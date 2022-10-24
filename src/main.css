@@ -1,0 +1,50 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@tailwind components;
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+@tailwind utilities;
+/**
+ * Use this directive to control where Tailwind injects the hover, focus,
+ * responsive, dark mode, and other variants of each class.
+ *
+ * If omitted, Tailwind will append these classes to the very end of
+ * your stylesheet by default.
+ */
+@tailwind variants;
+.btn {
+  @apply px-2.5 py-2 rounded mr-2.5 min-w-buttonRegular inline-block text-center text-base font-bold;
+}
+
+.btn.btn-primary {
+  @apply bg-main text-darkblue;
+}
+.btn.btn-dark {
+  @apply bg-darkblue text-white;
+}
+.btn.btn-pink {
+  @apply bg-darkblue text-white;
+}
+.btn.btn-danger {
+  @apply bg-darkblue text-white;
+}
+.btn.btn-success {
+  @apply bg-darkblue text-white;
+}
+.btn.btn-warning {
+  @apply bg-darkblue text-white;
+}
+.btn.btn-info {
+  @apply bg-darkblue text-white;
+}
+
+/*# sourceMappingURL=main.css.map */

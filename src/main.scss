@@ -1,0 +1,205 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@tailwind components;
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
+@tailwind utilities;
+
+/**
+ * Use this directive to control where Tailwind injects the hover, focus,
+ * responsive, dark mode, and other variants of each class.
+ *
+ * If omitted, Tailwind will append these classes to the very end of
+ * your stylesheet by default.
+ */
+@tailwind variants;
+
+h1, .h1 {
+  @apply text-white font-light text-5xl tracking-[-1px] mb-2 mt-12;
+  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+    @apply mt-2;
+  }
+}
+h2, .h2 {
+  @apply text-white font-light text-4xl tracking-[-0.85px] mb-2 mt-10;
+  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+    @apply mt-2;
+  }
+}
+h3, .h3 {
+  @apply text-white font-secondary font-bold text-3xl tracking-[-0.8px] mb-2 mt-7;
+  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+    @apply mt-2;
+  }
+}
+h4, .h4 {
+  @apply text-white font-secondary font-bold text-2xl tracking-[-0.7px] mb-2 mt-5;
+  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+    @apply mt-2;
+  }
+}
+h5, .h5 {
+  @apply text-white font-secondary font-bold text-xl tracking-[-0.7px] mb-2 mt-2;
+  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+    @apply mt-2;
+  }
+}
+.subtitle {
+  @apply italic;
+}
+
+.btn {
+  @apply px-2.5 py-2 rounded mr-2.5 min-w-buttonRegular inline-block text-center text-base font-bold text-main;
+  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+    @apply mt-2;
+  }
+
+  // Button color
+  &.btn-primary {
+    @apply bg-main text-darkblue;
+  }
+  &.btn-dark {
+    @apply bg-darkblue text-white;
+  }
+  &.btn-pink {
+    @apply bg-pink text-darkblue text-white;
+  }
+  &.btn-danger {
+    @apply bg-red text-darkblue text-white;
+  }
+  &.btn-success {
+    @apply bg-green text-darkblue text-white;
+  }
+  &.btn-warning {
+    @apply bg-orange text-darkblue text-white;
+  }
+  &.btn-info {
+    @apply bg-blue text-darkblue text-white;
+  }
+
+  // Button size
+  &.btn-small {
+    @apply text-sm min-w-buttonSmall;
+  }
+  &.btn-extrasmall {
+    @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary;
+  }
+
+  &.btn-ghost {
+    @apply bg-transparent;
+    &.btn-primary {
+      @apply text-main hover:bg-main/10;
+    }
+    &.btn-dark {
+      @apply text-darkblue hover:bg-darkblue/10;
+    }
+    &.btn-pink {
+      @apply text-pink hover:bg-pink/10;
+    }
+    &.btn-danger {
+      @apply text-red hover:bg-red/10;
+    }
+    &.btn-success {
+      @apply text-green hover:bg-green/10;
+    }
+    &.btn-warning {
+      @apply text-orange hover:bg-orange/10;
+    }
+    &.btn-info {
+      @apply text-blue hover:bg-blue/10;
+    }
+  }
+
+  // Button ghost
+  &.btn-light {
+    &.btn-primary {
+      @apply bg-main/10 text-main hover:bg-main/20;
+    }
+    &.btn-dark {
+      @apply bg-darkblue/10 text-darkblue hover:bg-darkblue/20;
+    }
+    &.btn-pink {
+      @apply bg-pink/10 text-darkblue text-pink hover:bg-pink/20;
+    }
+    &.btn-danger {
+      @apply bg-red/10 text-darkblue text-red hover:bg-red/20;
+    }
+    &.btn-success {
+      @apply bg-green/10 text-darkblue text-green hover:bg-green/20;
+    }
+    &.btn-warning {
+      @apply bg-orange/10 text-darkblue text-orange hover:bg-orange/20;
+    }
+    &.btn-info {
+      @apply bg-blue/10 text-darkblue text-blue hover:bg-blue/20;
+    }
+  }
+
+  // Button bordered
+  &.btn-bordered {
+    @apply bg-transparent;
+    &.btn-primary {
+      @apply border border-solid border-main text-main hover:bg-main/10;
+    }
+    &.btn-dark {
+      @apply border border-solid border-darkblue text-darkblue hover:bg-darkblue/10;
+    }
+    &.btn-pink {
+      @apply border border-solid border-pink text-pink hover:bg-pink/10;
+    }
+    &.btn-danger {
+      @apply border border-solid border-red text-red hover:bg-red/10;
+    }
+    &.btn-success {
+      @apply border border-solid border-green text-green hover:bg-green/10;
+    }
+    &.btn-warning {
+      @apply border border-solid border-orange text-orange hover:bg-orange/10;
+    }
+    &.btn-info {
+      @apply border border-solid border-blue text-blue hover:bg-blue/10;
+    }
+  }
+  &.btn-icon {
+    @apply min-w-min;
+  }
+  // Button disabled
+  &.btn-disabled {
+    @apply opacity-40 pointer-events-none;
+  }
+}
+
+label {
+  @apply font-bold text-white px-[10px] pb-[5px] block text-lg;
+  .is-optional {
+    @apply font-normal text-lightBlue text-sm;
+  }
+}
+
+input, textarea {
+  @apply bg-greyDarkBlue px-[10px] py-[7px] mb-[15px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
+  &.input-error {
+    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
+  }
+  &.input-success {
+    @apply bg-green-dark border border-solid border-green text-green;
+  }
+  &.input-search, [type='search'] {
+    @apply rounded-full pl-[40px];
+  }
+}
+
+textarea {
+  @apply min-h-[100px];
+}
