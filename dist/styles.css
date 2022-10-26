@@ -843,6 +843,10 @@ video {
   --tw-gradient-to: #BA6BFF;
 }
 
+.fill-white {
+  fill: #F2FDFF;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -1509,7 +1513,7 @@ label .is-optional {
   color: rgb(146 142 187 / var(--tw-text-opacity));
 }
 
-input, textarea {
+input, textarea, select {
   margin-bottom: 15px;
   width: 100%;
   border-radius: 5px;
@@ -1532,28 +1536,28 @@ input, textarea {
   outline-offset: 2px;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(146 142 187 / var(--tw-text-opacity));
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder, textarea::placeholder, select::placeholder {
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(146 142 187 / var(--tw-text-opacity));
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   --tw-border-opacity: 1;
   border-color: rgb(0 171 255 / var(--tw-border-opacity));
 }
 
-input:disabled, textarea:disabled {
+input:disabled, textarea:disabled, select:disabled {
   opacity: 0.4;
 }
 
-input.input-error, textarea.input-error {
+input.input-error, textarea.input-error, select.input-error {
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -1564,17 +1568,17 @@ input.input-error, textarea.input-error {
   color: rgb(255 101 101 / var(--tw-text-opacity));
 }
 
-input.input-error::-moz-placeholder, textarea.input-error::-moz-placeholder {
+input.input-error::-moz-placeholder, textarea.input-error::-moz-placeholder, select.input-error::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(160 84 84 / var(--tw-text-opacity));
 }
 
-input.input-error::placeholder, textarea.input-error::placeholder {
+input.input-error::placeholder, textarea.input-error::placeholder, select.input-error::placeholder {
   --tw-text-opacity: 1;
   color: rgb(160 84 84 / var(--tw-text-opacity));
 }
 
-input.input-success, textarea.input-success {
+input.input-success, textarea.input-success, select.input-success {
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -1585,9 +1589,26 @@ input.input-success, textarea.input-success {
   color: rgb(147 213 124 / var(--tw-text-opacity));
 }
 
-input.input-search, input [type=search], textarea.input-search, textarea [type=search] {
+input.input-search, input [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search] {
   border-radius: 9999px;
   padding-left: 40px;
+}
+
+select {
+  position: relative;
+}
+
+select::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 0.75rem;
+  width: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
+  opacity: 0.3;
+  --tw-content: "";
+  content: var(--tw-content);
 }
 
 textarea {
@@ -1595,6 +1616,7 @@ textarea {
 }
 
 .alert {
+  position: relative;
   border-radius: 10px;
   --tw-bg-opacity: 1;
   background-color: rgb(77 75 103 / var(--tw-bg-opacity));
@@ -1625,12 +1647,20 @@ textarea {
 }
 
 .alert .alert-content h1, .alert .alert-content .h1, .alert .alert-content h2, .alert .alert-content .h2, .alert .alert-content h3, .alert .alert-content .h3, .alert .alert-content h4, .alert .alert-content .h4, .alert .alert-content h5, .alert .alert-content .h5 {
-  margin: 0px;
+  margin-top: 0px;
+}
+
+.alert .alert-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  padding: 0.625rem;
 }
 
 .alert .alert-buttons {
   position: relative;
-  padding: 1.25rem;
+  padding: 0.625rem;
 }
 
 .alert .alert-buttons::before {

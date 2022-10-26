@@ -192,17 +192,21 @@ label .is-optional {
   @apply font-normal text-lightBlue text-sm;
 }
 
-input, textarea {
+input, textarea, select {
   @apply bg-greyDarkBlue px-[10px] py-[7px] mb-[15px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
 }
-input.input-error, textarea.input-error {
+input.input-error, textarea.input-error, select.input-error {
   @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
 }
-input.input-success, textarea.input-success {
+input.input-success, textarea.input-success, select.input-success {
   @apply bg-green-dark border border-solid border-green text-green;
 }
-input.input-search, input [type=search], textarea.input-search, textarea [type=search] {
+input.input-search, input [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search] {
   @apply rounded-full pl-[40px];
+}
+
+select {
+  @apply relative before:content-[""] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0;
 }
 
 textarea {
@@ -210,7 +214,7 @@ textarea {
 }
 
 .alert {
-  @apply text-center text-white rounded-md bg-deepBlue shadow-alert;
+  @apply text-center text-white rounded-md bg-deepBlue shadow-alert relative;
 }
 .alert.alert-danger {
   @apply bg-red-alert shadow-alertDanger;
@@ -222,10 +226,13 @@ textarea {
   @apply p-5;
 }
 .alert .alert-content h1, .alert .alert-content .h1, .alert .alert-content h2, .alert .alert-content .h2, .alert .alert-content h3, .alert .alert-content .h3, .alert .alert-content h4, .alert .alert-content .h4, .alert .alert-content h5, .alert .alert-content .h5 {
-  @apply m-0;
+  @apply mt-0;
+}
+.alert .alert-close {
+  @apply absolute top-0 right-0 p-2.5 cursor-pointer;
 }
 .alert .alert-buttons {
-  @apply p-5 relative before:content-[""] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;
+  @apply p-2.5 relative before:content-[""] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;
 }
 
 /*# sourceMappingURL=styles.css.map */
