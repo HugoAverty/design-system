@@ -60,41 +60,45 @@ h5 + h2, h5 + .h2, h5 + h3, h5 + .h3, h5 + h4, h5 + .h4, h5 + h5, h5 + .h5, .h5 
   @apply italic;
 }
 
-.btn {
-  @apply px-2.5 py-2 rounded mr-2.5 min-w-buttonRegular inline-block text-center text-base font-bold text-main;
+p {
+  @apply text-sm text-white leading-4;
 }
-.btn + h2, .btn + .h2, .btn + h3, .btn + .h3, .btn + h4, .btn + .h4, .btn + h5, .btn + .h5 {
-  @apply mt-2;
+
+.btn {
+  @apply px-2.5 py-2 rounded mr-2.5 min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg;
 }
 .btn.btn-primary {
-  @apply bg-main text-darkblue;
+  @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
 }
 .btn.btn-dark {
-  @apply bg-darkblue text-white;
+  @apply bg-darkblue text-white hover:bg-darkSea;
 }
 .btn.btn-pink {
-  @apply bg-pink text-darkblue text-white;
+  @apply bg-pink text-darkblue text-white hover:bg-pink-hover hover:shadow-pink;
 }
 .btn.btn-danger {
-  @apply bg-red text-darkblue text-white;
+  @apply bg-red text-darkblue text-white hover:bg-red-hover hover:shadow-red;
 }
 .btn.btn-success {
-  @apply bg-green text-darkblue text-white;
+  @apply bg-green text-darkblue text-white hover:bg-green-hover hover:shadow-green;
 }
 .btn.btn-warning {
-  @apply bg-orange text-darkblue text-white;
+  @apply bg-orange text-darkblue text-white hover:bg-orange-hover hover:shadow-orange;
 }
 .btn.btn-info {
-  @apply bg-blue text-darkblue text-white;
+  @apply bg-blue text-darkblue text-white hover:bg-blue-hover hover:shadow-blue;
+}
+.btn.btn-white {
+  @apply bg-white text-darkblue hover:bg-main-hover hover:shadow-white;
 }
 .btn.btn-small {
-  @apply text-sm min-w-buttonSmall;
+  @apply text-sm min-w-buttonSmall hover:shadow-lg;
 }
 .btn.btn-extrasmall {
-  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary;
+  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary hover:shadow-lg;
 }
 .btn.btn-ghost {
-  @apply bg-transparent;
+  @apply bg-transparent hover:shadow-none;
 }
 .btn.btn-ghost.btn-primary {
   @apply text-main hover:bg-main/10;
@@ -117,6 +121,12 @@ h5 + h2, h5 + .h2, h5 + h3, h5 + .h3, h5 + h4, h5 + .h4, h5 + h5, h5 + .h5, .h5 
 .btn.btn-ghost.btn-info {
   @apply text-blue hover:bg-blue/10;
 }
+.btn.btn-ghost.btn-white {
+  @apply text-white hover:bg-white/10;
+}
+.btn.btn-light {
+  @apply hover:shadow-none;
+}
 .btn.btn-light.btn-primary {
   @apply bg-main/10 text-main hover:bg-main/20;
 }
@@ -124,22 +134,25 @@ h5 + h2, h5 + .h2, h5 + h3, h5 + .h3, h5 + h4, h5 + .h4, h5 + h5, h5 + .h5, .h5 
   @apply bg-darkblue/10 text-darkblue hover:bg-darkblue/20;
 }
 .btn.btn-light.btn-pink {
-  @apply bg-pink/10 text-darkblue text-pink hover:bg-pink/20;
+  @apply bg-pink/10 text-pink hover:bg-pink/20;
 }
 .btn.btn-light.btn-danger {
-  @apply bg-red/10 text-darkblue text-red hover:bg-red/20;
+  @apply bg-red/10 text-red hover:bg-red/20;
 }
 .btn.btn-light.btn-success {
-  @apply bg-green/10 text-darkblue text-green hover:bg-green/20;
+  @apply bg-green/10 text-green hover:bg-green/20;
 }
 .btn.btn-light.btn-warning {
-  @apply bg-orange/10 text-darkblue text-orange hover:bg-orange/20;
+  @apply bg-orange/10 text-orange hover:bg-orange/20;
 }
 .btn.btn-light.btn-info {
-  @apply bg-blue/10 text-darkblue text-blue hover:bg-blue/20;
+  @apply bg-blue/10 text-blue hover:bg-blue/20;
+}
+.btn.btn-light.btn-white {
+  @apply bg-white/10 text-white hover:bg-white/20;
 }
 .btn.btn-bordered {
-  @apply bg-transparent;
+  @apply bg-transparent hover:shadow-none;
 }
 .btn.btn-bordered.btn-primary {
   @apply border border-solid border-main text-main hover:bg-main/10;
@@ -161,6 +174,9 @@ h5 + h2, h5 + .h2, h5 + h3, h5 + .h3, h5 + h4, h5 + .h4, h5 + h5, h5 + .h5, .h5 
 }
 .btn.btn-bordered.btn-info {
   @apply border border-solid border-blue text-blue hover:bg-blue/10;
+}
+.btn.btn-bordered.btn-white {
+  @apply border border-solid border-white text-white hover:bg-white/10;
 }
 .btn.btn-icon {
   @apply min-w-min;
@@ -191,6 +207,25 @@ input.input-search, input [type=search], textarea.input-search, textarea [type=s
 
 textarea {
   @apply min-h-[100px];
+}
+
+.alert {
+  @apply text-center text-white rounded-md;
+}
+.alert.alert-danger {
+  @apply bg-red-alert;
+}
+.alert.alert-success {
+  @apply bg-green-alert;
+}
+.alert .alert-content {
+  @apply p-5;
+}
+.alert .alert-content h1, .alert .alert-content .h1, .alert .alert-content h2, .alert .alert-content .h2, .alert .alert-content h3, .alert .alert-content .h3, .alert .alert-content h4, .alert .alert-content .h4, .alert .alert-content h5, .alert .alert-content .h5 {
+  @apply m-0;
+}
+.alert .alert-buttons {
+  @apply p-5 relative before:content-[""] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;
 }
 
 /*# sourceMappingURL=styles.css.map */

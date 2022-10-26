@@ -13,9 +13,15 @@ module.exports = {
     },
     colors: ({ colors }) => ({
 
-      main: '#56EAFF',
+      main: {
+        DEFAULT: '#56EAFF',
+        hover: '#9BF3FF'
+      },
 
-      pink: '#E142A2',
+      pink: {
+        DEFAULT: '#E142A2',
+        hover: '#FF2DAC'
+      },
       white: '#F2FDFF',
       black: '#0F1F2D',
       deepBlue: '#4D4B67',
@@ -30,14 +36,24 @@ module.exports = {
       red: {
         DEFAULT: '#FF6565',
         between: '#A05454',
-        dark: '#392525'
+        dark: '#392525',
+        hover: '#FF3C3C',
+        alert: 'rgba(255,101,101,.75)'
       },
       green: {
         DEFAULT: '#93D57C',
-        dark: '#1A2B14'
+        dark: '#1A2B14',
+        hover: '#78D758',
+        alert: 'rgba(147,213,124,.75)'
       },
-      orange: '#EC943F',
-      blue: '#00ABFF',
+      orange: {
+        DEFAULT:'#EC943F',
+        hover: '#E97D15'
+      },
+      blue: {
+        DEFAULT:'#00ABFF',
+        hover: '#3BBEFF'
+      },
 
       transparent: 'rgba(0,0,0,0)',
     }),
@@ -205,9 +221,9 @@ module.exports = {
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-      DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+      DEFAULT: '0 0 15px 0 rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-      lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+      lg: '0 0 10px 0 rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
