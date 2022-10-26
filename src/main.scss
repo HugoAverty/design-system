@@ -62,6 +62,10 @@ p {
   @apply text-sm text-white leading-4;
 }
 
+.bg-default {
+  @apply bg-darkblueTransparent backdrop-blur-sm;
+}
+
 .btn {
   @apply px-2.5 py-2 rounded mr-2.5 min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg ;
   // Button color
