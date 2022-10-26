@@ -218,12 +218,12 @@ textarea {
 }
 
 .alert {
-  @apply text-center text-white rounded-md;
+  @apply text-center text-white rounded-md bg-deepBlue shadow-alert;
   &.alert-danger {
-    @apply bg-red-alert;
+    @apply bg-red-alert shadow-alertDanger;
   }
   &.alert-success {
-    @apply bg-green-alert;
+    @apply bg-green-alert shadow-alertSuccess;
   }
   .alert-content {
     @apply p-5;

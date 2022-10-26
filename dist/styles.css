@@ -1596,17 +1596,28 @@ textarea {
 
 .alert {
   border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(77 75 103 / var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(146,142,187,0.50);
+  --tw-shadow-colored: 0 10px 20px 5px var(--tw-shadow-color), inset 0 10px 20px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .alert.alert-danger {
   background-color: rgba(255,101,101,.75);
+  --tw-shadow: 0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #FF9C71;
+  --tw-shadow-colored: 0 10px 20px 5px var(--tw-shadow-color), inset 0 10px 20px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .alert.alert-success {
   background-color: rgba(147,213,124,.75);
+  --tw-shadow: 0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #8EFF8F;
+  --tw-shadow-colored: 0 10px 20px 5px var(--tw-shadow-color), inset 0 10px 20px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .alert .alert-content {
