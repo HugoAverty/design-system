@@ -219,6 +219,13 @@ input, textarea, select {
 
 select {
   @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0;
+
+  /** for the dropdown indicator */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
 }
 
 textarea {
@@ -234,7 +241,7 @@ textarea {
     @apply bg-green-alert shadow-alertSuccess;
   }
   .alert-content {
-    @apply p-5;
+    @apply p-5 pb-7;
     h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
       @apply mt-0;
     }

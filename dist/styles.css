@@ -654,6 +654,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -670,12 +674,8 @@ video {
   height: 3rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.h-32 {
-  height: 8rem;
+.w-full {
+  width: 100%;
 }
 
 .w-16 {
@@ -696,10 +696,6 @@ video {
 
 .w-12 {
   width: 3rem;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .basis-1\/4 {
@@ -1616,6 +1612,17 @@ select::before {
   content: var(--tw-content);
 }
 
+select {
+  /** for the dropdown indicator */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
 textarea {
   min-height: 100px;
 }
@@ -1649,6 +1656,7 @@ textarea {
 
 .alert .alert-content {
   padding: 1.25rem;
+  padding-bottom: 1.75rem;
 }
 
 .alert .alert-content h1, .alert .alert-content .h1, .alert .alert-content h2, .alert .alert-content .h2, .alert .alert-content h3, .alert .alert-content .h3, .alert .alert-content h4, .alert .alert-content .h4, .alert .alert-content h5, .alert .alert-content .h5 {
