@@ -15,15 +15,24 @@ module.exports = {
 
       main: {
         DEFAULT: '#56EAFF',
-        hover: '#9BF3FF'
+        hover: '#C0F7FF'
       },
 
       pink: {
         DEFAULT: '#E142A2',
-        hover: '#FF2DAC'
+        hover: '#D28FEF'
       },
       white: '#F2FDFF',
-      black: '#0F1F2D',
+      black: {
+        DEFAULT: '#0F1F2D',
+        20:'rgba(15,31,45,.2)',
+        30:'rgba(15,31,45,.3)',
+        40:'rgba(15,31,45,.4)',
+        50:'rgba(15,31,45,.5)',
+        60:'rgba(15,31,45,.6)',
+        70:'rgba(15,31,45,.7)',
+        80:'rgba(15,31,45,.8)',
+      },
       deepBlue: '#4D4B67',
       lightBlue: '#928EBB',
       greyBlue: '#272736',
@@ -37,22 +46,22 @@ module.exports = {
         DEFAULT: '#FF6565',
         between: '#A05454',
         dark: '#392525',
-        hover: '#FF3C3C',
+        hover: '#FF8B8B',
         alert: 'rgba(255,101,101,.75)'
       },
       green: {
         DEFAULT: '#93D57C',
         dark: '#1A2B14',
-        hover: '#78D758',
+        hover: '#AEDF9C',
         alert: 'rgba(147,213,124,.75)'
       },
       orange: {
         DEFAULT:'#EC943F',
-        hover: '#E97D15'
+        hover: '#F0AE6F'
       },
       blue: {
         DEFAULT:'#00ABFF',
-        hover: '#3BBEFF'
+        hover: '#40C0FF'
       },
 
       transparent: 'rgba(0,0,0,0)',
@@ -232,6 +241,7 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
       alertDanger: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #FF9C71',
       alertSuccess: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #8EFF8F',
+      alertPrimary: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #FFFFFF',
       alert: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(146,142,187,0.50)',
       inputRadio: '0 0 7px 0 rgba(4,255,210,1)',
       none: 'none',

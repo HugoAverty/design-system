@@ -341,10 +341,38 @@ textarea {
   @apply relative pr-7;
 }
 .tag.tag-removable .icon {
-  @apply bg-darkblueTransparent rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
+  @apply bg-black-30 rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
 }
 .tag.tag-removable .icon img, .tag.tag-removable .icon svg {
   @apply h-3 w-3;
+}
+
+.tooltip {
+  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm py-2.5 px-5 text-base font-secondary;
+}
+.tooltip.tooltip-danger {
+  @apply bg-red shadow-alertDanger;
+}
+.tooltip.tooltip-success {
+  @apply bg-green shadow-alertSuccess;
+}
+.tooltip.tooltip-primary {
+  @apply bg-main shadow-alertPrimary text-black;
+}
+.tooltip.tooltip-arrow-bl, .tooltip.tooltip-arrow-br {
+  @apply after:content-[""] after:absolute after:w-0 after:h-0 after:inline-block after:bottom-[-8px] after:left-[15px] after:border-r-8 after:border-l-8 after:border-t-8 after:border-l-transparent after:border-r-transparent after:border-t-deepBlue after:border-solid;
+}
+.tooltip.tooltip-arrow-bl.tooltip-danger, .tooltip.tooltip-arrow-br.tooltip-danger {
+  @apply after:border-t-red;
+}
+.tooltip.tooltip-arrow-bl.tooltip-primary, .tooltip.tooltip-arrow-br.tooltip-primary {
+  @apply after:border-t-main;
+}
+.tooltip.tooltip-arrow-bl.tooltip-success, .tooltip.tooltip-arrow-br.tooltip-success {
+  @apply after:border-t-green;
+}
+.tooltip.tooltip-arrow-br {
+  @apply after:left-auto after:right-[15px];
 }
 
 /*# sourceMappingURL=styles.css.map */

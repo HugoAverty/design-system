@@ -345,10 +345,38 @@ textarea {
   &.tag-removable {
     @apply relative pr-7;
     .icon {
-      @apply bg-darkblueTransparent rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
+      @apply bg-black-30 rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
       img, svg {
         @apply h-3 w-3;
       }
     }
+  }
+}
+
+.tooltip {
+  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm py-2.5 px-5 text-base font-secondary;
+  &.tooltip-danger {
+    @apply bg-red shadow-alertDanger;
+  }
+  &.tooltip-success {
+    @apply bg-green shadow-alertSuccess;
+  }
+  &.tooltip-primary {
+    @apply bg-main shadow-alertPrimary text-black;
+  }
+  &.tooltip-arrow-bl, &.tooltip-arrow-br  {
+    @apply after:content-[''] after:absolute after:w-0 after:h-0 after:inline-block after:bottom-[-8px] after:left-[15px] after:border-r-8 after:border-l-8 after:border-t-8 after:border-l-transparent after:border-r-transparent after:border-t-deepBlue after:border-solid;
+    &.tooltip-danger {
+      @apply after:border-t-red;
+    }
+    &.tooltip-primary {
+      @apply after:border-t-main;
+    }
+    &.tooltip-success {
+      @apply after:border-t-green;
+    }
+  }
+  &.tooltip-arrow-br {
+    @apply after:left-auto after:right-[15px];
   }
 }
