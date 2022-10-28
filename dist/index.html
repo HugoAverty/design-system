@@ -10,10 +10,10 @@
 <body>
   <div class="sys-bg"></div>
   <div class="bg-default container mx-auto p-5">
-    <h1>
+    <h1 class="title">
       Typography
     </h1>
-    <h2>
+    <h2 class="title">
       Font Family
     </h2>
     <div class="flex flex-row">
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="bg-default container mx-auto p-5">
-    <h2>
+    <h2 class="title">
       Titles
     </h2>
     <h1>Let's create your own Metaverse!</h1>
@@ -54,10 +54,10 @@
     <h2>
       Links
     </h2>
-    <h1>
+    <h1 class="title">
       Color palettes
     </h1>
-    <h2>
+    <h2 class="title">
       Background on dark elements
     </h2>
   </div>
@@ -65,14 +65,14 @@
     <div class="w-full h-32 rounded bg-default"></div>
   </div>
   <div class="bg-default container mx-auto p-5">
-    <h2>
+    <h2 class="title">
       Main colors
     </h2>
     <div>
       <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-main"></div>
       <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-darkblue"></div>
     </div>
-    <h2>
+    <h2 class="title">
       Other colors
     </h2>
     <div>
@@ -83,7 +83,7 @@
       <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-darkSea"></div>
       <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-greyDarkBlue"></div>
     </div>
-    <h2>
+    <h2 class="title">
       Status colors
     </h2>
     <div>
@@ -92,7 +92,7 @@
       <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-orange"></div>
       <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-blue"></div>
     </div>
-    <h2>
+    <h2 class="title">
       Gradient colors
     </h2>
     <div>
@@ -101,10 +101,17 @@
     </div>
   </div>
   <div class="bg-default container mx-auto p-5">
-    <h1>
+    <h1 class="title">Columns</h1>
+    <div class="flex flex-row">
+      <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"></div>
+      <div class="basis-2/5 bg-deepBlue h-20 mr-2.5"></div>
+      <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"></div>
+      <div class="basis-1/5 bg-deepBlue h-20"></div>
+    </div>
+    <h1 class="title">
       Buttons
     </h1>
-    <h2>
+    <h2 class="title">
       Buttons regular size
     </h2>
     <div class="flex flex-row">
@@ -117,8 +124,8 @@
       <a class="btn btn-info" href="#">Info</a>
       <a class="btn btn-white" href="#">White</a>
     </div>
-za
-    <h2>
+
+    <h2 class="title">
       Buttons smaller
     </h2>
     <div class="flex flex-row">
@@ -132,7 +139,7 @@ za
       <a class="btn btn-white btn-small" href="#">White</a>
     </div>
 
-    <h2>
+    <h2 class="title">
       Buttons extra small
     </h2>
     <div class="flex flex-row">
@@ -147,13 +154,13 @@ za
     </div>
 
 
-    <h2>
+    <h2 class="title">
       Buttons types
     </h2>
 
-    <h3>
+    <h2 class="title">
       Ghost buttons
-    </h3>
+    </h2>
     <div class="flex flex-row">
       <a class="btn btn-primary btn-ghost" href="#">Primary</a>
       <a class="btn btn-dark btn-ghost" href="#">Dark</a>
@@ -165,9 +172,9 @@ za
       <a class="btn btn-white btn-ghost" href="#">White</a>
     </div>
 
-    <h3>
+    <h2 class="title">
       Light buttons
-    </h3>
+    </h2>
     <div class="flex flex-row">
       <a class="btn btn-primary btn-light" href="#">Primary</a>
       <a class="btn btn-dark btn-light" href="#">Dark</a>
@@ -179,9 +186,9 @@ za
       <a class="btn btn-white btn-light" href="#">White</a>
     </div>
 
-    <h3>
+    <h2 class="title">
       Bordered buttons
-    </h3>
+    </h2>
     <div class="flex flex-row">
       <a class="btn btn-primary btn-bordered" href="#">Primary</a>
       <a class="btn btn-dark btn-bordered" href="#">Dark</a>
@@ -192,11 +199,11 @@ za
       <a class="btn btn-info btn-bordered" href="#">Info</a>
       <a class="btn btn-white btn-bordered" href="#">White</a>
     </div>
-    <h2>
+    <h2 class="title">
       Buttons with text & icon
     </h2>
 
-    <h2>
+    <h2 class="title">
       Buttons with icon
     </h2>
     <div class="flex flex-row">
@@ -256,7 +263,7 @@ za
       </svg></a>
     </div>
 
-    <h2>
+    <h2 class="title">
       Buttons disabled
     </h2>
     <div class="flex flex-row">
@@ -270,11 +277,13 @@ za
       <a class="btn btn-info btn-disabled" href="#">Info</a>
     </div>
 
-    <h2>
+    <h2 class="title">
       Situationnal buttons
     </h2>
-    <h1>Forms</h1>
-    <h2>
+    <h1 class="title">
+      Forms
+    </h1>
+    <h2 class="title">
       Input text
     </h2>
     <div class="flex flex-row">
@@ -371,6 +380,65 @@ za
         <textarea class="input-error" placeholder="Placeholder..."></textarea>
       </div>
     </div>
+
+    <h2 class="title">
+      Switch, radio, checkbox
+    </h2>
+    <div class="flex flex-row">
+      <div class="inline-block pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-switch inline-block" id="switch-1" />
+        <label class="label-checkbox inline-block" for="switch-1">Unchecked</label>
+      </div>
+      <div class="inline-block pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-switch inline-block" checked id="switch-2" />
+        <label for="switch-2" class="inline-block">Checked</label>
+      </div>
+      <div class="inline-block pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-switch inline-block" disabled />
+        <label class="inline-block">Disabled</label>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-checkbox inline-block" id="check-1" />
+        <label class="label-checkbox inline-block" for="check-1">Unchecked</label>
+      </div>
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-checkbox inline-block" checked id="check-2" />
+        <label for="check-2" class="inline-block">Checked</label>
+      </div>
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-checkbox inline-block" disabled />
+        <label class="inline-block">Disabled</label>
+      </div>
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="checkbox" class="input-checkbox input-error inline-block" />
+        <label class="inline-block input-error">Error</label>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="radio" class="input-radio" id="radio-1" />
+        <label class="label-checkbox" for="radio-1">Unchecked</label>
+      </div>
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="radio" class="input-radio" checked id="radio-2" />
+        <label class="label-checkbox" id="radio-2">Checked</label>
+      </div>
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="radio" class="input-radio" disabled />
+        <label class="label-checkbox">Disabled</label>
+      </div>
+      <div class="flex-none pr-[10px] pb-[10px]">
+        <input type="radio" class="input-radio input-error" />
+        <label class="label-checkbox input-error">Error</label>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div class="pr-[10px] pb-[10px]">
+        <input type="range" min="0" max="10">
+      </div>
+    </div>
     <div class="flex flex-row">
       <div class="basis-1/3 pr-[10px] pb-[10px]">
         <div class="mt-1 justify-center rounded-md border-2 border-dashed border-lightBlue text-white px-6 pt-5 pb-6">
@@ -390,9 +458,9 @@ za
         </div>
       </div>
     </div>
-    <h1>Alert</h1>
-  </div>
-  <div class="container mx-auto p-5">
+    <h1 class="title">
+      Alert
+    </h1>
     <div class="flex flex-row">
       <div class="basis-1/3 pr-[10px] pb-[10px]">
         <div class="alert alert-danger">
@@ -460,6 +528,131 @@ za
           <div class="alert-content">
             <h4 class="">Je suis une modale et fière !</h4>
             <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Proin nec nulla nulla. Fusce id diam eu dolor suscipit lobortis. Pellentesque congue, urna id sodales aliquet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="title">Notifications & labels</h1>
+    <div class="flex flex-row">
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-xs">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-md">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-lg">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-xs notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-md notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-lg notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-square">2</div>
+      </div>
+
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-xs">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-md">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-lg">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-xs notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-md notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-lg notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-dark notif-square">2</div>
+      </div>
+
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-xs">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-md">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-lg">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-xs notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-md notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-lg notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-pink notif-square">2</div>
+      </div>
+
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-xs">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-md">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-lg">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-xs notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-md notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-lg notif-square">2</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="notif notif-danger notif-square">2</div>
+      </div>
+    </div>
+    <div class="flex flex-row mt-2.5">
+      <div class="flex-none mr-2.5">
+        <div class="tag">Tag</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="tag tag-dark">Tag</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="tag tag-danger">Tag</div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="tag tag-removable">
+          Tag
+          <div class="icon">
+            <img src="img/remove.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="tag tag-removable tag-dark">
+          Tag
+          <div class="icon">
+            <img src="img/remove.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="tag tag-removable tag-danger">
+          Tag
+          <div class="icon">
+            <img src="img/remove.svg" />
           </div>
         </div>
       </div>

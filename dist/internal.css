@@ -9,3 +9,31 @@
 .sys-block {
     background: #272736;
 }
+
+h1.title {
+    font-size: 38px;
+    letter-spacing: 5px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 200;
+    margin-top: 75px;
+}
+
+h1.title:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background: #82F0FF;
+    top: 0;
+    left: 0;
+}
+
+h2.title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    color: white;
+    font-size: 24px;
+}

@@ -197,14 +197,23 @@ p {
   }
 }
 
-label {
-  @apply font-bold text-white px-[10px] pb-[5px] block text-lg;
+label, .label {
+  @apply font-bold text-white px-[10px] pb-[5px] block text-lg cursor-pointer;
+  &.label-checkbox {
+    @apply inline-block;
+  }
   .is-optional {
     @apply font-normal text-lightBlue text-sm;
   }
+  &.input-error {
+    @apply text-red;
+  }
+  &.input-success {
+    @apply text-green;
+  }
 }
 
-input, textarea, select {
+input[type="text"], input[type="search"], input[type="number"], textarea, select {
   @apply bg-greyDarkBlue px-[10px] py-[7px] mb-[15px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
   &.input-error {
     @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
@@ -213,19 +222,56 @@ input, textarea, select {
     @apply bg-green-dark border border-solid border-green text-green;
   }
   &.input-search, [type='search'] {
-    @apply rounded-full pl-[40px];
+    @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url('img/search.svg')] bg-[length:16px_16px];
   }
 }
 
-select {
-  @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0;
+.input-checkbox, .input-radio {
+  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-black border border-solid border-deepBlue p-0 text-white inline-block outline-none rounded checked:before:rounded-xs  checked:before:top-[3px] checked:before:left-[3px] checked:border-lightBlue checked:before:bg-main checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute;
+  &.input-error {
+    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
+  }
+}
+.input-radio {
+  @apply rounded-full checked:before:rounded-full;
+}
+.input-switch {
+  @apply appearance-none
+  relative
+  top-0 right-0 bottom-0 left-0
+  h-4 w-8
+  bg-black
+  border border-solid border-deepBlue
+  p-0 text-white inline-block outline-none rounded-full
+  before:bg-lightBlue before:rounded-full before:w-5 before:left-[-3px] before:top-[-3px] before:h-5 before:content-[''] before:absolute
+  checked:before:right-[-3px] checked:before:top-[-3px] checked:before:left-auto checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio;
+  &.input-error {
+    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
+  }
+}
 
-  /** for the dropdown indicator */
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+input[type="range"], .input-range {
+  @apply
+  appearance-none
+  h-2.5
+  rounded-full
+  border border-solid border-deepBlue;
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-size: 70% 100%;
   background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1em;
+  background: rgba(255, 255, 255, 0.6);
+
+  &::-webkit-slider-thumb {
+    background: red;
+    cursor: ew-resize;
+    transition: background .3s ease-in-out;
+  }
+}
+input[type="range"]::-webkit-slider-thumb {
+  @apply bg-main shadow-inputRadio;
+}
+select {
+  @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
 }
 
 textarea {
@@ -233,7 +279,7 @@ textarea {
 }
 
 .alert {
-  @apply text-center text-white rounded-md bg-deepBlue shadow-alert relative;
+  @apply text-center text-white rounded-md bg-deepBlue shadow-alert backdrop-blur-sm relative;
   &.alert-danger {
     @apply bg-red-alert shadow-alertDanger;
   }
@@ -251,5 +297,58 @@ textarea {
   }
   .alert-buttons {
     @apply p-2.5 relative before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;
+  }
+}
+
+.notif {
+  @apply w-4 aspect-square bg-main text-black rounded-full text-center font-bold text-xs;
+  &.notif-xs {
+    @apply w-4 text-xs;
+  }
+  &.notif-md {
+    @apply w-6 text-base;
+  }
+  &.notif-lg {
+    @apply w-7 text-xl;
+  }
+  &.notif-square {
+    @apply rounded-xs;
+  }
+  &.notif-dark {
+    @apply bg-black text-white;
+  }
+  &.notif-pink {
+    @apply bg-pink text-white;
+  }
+  &.notif-success {
+    @apply bg-green;
+  }
+  &.notif-danger {
+    @apply bg-red text-white;
+  }
+}
+
+.tag {
+  @apply bg-main text-black rounded-full px-2.5 text-base font-bold;
+  &.tag-dark {
+    @apply bg-black text-white;
+  }
+  &.tag-pink {
+    @apply bg-pink text-white;
+  }
+  &.tag-success {
+    @apply bg-green;
+  }
+  &.tag-danger {
+    @apply bg-red text-white;
+  }
+  &.tag-removable {
+    @apply relative pr-7;
+    .icon {
+      @apply bg-darkblueTransparent rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
+      img, svg {
+        @apply h-3 w-3;
+      }
+    }
   }
 }
