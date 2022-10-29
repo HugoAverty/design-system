@@ -380,3 +380,57 @@ textarea {
     @apply after:left-auto after:right-[15px];
   }
 }
+
+.nav {
+  @apply p-2.5 bg-greyBlue border border-solid border-greyBlue text-white text-lg rounded border-greyBlue;
+  .nav-elt {
+    @apply inline-block rounded font-bold relative;
+    &.active {
+      a {
+        @apply text-black bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
+      }
+    }
+    &.disabled {
+      @apply opacity-30 pointer-events-none;
+    }
+    a {
+      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white-10 rounded;
+    }
+  }
+  &.nav-light, &.nav-light-pink {
+    @apply bg-transparent border-x-0 border-t-0 rounded-none border-b border-deepBlue;
+    .nav-elt {
+      @apply inline-block;
+      &.active {
+        a {
+          @apply text-white bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-main after:bg-gradient-to-r after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
+        }
+      }
+    }
+  }
+  &.nav-light-pink {
+    .nav-elt {
+      &.active {
+        a {
+          @apply after:from-[#F56772] after:to-[#BA6BFF];
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  @apply text-center bg-default rounded-md border border-deepBlue shadow-modal overflow-hidden;
+  .modal-title {
+    @apply text-main pb-2.5 pt-5 font-secondary font-bold text-2xl tracking-[-0.7px] border-b border-deepBlue;
+  }
+  .modal-content {
+    @apply p-5 text-center;
+    &.modal-content-image {
+      @apply pb-5 pt-0 px-0;
+    }
+  }
+  .modal-buttons {
+    @apply bg-bgButton p-2.5 border-t border-deepBlue;
+  }
+}

@@ -22,7 +22,18 @@ module.exports = {
         DEFAULT: '#E142A2',
         hover: '#D28FEF'
       },
-      white: '#F2FDFF',
+      white: {
+        DEFAULT: '#F2FDFF',
+        10:'rgba(242,253,255,.1)',
+        20:'rgba(242,253,255,.2)',
+        30:'rgba(242,253,255,.3)',
+        40:'rgba(242,253,255,.4)',
+        50:'rgba(242,253,255,.5)',
+        60:'rgba(242,253,255,.6)',
+        70:'rgba(242,253,255,.7)',
+        80:'rgba(242,253,255,.8)',
+        90:'rgba(242,253,255,.9)',
+      },
       black: {
         DEFAULT: '#0F1F2D',
         20:'rgba(15,31,45,.2)',
@@ -38,6 +49,7 @@ module.exports = {
       greyBlue: '#272736',
       darkSea: '#15172F',
       greyDarkBlue: '#0F1F2D',
+      bgButton: '#38384A',
 
       darkblueTransparent: 'rgba(39,39,54,0.85)',
       darkblue: 'rgba(39,39,54)',
@@ -243,6 +255,7 @@ module.exports = {
       alertSuccess: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #8EFF8F',
       alertPrimary: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #FFFFFF',
       alert: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(146,142,187,0.50)',
+      modal: '0 10px 20px 5px rgba(0,0,0,0.35)',
       inputRadio: '0 0 7px 0 rgba(4,255,210,1)',
       none: 'none',
     },
