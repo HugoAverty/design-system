@@ -752,6 +752,10 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
+.self-center {
+  align-self: center;
+}
+
 .rounded {
   border-radius: 5px;
 }
@@ -933,10 +937,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .font-main {
@@ -1692,6 +1692,45 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   padding-left: 40px;
 }
 
+.input-number {
+  position: relative;
+  margin-bottom: 0.625rem;
+}
+
+.input-number .plus, .input-number .minus {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  z-index: 10;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding-top: 0px;
+}
+
+.input-number .plus:hover, .input-number .minus:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 247 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(39 39 54 / var(--tw-text-opacity));
+  --tw-shadow-color: #56EAFF;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.input-number .plus {
+  right: 0.625rem;
+}
+
+.input-number .minus {
+  left: 0.625rem;
+}
+
+.input-number input {
+  margin: 0px;
+  text-align: center;
+}
+
 .input-checkbox, .input-radio {
   position: relative;
   top: 0px;
@@ -1739,6 +1778,10 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   content: var(--tw-content);
 }
 
+.input-checkbox:disabled, .input-radio:disabled {
+  opacity: 0.4;
+}
+
 .input-checkbox.input-error, .input-radio.input-error {
   border-width: 1px;
   border-style: solid;
@@ -1758,6 +1801,19 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
 .input-checkbox.input-error::placeholder, .input-radio.input-error::placeholder {
   --tw-text-opacity: 1;
   color: rgb(160 84 84 / var(--tw-text-opacity));
+}
+
+.input-checkbox.input-error:checked::before, .input-radio.input-error:checked::before {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 101 101 / var(--tw-bg-opacity));
+  content: var(--tw-content);
+  --tw-shadow: 0 0 7px 0 #FF6565;
+  --tw-shadow-colored: 0 0 7px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.input-checkbox:disabled + label, .input-radio:disabled + label {
+  opacity: 0.4;
 }
 
 .input-radio {
@@ -1825,6 +1881,10 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.input-switch:disabled {
+  opacity: 0.4;
+}
+
 .input-switch.input-error {
   border-width: 1px;
   border-style: solid;
@@ -1844,6 +1904,22 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
 .input-switch.input-error::placeholder {
   --tw-text-opacity: 1;
   color: rgb(160 84 84 / var(--tw-text-opacity));
+}
+
+.input-switch.input-error::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(160 84 84 / var(--tw-bg-opacity));
+}
+
+.input-switch.input-error:checked::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 101 101 / var(--tw-bg-opacity));
+}
+
+.input-switch:disabled + label {
+  opacity: 0.4;
 }
 
 input[type=range], .input-range {

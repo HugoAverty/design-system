@@ -257,6 +257,7 @@ module.exports = {
       alert: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(146,142,187,0.50)',
       modal: '0 10px 20px 5px rgba(0,0,0,0.35)',
       inputRadio: '0 0 7px 0 rgba(4,255,210,1)',
+      inputRadioDanger: '0 0 7px 0 #FF6565',
       none: 'none',
     },
     boxShadowColor: ({ theme }) => theme('colors'),

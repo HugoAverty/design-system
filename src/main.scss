@@ -230,10 +230,29 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
   }
 }
 
+.input-number {
+  @apply relative mb-2.5;
+  .plus, .minus {
+    @apply absolute top-0 bottom-0 z-10 mt-auto mb-auto w-6 h-6 pt-0  hover:text-darkblue hover:bg-main-hover hover:shadow-main;
+  }
+  .plus {
+    @apply right-2.5;
+  }
+  .minus {
+    @apply left-2.5;
+  }
+  input {
+    @apply text-center m-0;
+  }
+}
+
 .input-checkbox, .input-radio {
-  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-black border border-solid border-deepBlue p-0 text-white inline-block outline-none rounded checked:before:rounded-xs  checked:before:top-[3px] checked:before:left-[3px] checked:border-lightBlue checked:before:bg-main checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute;
+  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-black border border-solid border-deepBlue p-0 text-white inline-block outline-none rounded checked:before:rounded-xs  checked:before:top-[3px] checked:before:left-[3px] checked:border-lightBlue checked:before:bg-main checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute disabled:opacity-40;
   &.input-error {
-    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
+    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between checked:before:shadow-inputRadioDanger checked:before:bg-red;
+  }
+  &:disabled + label {
+    @apply opacity-40;
   }
 }
 .input-radio {
@@ -248,9 +267,12 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
   border border-solid border-deepBlue
   p-0 text-white inline-block outline-none rounded-full
   before:bg-lightBlue before:rounded-full before:w-5 before:left-[-3px] before:top-[-3px] before:h-5 before:content-[''] before:absolute
-  checked:before:right-[-3px] checked:before:top-[-3px] checked:before:left-auto checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio;
+  checked:before:right-[-3px] checked:before:top-[-3px] checked:before:left-auto checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio disabled:opacity-40;
   &.input-error {
-    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
+    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between before:bg-red-between checked:before:bg-red;
+  }
+  &:disabled + label {
+    @apply opacity-40;
   }
 }
 
