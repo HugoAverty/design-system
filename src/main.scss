@@ -470,10 +470,16 @@ textarea {
     ul {
       li {
         a {
-          @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all;
-          &:hover img {
+          @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
+          &:hover:not(.active) img {
             @apply invert;
           }
+        }
+        &.active {
+          @apply relative after:absolute after:content-[''] after:w-[5px] after:h-full after:bg-main after:right-[-3px] after:top-0 after:rounded;
+        }
+        &.disabled a {
+          @apply opacity-40 pointer-events-none;
         }
         &.separator {
           @apply bg-deepBlue my-2.5 h-[1px] w-full;

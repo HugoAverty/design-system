@@ -448,10 +448,16 @@ textarea {
   @apply bg-default border border-deepBlue block py-2.5 rounded;
 }
 .menu.menu-tools ul li a {
-  @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all;
+  @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
 }
-.menu.menu-tools ul li a:hover img {
+.menu.menu-tools ul li a:hover:not(.active) img {
   @apply invert;
+}
+.menu.menu-tools ul li.active {
+  @apply relative after:absolute after:content-[""] after:w-[5px] after:h-full after:bg-main after:right-[-3px] after:top-0 after:rounded;
+}
+.menu.menu-tools ul li.disabled a {
+  @apply opacity-40 pointer-events-none;
 }
 .menu.menu-tools ul li.separator {
   @apply bg-deepBlue my-2.5 h-[1px] w-full;
