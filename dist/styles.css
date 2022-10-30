@@ -1023,6 +1023,26 @@ video {
   background-color: rgba(15,31,45,.4);
 }
 
+/* width */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 54 / var(--tw-bg-opacity));
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  --tw-bg-opacity: 1;
+  background-color: rgb(146 142 187 / var(--tw-bg-opacity));
+}
+
 h1, .h1 {
   margin-bottom: 0.5rem;
   margin-top: 3rem;

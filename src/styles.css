@@ -21,6 +21,21 @@
  * your stylesheet by default.
  */
 @tailwind variants;
+/* width */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-greyBlue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-lightBlue;
+}
+
 h1, .h1 {
   @apply text-white font-light text-5xl tracking-[-1px] mb-2 mt-12;
 }
