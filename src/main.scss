@@ -33,27 +33,24 @@ h1, .h1 {
 }
 h2, .h2 {
   @apply text-white font-light text-4xl tracking-[-0.85px] mb-2 mt-10;
-  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+  & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
     @apply mt-2;
   }
 }
 h3, .h3 {
-  @apply text-white font-secondary font-bold text-3xl tracking-[-0.8px] mb-2 mt-7;
-  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+  @apply text-white font-secondary text-3xl tracking-[-0.8px] mb-2 mt-7;
+  & + h4, & + .h4, & + h5, & + .h5 {
     @apply mt-2;
   }
 }
 h4, .h4 {
   @apply text-white font-secondary font-bold text-2xl tracking-[-0.7px] mb-2 mt-5;
-  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
+  & + h5, & + .h5 {
     @apply mt-2;
   }
 }
 h5, .h5 {
   @apply text-white font-secondary font-bold text-xl tracking-[-0.7px] mb-2 mt-2;
-  & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
-    @apply mt-2;
-  }
 }
 .subtitle {
   @apply italic text-lightBlue text-base;
@@ -62,7 +59,7 @@ p {
   @apply text-sm text-white leading-5;
 }
 
-a:not(.btn), .link {
+p a:not(.btn), p .link {
   @apply overflow-hidden font-bold text-main relative after:content-[''] after:absolute after:bottom-[-3px] after:left-0 after:w-0 after:h-['1px'] after:border-t after:border-dashed hover:after:w-full after:transition-all;
 }
 
@@ -277,7 +274,7 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
 }
 
 input[type="range"], .input-range {
-  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-2.5 ;
+  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-2.5 cursor-col-resize;
   &::-webkit-slider-thumb {
     @apply bg-main shadow-main rounded-full appearance-none h-5 w-5;
   }

@@ -621,12 +621,24 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .right-\[-5px\] {
   right: -5px;
 }
 
 .top-\[-5px\] {
   top: -5px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .mx-auto {
@@ -690,8 +702,8 @@ video {
   height: 3rem;
 }
 
-.min-h-\[100px\] {
-  min-height: 100px;
+.h-full {
+  height: 100%;
 }
 
 .w-full {
@@ -993,6 +1005,12 @@ video {
   color: rgb(146 142 187 / var(--tw-text-opacity));
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 /**
  * Use this directive to control where Tailwind injects the hover, focus,
  * responsive, dark mode, and other variants of each class.
@@ -1000,6 +1018,19 @@ video {
  * If omitted, Tailwind will append these classes to the very end of
  * your stylesheet by default.
  */
+
+.hover\:bg-main:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 234 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-black-20:hover {
+  background-color: rgba(15,31,45,.2);
+}
+
+.hover\:bg-black-40:hover {
+  background-color: rgba(15,31,45,.4);
+}
 
 h1, .h1 {
   margin-bottom: 0.5rem;
@@ -1027,7 +1058,7 @@ h2, .h2 {
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-h2 + h2, h2 + .h2, h2 + h3, h2 + .h3, h2 + h4, h2 + .h4, h2 + h5, h2 + .h5, .h2 + h2, .h2 + .h2, .h2 + h3, .h2 + .h3, .h2 + h4, .h2 + .h4, .h2 + h5, .h2 + .h5 {
+h2 + h3, h2 + .h3, h2 + h4, h2 + .h4, h2 + h5, h2 + .h5, .h2 + h3, .h2 + .h3, .h2 + h4, .h2 + .h4, .h2 + h5, .h2 + .h5 {
   margin-top: 0.5rem;
 }
 
@@ -1037,13 +1068,12 @@ h3, .h3 {
   font-family: Roboto Condensed, Arial;
   font-size: 24px;
   line-height: 2.25rem;
-  font-weight: 700;
   letter-spacing: -0.8px;
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-h3 + h2, h3 + .h2, h3 + h3, h3 + .h3, h3 + h4, h3 + .h4, h3 + h5, h3 + .h5, .h3 + h2, .h3 + .h2, .h3 + h3, .h3 + .h3, .h3 + h4, .h3 + .h4, .h3 + h5, .h3 + .h5 {
+h3 + h4, h3 + .h4, h3 + h5, h3 + .h5, .h3 + h4, .h3 + .h4, .h3 + h5, .h3 + .h5 {
   margin-top: 0.5rem;
 }
 
@@ -1059,7 +1089,7 @@ h4, .h4 {
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-h4 + h2, h4 + .h2, h4 + h3, h4 + .h3, h4 + h4, h4 + .h4, h4 + h5, h4 + .h5, .h4 + h2, .h4 + .h2, .h4 + h3, .h4 + .h3, .h4 + h4, .h4 + .h4, .h4 + h5, .h4 + .h5 {
+h4 + h5, h4 + .h5, .h4 + h5, .h4 + .h5 {
   margin-top: 0.5rem;
 }
 
@@ -1073,10 +1103,6 @@ h5, .h5 {
   letter-spacing: -0.7px;
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
-}
-
-h5 + h2, h5 + .h2, h5 + h3, h5 + .h3, h5 + h4, h5 + .h4, h5 + h5, h5 + .h5, .h5 + h2, .h5 + .h2, .h5 + h3, .h5 + .h3, .h5 + h4, .h5 + .h4, .h5 + h5, .h5 + .h5 {
-  margin-top: 0.5rem;
 }
 
 .subtitle {
@@ -1094,7 +1120,7 @@ p {
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-a:not(.btn), .link {
+p a:not(.btn), p .link {
   position: relative;
   overflow: hidden;
   font-weight: 700;
@@ -1102,7 +1128,7 @@ a:not(.btn), .link {
   color: rgb(86 234 255 / var(--tw-text-opacity));
 }
 
-a:not(.btn)::after, .link::after {
+p a:not(.btn)::after, p .link::after {
   position: absolute;
   bottom: -3px;
   left: 0px;
@@ -1117,7 +1143,7 @@ a:not(.btn)::after, .link::after {
   content: var(--tw-content);
 }
 
-a:not(.btn):hover::after, .link:hover::after {
+p a:not(.btn):hover::after, p .link:hover::after {
   content: var(--tw-content);
   width: 100%;
 }
@@ -1929,6 +1955,7 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
 input[type=range], .input-range {
   height: 0.625rem;
   width: 100%;
+  cursor: col-resize;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
