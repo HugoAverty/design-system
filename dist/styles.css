@@ -625,20 +625,20 @@ video {
   position: relative;
 }
 
-.right-\[-5px\] {
-  right: -5px;
-}
-
-.top-\[-5px\] {
-  top: -5px;
-}
-
 .top-0 {
   top: 0px;
 }
 
 .left-0 {
   left: 0px;
+}
+
+.right-\[-5px\] {
+  right: -5px;
+}
+
+.top-\[-5px\] {
+  top: -5px;
 }
 
 .mx-auto {
@@ -1019,15 +1019,6 @@ video {
  * your stylesheet by default.
  */
 
-.hover\:bg-main:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(86 234 255 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-black-20:hover {
-  background-color: rgba(15,31,45,.2);
-}
-
 .hover\:bg-black-40:hover {
   background-color: rgba(15,31,45,.4);
 }
@@ -1159,8 +1150,8 @@ p a:not(.btn):hover::after, p .link:hover::after {
   display: inline-block;
   min-width: 125px;
   border-radius: 5px;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
@@ -1295,6 +1286,55 @@ p a:not(.btn):hover::after, p .link:hover::after {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.btn.btn-gr-primary {
+  border-radius: 5px;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #1ABAD0;
+  --tw-gradient-to: rgb(26 186 208 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(106 237 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #6AEDFF, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(133 242 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
+  --tw-gradient-to: #CDFBFF;
+  --tw-text-opacity: 1;
+  color: rgb(15 31 45 / var(--tw-text-opacity));
+}
+
+.btn.btn-gr-primary:hover {
+  --tw-shadow-color: #56EAFF;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.btn.btn-gr-pink {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #F56772;
+  --tw-gradient-to: rgb(245 103 114 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #BA6BFF;
+  --tw-text-opacity: 1;
+  color: rgb(242 253 255 / var(--tw-text-opacity));
+}
+
+.btn.btn-gr-pink:hover {
+  --tw-shadow-color: #E142A2;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.btn.btn-skew {
+  --tw-skew-x: -20deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 3px;
+  font-family: Roboto Condensed, Arial;
+  font-weight: 400;
+}
+
+.btn.btn-skew > span {
+  display: block;
+  --tw-skew-x: 20deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .btn.btn-small {
   min-width: 100px;
   font-size: 13px;
@@ -1307,6 +1347,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
   font-family: Roboto Condensed, Arial;
   font-size: 12px;
   line-height: 1rem;
+  font-weight: 400;
 }
 
 .btn.btn-ghost {
@@ -1943,9 +1984,12 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
 }
 
 .input-switch.input-error:checked::before {
-  content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(255 101 101 / var(--tw-bg-opacity));
+  content: var(--tw-content);
+  --tw-shadow: 0 0 7px 0 #FF6565;
+  --tw-shadow-colored: 0 0 7px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .input-switch:disabled + label {

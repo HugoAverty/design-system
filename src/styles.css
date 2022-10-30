@@ -70,7 +70,7 @@ p a:not(.btn), p .link {
 }
 
 .btn {
-  @apply px-2.5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg;
+  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg;
 }
 .btn.btn-primary {
   @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
@@ -96,11 +96,23 @@ p a:not(.btn), p .link {
 .btn.btn-white {
   @apply bg-white text-darkblue hover:bg-white hover:shadow-white;
 }
+.btn.btn-gr-primary {
+  @apply rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
+}
+.btn.btn-gr-pink {
+  @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF] text-white hover:shadow-pink;
+}
+.btn.btn-skew {
+  @apply skew-x-[-20deg] rounded-xs font-secondary font-normal;
+}
+.btn.btn-skew > span {
+  @apply skew-x-[20deg] block;
+}
 .btn.btn-small {
   @apply text-sm min-w-buttonSmall;
 }
 .btn.btn-extrasmall {
-  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary;
+  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary font-normal;
 }
 .btn.btn-ghost {
   @apply bg-transparent hover:shadow-none;
@@ -261,7 +273,7 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   checked:before:right-[-3px] checked:before:top-[-3px] checked:before:left-auto checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio disabled:opacity-40;
 }
 .input-switch.input-error {
-  @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between before:bg-red-between checked:before:bg-red;
+  @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between before:bg-red-between checked:before:bg-red checked:before:shadow-inputRadioDanger;
 }
 .input-switch:disabled + label {
   @apply opacity-40;
