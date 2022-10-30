@@ -1763,6 +1763,33 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   padding-left: 40px;
 }
 
+select {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("img/dropdown.svg");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+}
+
+select::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 0.75rem;
+  width: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
+  opacity: 0.3;
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+select:focus {
+  background-image: url("img/dropdown-active.svg");
+}
+
 .input-number {
   position: relative;
   margin-bottom: 0.625rem;

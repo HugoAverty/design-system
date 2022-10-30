@@ -239,7 +239,9 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
     @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url('img/search.svg')] bg-[length:16px_16px];
   }
 }
-
+select {
+  @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
+}
 .input-number {
   @apply relative mb-2.5;
   .plus, .minus {
