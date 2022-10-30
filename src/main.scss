@@ -277,27 +277,10 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
 }
 
 input[type="range"], .input-range {
-  @apply
-  appearance-none
-  h-2.5
-  rounded-full
-  border border-solid border-deepBlue;
-  background-image: linear-gradient(#ff4500, #ff4500);
-  background-size: 70% 100%;
-  background-repeat: no-repeat;
-  background: rgba(255, 255, 255, 0.6);
-
+  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-2.5 ;
   &::-webkit-slider-thumb {
-    background: red;
-    cursor: ew-resize;
-    transition: background .3s ease-in-out;
+    @apply bg-main shadow-main rounded-full appearance-none h-5 w-5;
   }
-}
-input[type="range"]::-webkit-slider-thumb {
-  @apply bg-main shadow-inputRadio;
-}
-select {
-  @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
 }
 
 textarea {
