@@ -57,11 +57,15 @@ h5 + h2, h5 + .h2, h5 + h3, h5 + .h3, h5 + h4, h5 + .h4, h5 + h5, h5 + .h5, .h5 
 }
 
 .subtitle {
-  @apply italic;
+  @apply italic text-lightBlue text-base;
 }
 
 p {
-  @apply text-sm text-white leading-4;
+  @apply text-sm text-white leading-5;
+}
+
+a:not(.btn), .link {
+  @apply overflow-hidden font-bold text-main relative after:content-[""] after:absolute after:bottom-[-3px] after:left-0 after:w-0 after:h-["1px"] after:border-t after:border-dashed hover:after:w-full after:transition-all;
 }
 
 .bg-default {
@@ -69,7 +73,7 @@ p {
 }
 
 .btn {
-  @apply px-2.5 py-2 rounded mr-2.5 min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg;
+  @apply px-2.5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg;
 }
 .btn.btn-primary {
   @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
@@ -93,13 +97,13 @@ p {
   @apply bg-blue text-darkblue text-white hover:bg-blue-hover hover:shadow-blue;
 }
 .btn.btn-white {
-  @apply bg-white text-darkblue hover:bg-main-hover hover:shadow-white;
+  @apply bg-white text-darkblue hover:bg-white hover:shadow-white;
 }
 .btn.btn-small {
-  @apply text-sm min-w-buttonSmall hover:shadow-lg;
+  @apply text-sm min-w-buttonSmall;
 }
 .btn.btn-extrasmall {
-  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary hover:shadow-lg;
+  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary;
 }
 .btn.btn-ghost {
   @apply bg-transparent hover:shadow-none;
@@ -288,7 +292,7 @@ textarea {
   @apply mt-0;
 }
 .alert .alert-close {
-  @apply absolute top-0 right-0 p-2.5 cursor-pointer;
+  @apply absolute top-0 right-0 p-2.5 cursor-pointer hover:bg-darkblueTransparent rounded-bl transition-all;
 }
 .alert .alert-buttons {
   @apply p-2.5 relative before:content-[""] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;

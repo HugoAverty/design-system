@@ -33,17 +33,29 @@
     <h2 class="title">
       Titles
     </h2>
-    <h1>Let's create your own Metaverse!</h1>
-    <h2>Let's create your own Metaverse!</h2>
-    <h3>Let's create your own Metaverse!</h3>
-    <h4>Let's create your own Metaverse!</h4>
-    <h5>Let's create your own Metaverse!</h5>
-    <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
+    <div class="flex flex-row">
+      <div class="basis-1/2 mr-2.5">
+        <h1>Let's create your own Metaverse!</h1>
+        <h2>Let's create your own Metaverse!</h2>
+        <h3>Let's create your own Metaverse!</h3>
+        <h4>Let's create your own Metaverse!</h4>
+        <h5>Let's create your own Metaverse!</h5>
+        <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
+      </div>
+      <div class="basis-1/2 mr-2.5">
+        <h1 class="text-main">Let's create your own Metaverse!</h1>
+        <h2 class="text-main">Let's create your own Metaverse!</h2>
+        <h3 class="text-main">Let's create your own Metaverse!</h3>
+        <h4 class="text-main">Let's create your own Metaverse!</h4>
+        <h5 class="text-main">Let's create your own Metaverse!</h5>
+        <div class="subtitle text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
+      </div>
+    </div>
     <h2>
       Text
     </h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla. <strong>Fusce id diam eu dolor suscipit lobortis</strong>. Pellentesque congue, urna id sodales aliquet, quam nibh egestas massa, sed facilisis lectus orci id urna. <em>Morbi bibendum est lacus</em>.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla. <strong>Fusce id diam eu dolor suscipit lobortis</strong>. Pellentesque congue, urna id sodales aliquet, quam nibh egestas massa, <a href="">sed facilisis lectus orci</a> id urna. <em>Morbi bibendum est lacus</em>.
     </p>
     <p>
       Etiam placerat arcu vitae augue laoreet ultricies. Etiam mauris nulla, <strong>bibendum</strong> non aliquam ac, maximus et odio. Nulla augue arcu, ultrices eget congue sed, porttitor pellentesque massa. Phasellus rutrum placerat arcu, in lacinia mi faucibus at. Aenean nunc lorem, sagittis a lectus non, fermentum pharetra ante.
@@ -54,6 +66,11 @@
     <h2>
       Links
     </h2>
+    <div class="flex flex-row">
+      <div class="basis-1/2 mr-2.5">
+        <a href="#">Link</a>
+      </div>
+    </div>
     <h1 class="title">
       Color palettes
     </h1>
@@ -103,7 +120,7 @@
   <div class="bg-default container mx-auto p-5">
     <h1 class="title">Columns</h1>
     <div class="flex flex-row">
-      <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"></div>
+      <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"><div class="inline-block align-middle">basis-1/5</div></div>
       <div class="basis-2/5 bg-deepBlue h-20 mr-2.5"></div>
       <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"></div>
       <div class="basis-1/5 bg-deepBlue h-20"></div>
@@ -115,42 +132,91 @@
       Buttons regular size
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-primary" href="#">Primary</a>
-      <a class="btn btn-dark" href="#">Dark</a>
-      <a class="btn btn-pink" href="#">Pink</a>
-      <a class="btn btn-danger" href="#">Danger</a>
-      <a class="btn btn-success" href="#">Success</a>
-      <a class="btn btn-warning" href="#">Warning</a>
-      <a class="btn btn-info" href="#">Info</a>
-      <a class="btn btn-white" href="#">White</a>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-primary" href="#">Primary</a>
+        </div>
+        <div class="flex-none mr-2.5 bg-white p-2.5">
+          <a class="btn btn-dark" href="#">Dark</a>
+        </div>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-pink" href="#">Pink</a>
+        </div>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-danger" href="#">Danger</a>
+        </div>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-success" href="#">Success</a>
+        </div>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-warning" href="#">Warning</a>
+        </div>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-info" href="#">Info</a>
+        </div>
+        <div class="flex-none mr-2.5">
+          <a class="btn btn-white" href="#">White</a>
+        </div>
     </div>
 
     <h2 class="title">
       Buttons smaller
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-primary btn-small" href="#">Primary</a>
-      <a class="btn btn-dark btn-small" href="#">Dark</a>
-      <a class="btn btn-pink btn-small" href="#">Pink</a>
-      <a class="btn btn-danger btn-small" href="#">Danger</a>
-      <a class="btn btn-success btn-small" href="#">Success</a>
-      <a class="btn btn-warning btn-small" href="#">Warning</a>
-      <a class="btn btn-info btn-small" href="#">Info</a>
-      <a class="btn btn-white btn-small" href="#">White</a>
+
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-small" href="#">Primary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-small" href="#">Dark</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-small" href="#">Pink</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-small" href="#">Danger</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-small" href="#">Success</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-small" href="#">Warning</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-small" href="#">Info</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-white btn-small" href="#">White</a>
+      </div>
     </div>
 
     <h2 class="title">
       Buttons extra small
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-primary btn-extrasmall" href="#">Primary</a>
-      <a class="btn btn-dark btn-extrasmall" href="#">Dark</a>
-      <a class="btn btn-pink btn-extrasmall" href="#">Pink</a>
-      <a class="btn btn-danger btn-extrasmall" href="#">Danger</a>
-      <a class="btn btn-success btn-extrasmall" href="#">Success</a>
-      <a class="btn btn-warning btn-extrasmall" href="#">Warning</a>
-      <a class="btn btn-info btn-extrasmall" href="#">Info</a>
-      <a class="btn btn-white btn-extrasmall" href="#">White</a>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-extrasmall" href="#">Primary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-extrasmall" href="#">Dark</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-extrasmall" href="#">Pink</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-extrasmall" href="#">Danger</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-extrasmall" href="#">Success</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-extrasmall" href="#">Warning</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-extrasmall" href="#">Info</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-white btn-extrasmall" href="#">White</a>
+      </div>
     </div>
 
 
@@ -162,42 +228,90 @@
       Ghost buttons
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-primary btn-ghost" href="#">Primary</a>
-      <a class="btn btn-dark btn-ghost" href="#">Dark</a>
-      <a class="btn btn-pink btn-ghost" href="#">Pink</a>
-      <a class="btn btn-danger btn-ghost" href="#">Danger</a>
-      <a class="btn btn-success btn-ghost" href="#">Success</a>
-      <a class="btn btn-warning btn-ghost" href="#">Warning</a>
-      <a class="btn btn-info btn-ghost" href="#">Info</a>
-      <a class="btn btn-white btn-ghost" href="#">White</a>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-ghost" href="#">Primary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-ghost" href="#">Dark</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-ghost" href="#">Pink</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-ghost" href="#">Danger</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-ghost" href="#">Success</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-ghost" href="#">Warning</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-ghost" href="#">Info</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-white btn-ghost" href="#">White</a>
+      </div>
     </div>
 
     <h2 class="title">
       Light buttons
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-primary btn-light" href="#">Primary</a>
-      <a class="btn btn-dark btn-light" href="#">Dark</a>
-      <a class="btn btn-pink btn-light" href="#">Pink</a>
-      <a class="btn btn-danger btn-light" href="#">Danger</a>
-      <a class="btn btn-success btn-light" href="#">Success</a>
-      <a class="btn btn-warning btn-light" href="#">Warning</a>
-      <a class="btn btn-info btn-light" href="#">Info</a>
-      <a class="btn btn-white btn-light" href="#">White</a>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-light" href="#">Primary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-light" href="#">Dark</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-light" href="#">Pink</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-light" href="#">Danger</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-light" href="#">Success</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-light" href="#">Warning</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-light" href="#">Info</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-white btn-light" href="#">White</a>
+      </div>
     </div>
 
     <h2 class="title">
       Bordered buttons
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-primary btn-bordered" href="#">Primary</a>
-      <a class="btn btn-dark btn-bordered" href="#">Dark</a>
-      <a class="btn btn-pink btn-bordered" href="#">Pink</a>
-      <a class="btn btn-danger btn-bordered" href="#">Danger</a>
-      <a class="btn btn-success btn-bordered" href="#">Success</a>
-      <a class="btn btn-warning btn-bordered" href="#">Warning</a>
-      <a class="btn btn-info btn-bordered" href="#">Info</a>
-      <a class="btn btn-white btn-bordered" href="#">White</a>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-bordered" href="#">Primary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-bordered" href="#">Dark</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-bordered" href="#">Pink</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-bordered" href="#">Danger</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-bordered" href="#">Success</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-bordered" href="#">Warning</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-bordered" href="#">Info</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-white btn-bordered" href="#">White</a>
+      </div>
     </div>
     <h2 class="title">
       Buttons with text & icon
@@ -207,74 +321,122 @@
       Buttons with icon
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-icon" href="#">
-        <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-icon" href="#">
+          <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-        </svg>
-      </a>
-      <a class="btn btn-primary btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-dark btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-pink btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-danger btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-success btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-warning btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-info btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
     </div>
     <div class="flex flex-row mt-2.5">
-      <a class="btn btn-extrasmall btn-bordered btn-icon" href="#">
-        <svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-icon btn-extrasmall btn-bordered" href="#">
+          <svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-        </svg>
-      </a>
-      <a class="btn btn-primary btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-dark btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-pink btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-danger btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-success btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-warning btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
-      <a class="btn btn-info btn-bordered btn-extrasmall btn-icon" href="#"><svg class="h-5 w-5" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-      </svg></a>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-icon btn-extrasmall btn-bordered" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
     </div>
 
     <h2 class="title">
       Buttons disabled
     </h2>
     <div class="flex flex-row">
-      <a class="btn btn-disabled" href="#">Ghost</a>
-      <a class="btn btn-primary btn-disabled" href="#">Primary</a>
-      <a class="btn btn-dark btn-disabled" href="#">Dark</a>
-      <a class="btn btn-pink btn-disabled" href="#">Pink</a>
-      <a class="btn btn-danger btn-disabled" href="#">Danger</a>
-      <a class="btn btn-success btn-disabled" href="#">Success</a>
-      <a class="btn btn-warning btn-disabled" href="#">Warning</a>
-      <a class="btn btn-info btn-disabled" href="#">Info</a>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-primary btn-disabled" href="#">Primary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5">
+        <a class="btn btn-dark btn-disabled" href="#">Dark</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-pink btn-disabled" href="#">Pink</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-danger btn-disabled" href="#">Danger</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-success btn-disabled" href="#">Success</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-warning btn-disabled" href="#">Warning</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-info btn-disabled" href="#">Info</a>
+      </div>
+      <div class="flex-none mr-2.5">
+        <a class="btn btn-white btn-disabled" href="#">White</a>
+      </div>
     </div>
 
     <h2 class="title">
@@ -470,7 +632,7 @@
           </div>
           <div class="alert-buttons">
             <div class="flex flex-row">
-              <div class="basis-1/2">
+              <div class="basis-1/2 mr-2.5">
                 <a class="btn btn-white btn-ghost w-full" href="#">Cancel</a>
               </div>
               <div class="basis-1/2">
@@ -488,7 +650,7 @@
           </div>
           <div class="alert-buttons">
             <div class="flex flex-row">
-              <div class="basis-1/2">
+              <div class="basis-1/2 mr-2.5">
                 <a class="btn btn-white btn-ghost w-full" href="#">Cancel</a>
               </div>
               <div class="basis-1/2">
@@ -508,7 +670,7 @@
           </div>
           <div class="alert-buttons">
             <div class="flex flex-row">
-              <div class="basis-1/2">
+              <div class="basis-1/2 mr-2.5">
                 <a class="btn btn-white btn-ghost w-full" href="#">Cancel</a>
               </div>
               <div class="basis-1/2">
@@ -556,25 +718,25 @@
         <div class="notif notif-square">2</div>
       </div>
 
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-xs">2</div>
       </div>
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-md">2</div>
       </div>
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-lg">2</div>
       </div>
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-xs notif-square">2</div>
       </div>
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-md notif-square">2</div>
       </div>
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-lg notif-square">2</div>
       </div>
-      <div class="flex-none mr-2.5">
+      <div class="flex-none mr-2.5 bg-white p-2.5">
         <div class="notif notif-dark notif-square">2</div>
       </div>
 
@@ -762,7 +924,7 @@
             <img class="pt-5 inline" src="img/example-nav.png" />
           </div>
           <div class="modal-buttons flex flex-row">
-            <a class="basis-1/2 btn btn-primary btn-ghost" href="#">Cancel</a>
+            <a class="basis-1/2 mr-2.5 btn btn-primary btn-ghost" href="#">Cancel</a>
             <a class="basis-1/2 btn btn-primary" href="#">OK</a>
           </div>
         </div>
