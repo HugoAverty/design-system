@@ -1043,6 +1043,25 @@ video {
   background-color: rgb(146 142 187 / var(--tw-bg-opacity));
 }
 
+.bg-default {
+  background-color: rgba(39,39,54,0.85);
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.bg-gr-primary {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #1ABAD0;
+  --tw-gradient-to: rgb(26 186 208 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(106 237 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #6AEDFF, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(133 242 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
+  --tw-gradient-to: #CDFBFF;
+}
+
 h1, .h1 {
   margin-bottom: 0.5rem;
   margin-top: 3rem;
@@ -1157,13 +1176,6 @@ p a:not(.btn)::after, p .link::after {
 p a:not(.btn):hover::after, p .link:hover::after {
   content: var(--tw-content);
   width: 100%;
-}
-
-.bg-default {
-  background-color: rgba(39,39,54,0.85);
-  --tw-backdrop-blur: blur(4px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .btn {
@@ -2464,6 +2476,59 @@ textarea {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   content: var(--tw-content);
   --tw-gradient-to: #BA6BFF;
+}
+
+.menu.menu-tools {
+  display: block;
+  border-radius: 5px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(77 75 103 / var(--tw-border-opacity));
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background-color: rgba(39,39,54,0.85);
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.menu.menu-tools ul li a {
+  display: block;
+  --tw-border-opacity: 1;
+  border-color: rgb(77 75 103 / var(--tw-border-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.menu.menu-tools ul li a:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #1ABAD0;
+  --tw-gradient-to: rgb(26 186 208 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(106 237 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #6AEDFF, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(133 242 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
+  --tw-gradient-to: #CDFBFF;
+}
+
+.menu.menu-tools ul li a:hover img {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.menu.menu-tools ul li.separator {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  height: 1px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(77 75 103 / var(--tw-bg-opacity));
 }
 
 .modal {

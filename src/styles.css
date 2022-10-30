@@ -36,6 +36,14 @@
   @apply bg-lightBlue;
 }
 
+.bg-default {
+  @apply bg-darkblueTransparent backdrop-blur-sm;
+}
+
+.bg-gr-primary {
+  @apply bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
+}
+
 h1, .h1 {
   @apply text-white font-light text-5xl tracking-[-1px] mb-2 mt-12;
 }
@@ -78,10 +86,6 @@ p {
 
 p a:not(.btn), p .link {
   @apply overflow-hidden font-bold text-main relative after:content-[""] after:absolute after:bottom-[-3px] after:left-0 after:w-0 after:h-["1px"] after:border-t after:border-dashed hover:after:w-full after:transition-all;
-}
-
-.bg-default {
-  @apply bg-darkblueTransparent backdrop-blur-sm;
 }
 
 .btn {
@@ -438,6 +442,19 @@ textarea {
 }
 .nav.nav-light-pink .nav-elt.active a {
   @apply after:from-[#F56772] after:to-[#BA6BFF];
+}
+
+.menu.menu-tools {
+  @apply bg-default border border-deepBlue block py-2.5 rounded;
+}
+.menu.menu-tools ul li a {
+  @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all;
+}
+.menu.menu-tools ul li a:hover img {
+  @apply invert;
+}
+.menu.menu-tools ul li.separator {
+  @apply bg-deepBlue my-2.5 h-[1px] w-full;
 }
 
 .modal {
