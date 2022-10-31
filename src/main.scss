@@ -368,6 +368,24 @@ input[type="range"], .input-range {
   }
 }
 
+.progress {
+  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-5 cursor-col-resize p-[2px];
+  &.progress-pink {
+    .progress-bar {
+      @apply  bg-gradient-to-r from-[#F56772] to-[#BA6BFF];
+      progress-purcentage {
+        @apply text-pink;
+      }
+    }
+  }
+  .progress-bar {
+    @apply bg-main rounded-full h-full bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] relative;
+    .progress-purcentage {
+      @apply absolute right-0 bottom-[-25px] text-main font-secondary text-base;
+    }
+  }
+}
+
 textarea {
   @apply min-h-[100px];
 }

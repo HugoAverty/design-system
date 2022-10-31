@@ -770,6 +770,18 @@ video {
   width: 16rem;
 }
 
+.w-\[25\%\] {
+  width: 25%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[35\%\] {
+  width: 35%;
+}
+
 .flex-none {
   flex: none;
 }
@@ -2326,6 +2338,63 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
   background-color: rgb(86 234 255 / var(--tw-bg-opacity));
   --tw-shadow-color: #56EAFF;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.progress {
+  height: 1.25rem;
+  width: 100%;
+  cursor: col-resize;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(77 75 103 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 31 45 / var(--tw-bg-opacity));
+  padding: 2px;
+}
+
+.progress.progress-pink .progress-bar {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #F56772;
+  --tw-gradient-to: rgb(245 103 114 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #BA6BFF;
+}
+
+.progress.progress-pink .progress-bar progress-purcentage {
+  --tw-text-opacity: 1;
+  color: rgb(225 66 162 / var(--tw-text-opacity));
+}
+
+.progress .progress-bar {
+  position: relative;
+  height: 100%;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 234 255 / var(--tw-bg-opacity));
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: #1ABAD0;
+  --tw-gradient-to: rgb(26 186 208 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(106 237 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #6AEDFF, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(133 242 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
+  --tw-gradient-to: #CDFBFF;
+}
+
+.progress .progress-bar .progress-purcentage {
+  position: absolute;
+  right: 0px;
+  bottom: -25px;
+  font-family: Roboto Condensed, Arial;
+  font-size: 14px;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(86 234 255 / var(--tw-text-opacity));
 }
 
 textarea {
