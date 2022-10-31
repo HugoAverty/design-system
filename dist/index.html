@@ -49,7 +49,7 @@
         <div class="subtitle text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
       </div>
     </div>
-    <h3>
+    <h3 class="title">
       Text
     </h3>
     <p>
@@ -176,7 +176,7 @@
       Gradient colors
     </h3>
     <div class="flex flex-row">
-      <div class="flex-none mr-2.5 self-center">
+      <div class="flex-none mr-2.5 mb-2.5 self-center">
         <div class="w-32 h-16 inline-block rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF]"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
@@ -195,8 +195,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="bg-default container mx-auto p-5">
     <h1 class="title">Global settings</h1>
     <h2 class="title">Columns</h2>
     <p class="subtitle">
@@ -279,17 +277,17 @@
     <div class="flex flex-row">
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadow">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
-          default: 0 10px 20px 5px rgba(0,0,0,0.35)
+          <strong>bxShadow:</strong> 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadowHover">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
-          hover : 0 10px 20px 5px rgba(0,0,0,0.35)
+          <strong>bxShadowHover :</strong> 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 relative shadow-bxShadowSmall">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
-          hover: 0 10px 20px 5px rgba(0,0,0,0.35)
+          <strong>bxShadowSmall:</strong> 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
     </div>
@@ -451,7 +449,7 @@
         <a class="btn btn-white btn-ghost" href="#">White</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-danger btn-bordered" href="#">
+        <a class="btn btn-danger btn-ghost" href="#">
           <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="red" stroke-width="4"></circle>
             <path class="opacity-75" fill="red" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -730,13 +728,18 @@
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <label for="input-ex1">
-          Input text
+          Input text with help
+          <div class="label-help absolute right-[5px] top-0 bottom-[0px] m-auto h-[24px]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#928EBB" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+            </svg>
+          </div>
         </label>
         <input type="text" value="I got a value" />
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <label for="input-ex1">
-          Input text
+          Input text disabled
         </label>
         <input type="text" value="I'm disabled" disabled />
       </div>
@@ -750,9 +753,15 @@
     <div class="flex flex-row">
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <input type="text" class="input-error" value="Invalid value" />
+        <div class="input-message input-error">
+          This is an error message information…
+        </div>
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <input type="text" class="input-success" value="OK perfect boss !" />
+        <div class="input-message input-success">
+          This is an success message information…
+        </div>
       </div>
     </div>
     <h3 class="title">
@@ -845,15 +854,6 @@
         <textarea class="input-error" placeholder="Placeholder..."></textarea>
       </div>
     </div>
-    <h3 class="title">
-      Range
-    </h3>
-    <div class="flex flex-row">
-      <div class="basis-1/5 pr-[10px] pb-[10px]">
-        <input type="range" min="0" max="10">
-      </div>
-    </div>
-
     <h2 class="title">
       Toggles
     </h2>
@@ -861,96 +861,140 @@
       Switch
     </h3>
     <div class="flex flex-row">
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-switch inline-block" id="switch-1" />
-        <label class="label-checkbox inline-block" for="switch-1">Unchecked</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch " id="switch-1" />
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-switch inline-block" checked id="switch-2" />
-        <label for="switch-2" class="inline-block">Checked</label>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="label-checkbox " for="switch-1">Unchecked</label>
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-switch inline-block" disabled />
-        <label class="inline-block">Disabled unchecked</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch " checked id="switch-2" />
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-switch inline-block" disabled checked />
-        <label class="inline-block">Disabled checked</label>
+      <div class="flex-none mr-2.5 self-center">
+        <label for="switch-2" class="">Checked</label>
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-switch inline-block input-error" />
-        <label class="inline-block input-error">Error unchecked</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch " disabled />
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-switch inline-block input-error" checked />
-        <label class="inline-block input-error">Error checked</label>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="">Disabled unchecked</label>
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <label class="inline-block">Yes</label>
-        <input type="checkbox" class="input-switch inline-block" checked />
-        <label class="inline-block">No</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch " disabled checked />
       </div>
-      <div class="inline-block pr-[10px] pb-[10px]">
-        <label class="inline-block">Yes</label>
-        <input type="checkbox" class="input-switch inline-block" />
-        <label class="inline-block">No</label>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="">Disabled checked</label>
+      </div>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch  input-error" />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class=" input-error">Error unchecked</label>
+      </div>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch  input-error" checked />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class=" input-error">Error checked</label>
+      </div>
+      <div class="flex-none self-center">
+        <label class="">Yes</label>
+      </div>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch " checked />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="">No</label>
+      </div>
+      <div class="flex-none self-center">
+        <label class="">Yes</label>
+      </div>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-switch " />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="">No</label>
       </div>
     </div>
     <h3 class="title">
       Checkbox
     </h3>
     <div class="flex flex-row">
-      <div class="flex-none pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-checkbox inline-block" id="check-1" />
-        <label class="label-checkbox inline-block" for="check-1">Unchecked</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-checkbox " id="check-1" />
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-checkbox inline-block" checked id="check-2" />
-        <label for="check-2" class="inline-block">Checked</label>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="label-checkbox " for="check-1">Unchecked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-checkbox inline-block" disabled />
-        <label class="inline-block">Disabled unchecked</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-checkbox " checked id="check-2" />
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-checkbox inline-block" disabled checked />
-        <label class="inline-block">Disabled checked</label>
+      <div class="flex-none mr-2.5 self-center">
+        <label for="check-2" class="">Checked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-checkbox input-error inline-block" />
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-checkbox " disabled />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="">Disabled unchecked</label>
+      </div>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-checkbox" disabled checked />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="">Disabled checked</label>
+      </div>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-checkbox input-error" />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
         <label class="inline-block input-error">Error unchecked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
-        <input type="checkbox" class="input-checkbox input-error inline-block" checked />
-        <label class="inline-block input-error">Error checked</label>
+      <div class="flex-none self-center">
+        <input type="checkbox" class="input-checkbox input-error" checked />
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <label class="input-error">Error checked</label>
       </div>
     </div>
     <h3 class="title">
       Radio
     </h3>
     <div class="flex flex-row">
-      <div class="flex-none pr-[10px] pb-[10px]">
+      <div class="flex-none self-center">
         <input type="radio" class="input-radio" id="radio-1" />
+      </div>
+      <div class="flex-none self-center mr-2.5 ">
         <label class="label-checkbox" for="radio-1">Unchecked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
+      <div class="flex-none self-center">
         <input type="radio" class="input-radio" checked id="radio-2" />
+      </div>
+      <div class="flex-none self-center mr-2.5 ">
         <label class="label-checkbox" id="radio-2">Checked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
+      <div class="flex-none self-center">
         <input type="radio" class="input-radio" disabled />
+      </div>
+      <div class="flex-none self-center mr-2.5 ">
         <label class="label-checkbox">Disabled unchecked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
+      <div class="flex-none self-center">
         <input type="radio" class="input-radio" disabled checked />
+      </div>
+      <div class="flex-none self-center mr-2.5 ">
         <label class="label-checkbox">Disabled checked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
+      <div class="flex-none self-center">
         <input type="radio" class="input-radio input-error" />
+      </div>
+      <div class="flex-none self-center mr-2.5 ">
         <label class="label-checkbox input-error">Error unchecked</label>
       </div>
-      <div class="flex-none pr-[10px] pb-[10px]">
+      <div class="flex-none self-center">
         <input type="radio" class="input-radio input-error" checked />
+      </div>
+      <div class="flex-none self-center mr-2.5 ">
         <label class="label-checkbox input-error">Error checked</label>
       </div>
     </div>
@@ -976,6 +1020,17 @@
         </div>
       </div>
     </div>
+    <h3 class="title">
+      Range
+    </h3>
+    <div class="flex flex-row">
+      <div class="basis-1/5 pr-[10px] pb-[10px]">
+        <input type="range" min="0" max="10">
+      </div>
+    </div>
+    <h3 class="title">
+      Progress
+    </h3>
     <h1 class="title">
       Alert
     </h1>
@@ -1053,7 +1108,7 @@
     <h1 class="title">Notifications & tags</h1>
     <div class="flex flex-row">
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-xs">2</div>
+        <div class="notif notif-xs"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="notif notif-md">2</div>
@@ -1062,7 +1117,7 @@
         <div class="notif notif-lg">2</div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-xs notif-square">2</div>
+        <div class="notif notif-xs notif-square"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="notif notif-md notif-square">2</div>
@@ -1075,7 +1130,7 @@
       </div>
 
       <div class="flex-none mr-2.5 bg-white p-2.5 self-center">
-        <div class="notif notif-dark notif-xs">2</div>
+        <div class="notif notif-dark notif-xs"></div>
       </div>
       <div class="flex-none mr-2.5 bg-white p-2.5 self-center">
         <div class="notif notif-dark notif-md">2</div>
@@ -1084,7 +1139,7 @@
         <div class="notif notif-dark notif-lg">2</div>
       </div>
       <div class="flex-none mr-2.5 bg-white p-2.5 self-center">
-        <div class="notif notif-dark notif-xs notif-square">2</div>
+        <div class="notif notif-dark notif-xs notif-square"></div>
       </div>
       <div class="flex-none mr-2.5 bg-white p-2.5 self-center">
         <div class="notif notif-dark notif-md notif-square">2</div>
@@ -1097,7 +1152,7 @@
       </div>
 
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-xs">2</div>
+        <div class="notif notif-pink notif-xs"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="notif notif-pink notif-md">2</div>
@@ -1106,7 +1161,7 @@
         <div class="notif notif-pink notif-lg">2</div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-xs notif-square">2</div>
+        <div class="notif notif-pink notif-xs notif-square"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="notif notif-pink notif-md notif-square">2</div>
@@ -1119,7 +1174,7 @@
       </div>
 
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-danger notif-xs">2</div>
+        <div class="notif notif-danger notif-xs"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="notif notif-danger notif-md">2</div>
@@ -1128,7 +1183,7 @@
         <div class="notif notif-danger notif-lg">2</div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-danger notif-xs notif-square">2</div>
+        <div class="notif notif-danger notif-xs notif-square"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="notif notif-danger notif-md notif-square">2</div>

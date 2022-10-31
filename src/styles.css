@@ -41,7 +41,11 @@
 }
 
 .bg-gr-primary {
-  @apply bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
+  @apply bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
+}
+
+.bg-gr-overlay-white {
+  @apply bg-gradient-to-tr from-[rgba(255,255,255,0)] to-[rgba(255,255,255,1)];
 }
 
 h1, .h1 {
@@ -89,13 +93,13 @@ p a:not(.btn), p .link {
 }
 
 .btn {
-  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg;
+  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
 }
 .btn.btn-primary {
   @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
 }
 .btn.btn-dark {
-  @apply bg-darkblue text-white hover:bg-darkSea;
+  @apply bg-darkblue text-white hover:bg-darkSea hover:to-[rgba(255,255,255,.1)];
 }
 .btn.btn-pink {
   @apply bg-pink text-darkblue text-white hover:bg-pink-hover hover:shadow-pink;
@@ -119,7 +123,7 @@ p a:not(.btn), p .link {
   @apply inline-block;
 }
 .btn.btn-gr-primary {
-  @apply rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
+  @apply rounded bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
 }
 .btn.btn-gr-pink {
   @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF] text-white hover:shadow-pink;
@@ -137,7 +141,7 @@ p a:not(.btn), p .link {
   @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal;
 }
 .btn.btn-ghost {
-  @apply bg-transparent hover:shadow-none;
+  @apply bg-none bg-transparent hover:shadow-none;
 }
 .btn.btn-ghost.btn-primary {
   @apply text-main hover:bg-main/10;
@@ -164,7 +168,7 @@ p a:not(.btn), p .link {
   @apply text-white hover:bg-white/10;
 }
 .btn.btn-light {
-  @apply hover:shadow-none;
+  @apply bg-none hover:shadow-none;
 }
 .btn.btn-light.btn-primary {
   @apply bg-main/10 text-main hover:bg-main/20;
@@ -191,7 +195,7 @@ p a:not(.btn), p .link {
   @apply bg-white/10 text-white hover:bg-white/20;
 }
 .btn.btn-bordered {
-  @apply bg-transparent hover:shadow-none;
+  @apply bg-none bg-transparent hover:shadow-none;
 }
 .btn.btn-bordered.btn-primary {
   @apply border border-solid border-main text-main hover:bg-main/10;
@@ -225,7 +229,7 @@ p a:not(.btn), p .link {
 }
 
 label, .label {
-  @apply font-bold text-white px-[10px] pb-[5px] block text-lg cursor-pointer;
+  @apply font-bold text-white px-[10px] pb-[5px] block text-lg cursor-pointer relative;
 }
 label.label-checkbox, .label.label-checkbox {
   @apply inline-block;
@@ -239,9 +243,22 @@ label.input-error, .label.input-error {
 label.input-success, .label.input-success {
   @apply text-green;
 }
+label.disabled, .label.disabled {
+  @apply opacity-40;
+}
+
+.input-message {
+  @apply text-xs mt-[5px];
+}
+.input-message.input-error {
+  @apply text-red;
+}
+.input-message.input-success {
+  @apply text-green;
+}
 
 input[type=text], input[type=search], input[type=number], textarea, select {
-  @apply bg-greyDarkBlue px-[10px] py-[7px] mb-[15px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
+  @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
 }
 input[type=text].input-error, input[type=search].input-error, input[type=number].input-error, textarea.input-error, select.input-error {
   @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
@@ -252,9 +269,21 @@ input[type=text].input-success, input[type=search].input-success, input[type=num
 input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search] {
   @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url("img/search.svg")] bg-[length:16px_16px];
 }
+input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error {
+  @apply bg-[url("img/search-red.svg")];
+}
+input[type=text].input-search.input-success, input[type=text] [type=search].input-success, input[type=search].input-search.input-success, input[type=search] [type=search].input-success, input[type=number].input-search.input-success, input[type=number] [type=search].input-success, textarea.input-search.input-success, textarea [type=search].input-success, select.input-search.input-success, select [type=search].input-success {
+  @apply bg-[url("img/search-green.svg")];
+}
 
 select {
   @apply relative before:content-[""] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url("img/dropdown.svg")] appearance-none focus:bg-[url("img/dropdown-active.svg")];
+}
+select.input-error {
+  @apply bg-[url("img/dropdown-red.svg")] focus:bg-[url("img/dropdown-active-red.svg")];
+}
+select.input-success {
+  @apply bg-[url("img/dropdown-green.svg")] focus:bg-[url("img/dropdown-active-green.svg")];
 }
 
 .input-number {
@@ -331,6 +360,9 @@ textarea {
 .alert .alert-content h1, .alert .alert-content .h1, .alert .alert-content h2, .alert .alert-content .h2, .alert .alert-content h3, .alert .alert-content .h3, .alert .alert-content h4, .alert .alert-content .h4, .alert .alert-content h5, .alert .alert-content .h5 {
   @apply mt-0;
 }
+.alert .alert-content p {
+  @apply mb-0;
+}
 .alert .alert-close {
   @apply absolute top-0 right-0 p-2.5 cursor-pointer hover:bg-darkblueTransparent rounded-bl transition-all;
 }
@@ -397,6 +429,9 @@ textarea {
 .tooltip {
   @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm py-2.5 px-5 text-base font-secondary;
 }
+.tooltip p {
+  @apply mb-0;
+}
 .tooltip.tooltip-danger {
   @apply bg-red shadow-alertDanger;
 }
@@ -429,7 +464,7 @@ textarea {
   @apply inline-block rounded font-bold relative;
 }
 .nav .nav-elt.active a {
-  @apply text-black bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
+  @apply text-black bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
 }
 .nav .nav-elt.disabled {
   @apply opacity-30 pointer-events-none;
@@ -447,7 +482,7 @@ textarea {
   @apply inline-block;
 }
 .nav.nav-light .nav-elt.active a, .nav.nav-light-pink .nav-elt.active a {
-  @apply text-white bg-none after:content-[""] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-main after:bg-gradient-to-r after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
+  @apply text-white bg-none after:content-[""] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-main after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
 }
 .nav.nav-light-pink .nav-elt.active a {
   @apply after:from-[#F56772] after:to-[#BA6BFF];
@@ -457,7 +492,7 @@ textarea {
   @apply bg-default border border-deepBlue block py-2.5 rounded;
 }
 .menu.menu-tools ul li a {
-  @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
+  @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-tr hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
 }
 .menu.menu-tools ul li a:hover:not(.active) img {
   @apply invert;
@@ -483,6 +518,9 @@ textarea {
 }
 .modal .modal-content.modal-content-image {
   @apply pb-5 pt-0 px-0;
+}
+.modal .modal-content p {
+  @apply mb-0;
 }
 .modal .modal-buttons {
   @apply bg-bgButton p-2.5 border-t border-deepBlue;

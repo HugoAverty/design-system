@@ -15,8 +15,10 @@
     margin-top: 0;
 }
 
-.title + p {
-
+.title + .subtitle {
+    font-family: 'Roboto Condensed';
+    opacity: .75;
+    transform: translateY(-8px);
 }
 
 h1.title {
@@ -49,8 +51,7 @@ h2.title {
 
 .legend {
     font-family: 'Roboto Condensed';
-    color: white;
-    opacity: .5;
     font-size: 12px;
     text-align: center;
+    color: #928EBB;
 }

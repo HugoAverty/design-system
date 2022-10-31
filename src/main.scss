@@ -46,11 +46,15 @@
 }
 
 .bg-gr-primary {
-  @apply bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
+  @apply bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
 }
 
 .bg-gr-pink {
 
+}
+
+.bg-gr-overlay-white {
+  @apply bg-gradient-to-tr from-[rgba(255,255,255,0)] to-[rgba(255,255,255,1)];
 }
 
 h1, .h1 {
@@ -92,13 +96,13 @@ p a:not(.btn), p .link {
 }
 
 .btn {
-  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg ;
+  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];;
   // Button color
   &.btn-primary {
     @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
   }
   &.btn-dark {
-    @apply bg-darkblue text-white hover:bg-darkSea;
+    @apply bg-darkblue text-white hover:bg-darkSea hover:to-[rgba(255,255,255,.1)];
   }
   &.btn-pink {
     @apply bg-pink text-darkblue text-white hover:bg-pink-hover hover:shadow-pink;
@@ -125,7 +129,7 @@ p a:not(.btn), p .link {
   }
 
   &.btn-gr-primary {
-    @apply rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
+    @apply rounded bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
   }
   &.btn-gr-pink {
     @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF] text-white hover:shadow-pink;
@@ -147,7 +151,7 @@ p a:not(.btn), p .link {
   }
 
   &.btn-ghost {
-    @apply bg-transparent hover:shadow-none;
+    @apply bg-none bg-transparent hover:shadow-none;
     &.btn-primary {
       @apply text-main hover:bg-main/10;
     }
@@ -176,7 +180,7 @@ p a:not(.btn), p .link {
 
   // Button ghost
   &.btn-light {
-    @apply hover:shadow-none;
+    @apply bg-none hover:shadow-none;
     &.btn-primary {
       @apply bg-main/10 text-main hover:bg-main/20;
     }
@@ -205,7 +209,7 @@ p a:not(.btn), p .link {
 
   // Button bordered
   &.btn-bordered {
-    @apply bg-transparent hover:shadow-none;
+    @apply bg-none bg-transparent hover:shadow-none;
     &.btn-primary {
       @apply border border-solid border-main text-main hover:bg-main/10;
     }
@@ -241,7 +245,7 @@ p a:not(.btn), p .link {
 }
 
 label, .label {
-  @apply font-bold text-white px-[10px] pb-[5px] block text-lg cursor-pointer;
+  @apply font-bold text-white px-[10px] pb-[5px] block text-lg cursor-pointer relative;
   &.label-checkbox {
     @apply inline-block;
   }
@@ -254,10 +258,23 @@ label, .label {
   &.input-success {
     @apply text-green;
   }
+  &.disabled {
+    @apply opacity-40;
+  }
+}
+
+.input-message {
+  @apply text-xs mt-[5px] ;
+  &.input-error {
+    @apply text-red;
+  }
+  &.input-success {
+    @apply text-green;
+  }
 }
 
 input[type="text"], input[type="search"], input[type="number"], textarea, select {
-  @apply bg-greyDarkBlue px-[10px] py-[7px] mb-[15px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
+  @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
   &.input-error {
     @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
   }
@@ -266,10 +283,22 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
   }
   &.input-search, [type='search'] {
     @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url('img/search.svg')] bg-[length:16px_16px];
+    &.input-error {
+      @apply bg-[url('img/search-red.svg')];
+    }
+    &.input-success {
+      @apply bg-[url('img/search-green.svg')];
+    }
   }
 }
 select {
   @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
+  &.input-error {
+    @apply bg-[url('img/dropdown-red.svg')] focus:bg-[url('img/dropdown-active-red.svg')];
+  }
+  &.input-success {
+    @apply bg-[url('img/dropdown-green.svg')] focus:bg-[url('img/dropdown-active-green.svg')];
+  }
 }
 .input-number {
   @apply relative mb-2.5;
@@ -341,6 +370,9 @@ textarea {
     h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
       @apply mt-0;
     }
+    p {
+      @apply mb-0;
+    }
   }
   .alert-close {
     @apply absolute top-0 right-0 p-2.5 cursor-pointer hover:bg-darkblueTransparent rounded-bl transition-all;
@@ -408,6 +440,9 @@ textarea {
 
 .tooltip {
   @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm py-2.5 px-5 text-base font-secondary;
+  p {
+    @apply mb-0;
+  }
   &.tooltip-danger {
     @apply bg-red shadow-alertDanger;
   }
@@ -440,7 +475,7 @@ textarea {
     @apply inline-block rounded font-bold relative;
     &.active {
       a {
-        @apply text-black bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
+        @apply text-black bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
       }
     }
     &.disabled {
@@ -459,7 +494,7 @@ textarea {
       @apply inline-block;
       &.active {
         a {
-          @apply text-white bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-main after:bg-gradient-to-r after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
+          @apply text-white bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-main after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
         }
       }
     }
@@ -481,7 +516,7 @@ textarea {
     ul {
       li {
         a {
-          @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-r hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
+          @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-tr hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
           &:hover:not(.active) img {
             @apply invert;
           }
@@ -509,6 +544,9 @@ textarea {
     @apply p-5 text-center;
     &.modal-content-image {
       @apply pb-5 pt-0 px-0;
+    }
+    p {
+      @apply mb-0;
     }
   }
   .modal-buttons {

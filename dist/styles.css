@@ -641,12 +641,8 @@ video {
   right: 0px;
 }
 
-.right-\[-5px\] {
-  right: -5px;
-}
-
-.top-\[-5px\] {
-  top: -5px;
+.right-\[5px\] {
+  right: 5px;
 }
 
 .m-auto {
@@ -664,6 +660,14 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mt-2\.5 {
@@ -720,6 +724,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-\[24px\] {
+  height: 24px;
 }
 
 .h-12 {
@@ -1178,7 +1186,7 @@ video {
 }
 
 .bg-gr-primary {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: #1ABAD0;
   --tw-gradient-to: rgb(26 186 208 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
@@ -1187,6 +1195,14 @@ video {
   --tw-gradient-to: rgb(133 242 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
   --tw-gradient-to: #CDFBFF;
+}
+
+.bg-gr-overlay-white {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: rgba(255,255,255,0);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgba(255,255,255,1);
 }
 
 h1, .h1 {
@@ -1326,6 +1342,12 @@ p a:not(.btn):hover::after, p .link:hover::after {
 }
 
 .btn:hover {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: rgba(255,255,255,0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(255 255 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), rgba(255,255,255,0), var(--tw-gradient-to);
+  --tw-gradient-to: rgba(255,255,255,.5);
   --tw-shadow: 0 0 10px 0 rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 0 10px 0 var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1355,6 +1377,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 .btn.btn-dark:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(21 23 47 / var(--tw-bg-opacity));
+  --tw-gradient-to: rgba(255,255,255,.1);
 }
 
 .btn.btn-pink {
@@ -1452,7 +1475,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 
 .btn.btn-gr-primary {
   border-radius: 5px;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: #1ABAD0;
   --tw-gradient-to: rgb(26 186 208 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
@@ -1519,6 +1542,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 
 .btn.btn-ghost {
   background-color: rgba(0,0,0,0);
+  background-image: none;
 }
 
 .btn.btn-ghost:hover {
@@ -1597,6 +1621,10 @@ p a:not(.btn):hover::after, p .link:hover::after {
 
 .btn.btn-ghost.btn-white:hover {
   background-color: rgb(242 253 255 / 0.1);
+}
+
+.btn.btn-light {
+  background-image: none;
 }
 
 .btn.btn-light:hover {
@@ -1687,6 +1715,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 
 .btn.btn-bordered {
   background-color: rgba(0,0,0,0);
+  background-image: none;
 }
 
 .btn.btn-bordered:hover {
@@ -1813,6 +1842,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 }
 
 label, .label {
+  position: relative;
   display: block;
   cursor: pointer;
   padding-left: 10px;
@@ -1847,8 +1877,27 @@ label.input-success, .label.input-success {
   color: rgb(147 213 124 / var(--tw-text-opacity));
 }
 
+label.disabled, .label.disabled {
+  opacity: 0.4;
+}
+
+.input-message {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1rem;
+}
+
+.input-message.input-error {
+  --tw-text-opacity: 1;
+  color: rgb(255 101 101 / var(--tw-text-opacity));
+}
+
+.input-message.input-success {
+  --tw-text-opacity: 1;
+  color: rgb(147 213 124 / var(--tw-text-opacity));
+}
+
 input[type=text], input[type=search], input[type=number], textarea, select {
-  margin-bottom: 15px;
   width: 100%;
   border-radius: 5px;
   border-width: 1px;
@@ -1932,6 +1981,14 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   padding-left: 40px;
 }
 
+input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error {
+  background-image: url("img/search-red.svg");
+}
+
+input[type=text].input-search.input-success, input[type=text] [type=search].input-success, input[type=search].input-search.input-success, input[type=search] [type=search].input-success, input[type=number].input-search.input-success, input[type=number] [type=search].input-success, textarea.input-search.input-success, textarea [type=search].input-success, select.input-search.input-success, select [type=search].input-success {
+  background-image: url("img/search-green.svg");
+}
+
 select {
   position: relative;
   -webkit-appearance: none;
@@ -1957,6 +2014,22 @@ select::before {
 
 select:focus {
   background-image: url("img/dropdown-active.svg");
+}
+
+select.input-error {
+  background-image: url("img/dropdown-red.svg");
+}
+
+select.input-error:focus {
+  background-image: url("img/dropdown-active-red.svg");
+}
+
+select.input-success {
+  background-image: url("img/dropdown-green.svg");
+}
+
+select.input-success:focus {
+  background-image: url("img/dropdown-active-green.svg");
 }
 
 .input-number {
@@ -2262,6 +2335,10 @@ textarea {
   margin-top: 0px;
 }
 
+.alert .alert-content p {
+  margin-bottom: 0px;
+}
+
 .alert .alert-close {
   position: absolute;
   top: 0px;
@@ -2516,6 +2593,10 @@ textarea {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.tooltip p {
+  margin-bottom: 0px;
+}
+
 .tooltip.tooltip-danger {
   --tw-bg-opacity: 1;
   background-color: rgb(255 101 101 / var(--tw-bg-opacity));
@@ -2609,7 +2690,7 @@ textarea {
 
 .nav .nav-elt.active a {
   border-radius: 5px;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: #1ABAD0;
   --tw-gradient-to: rgb(26 186 208 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
@@ -2677,7 +2758,7 @@ textarea {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(86 234 255 / var(--tw-bg-opacity));
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: #1ABAD0;
   --tw-gradient-to: rgb(26 186 208 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
@@ -2727,7 +2808,7 @@ textarea {
 }
 
 .menu.menu-tools ul li a:hover {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: #1ABAD0;
   --tw-gradient-to: rgb(26 186 208 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
@@ -2815,6 +2896,10 @@ textarea {
   padding-right: 0px;
   padding-bottom: 1.25rem;
   padding-top: 0px;
+}
+
+.modal .modal-content p {
+  margin-bottom: 0px;
 }
 
 .modal .modal-buttons {
