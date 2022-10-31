@@ -138,7 +138,7 @@ p a:not(.btn), p .link {
   @apply text-sm min-w-buttonSmall;
 }
 .btn.btn-extrasmall {
-  @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal;
+  @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal rounded-xs;
 }
 .btn.btn-ghost {
   @apply bg-none bg-transparent hover:shadow-none;
@@ -222,7 +222,22 @@ p a:not(.btn), p .link {
   @apply border border-solid border-white text-white hover:bg-white/10;
 }
 .btn.btn-icon {
-  @apply min-w-min px-2;
+  @apply min-w-min px-2 aspect-square h-[40px] w-[40px] relative;
+}
+.btn.btn-icon svg, .btn.btn-icon img {
+  @apply h-[24px] w-[24px] absolute top-0 right-0 bottom-0 left-0 m-auto;
+}
+.btn.btn-icon.btn-small {
+  @apply h-[36px] w-[36px];
+}
+.btn.btn-icon.btn-small svg, .btn.btn-icon.btn-small img {
+  @apply h-[20px] w-[20px];
+}
+.btn.btn-icon.btn-extrasmall {
+  @apply h-[26px] w-[26px];
+}
+.btn.btn-icon.btn-extrasmall svg, .btn.btn-icon.btn-extrasmall img {
+  @apply h-[16px] w-[16px];
 }
 .btn.btn-disabled {
   @apply opacity-40 pointer-events-none;

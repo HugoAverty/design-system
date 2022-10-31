@@ -96,7 +96,7 @@ p a:not(.btn), p .link {
 }
 
 .btn {
-  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];;
+  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
   // Button color
   &.btn-primary {
     @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
@@ -147,7 +147,7 @@ p a:not(.btn), p .link {
     @apply text-sm min-w-buttonSmall;
   }
   &.btn-extrasmall {
-    @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal;
+    @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal rounded-xs;
   }
 
   &.btn-ghost {
@@ -236,7 +236,22 @@ p a:not(.btn), p .link {
     }
   }
   &.btn-icon {
-    @apply min-w-min px-2;
+    @apply min-w-min px-2 aspect-square h-[40px] w-[40px] relative;
+    svg, img {
+      @apply h-[24px] w-[24px] absolute top-0 right-0 bottom-0 left-0 m-auto;
+    }
+    &.btn-small {
+      @apply h-[36px] w-[36px];
+      svg, img {
+        @apply h-[20px] w-[20px];
+      }
+    }
+    &.btn-extrasmall {
+      @apply h-[26px] w-[26px];
+      svg, img {
+        @apply h-[16px] w-[16px];
+      }
+    }
   }
   // Button disabled
   &.btn-disabled {
