@@ -762,6 +762,10 @@ video {
   width: 16rem;
 }
 
+.w-2\/12 {
+  width: 16.666667%;
+}
+
 .flex-none {
   flex: none;
 }
