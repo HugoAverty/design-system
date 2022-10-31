@@ -227,7 +227,7 @@ p a:not(.btn), p .link {
     }
   }
   &.btn-icon {
-    @apply min-w-min;
+    @apply min-w-min px-2;
   }
   // Button disabled
   &.btn-disabled {

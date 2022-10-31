@@ -1668,6 +1668,8 @@ p a:not(.btn):hover::after, p .link:hover::after {
   min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .btn.btn-disabled {

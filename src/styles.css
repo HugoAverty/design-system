@@ -215,7 +215,7 @@ p a:not(.btn), p .link {
   @apply border border-solid border-white text-white hover:bg-white/10;
 }
 .btn.btn-icon {
-  @apply min-w-min;
+  @apply min-w-min px-2;
 }
 .btn.btn-disabled {
   @apply opacity-40 pointer-events-none;
