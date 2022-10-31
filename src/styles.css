@@ -341,6 +341,9 @@ textarea {
 .notif {
   @apply z-10 w-4 aspect-square bg-main text-black rounded-full text-center font-bold text-xs relative before:content-[""] before:absolute before:w-full before:h-full before:bg-main before:opacity-30 before:top-0 before:left-0 before:animate-ping before:rounded-full before:z-0;
 }
+.notif .no-anim {
+  @apply before:content-none static;
+}
 .notif.notif-xs {
   @apply w-4 text-xs;
 }
@@ -433,6 +436,9 @@ textarea {
 }
 .nav .nav-elt a {
   @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white-10 rounded;
+}
+.nav .nav-elt .notif {
+  @apply absolute right-[-5px] top-[-5px];
 }
 .nav.nav-light, .nav.nav-light-pink {
   @apply bg-transparent border-x-0 border-t-0 rounded-none border-b border-deepBlue;

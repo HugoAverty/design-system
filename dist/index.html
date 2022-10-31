@@ -67,6 +67,9 @@
     <h3 class="title">
       Background on dark elements
     </h3>
+    <p class="subtitle">
+      It is a default background, blue in colour with an opacity and a blur filter. Be careful not to superimpose the backgrounds together (increased performance problems).
+    </p>
   </div>
   <div class="container mx-auto p-5">
     <div class="w-2/12 h-16 rounded bg-default relative">
@@ -79,6 +82,9 @@
     <h3 class="title">
       Main colors
     </h3>
+    <p class="subtitle">
+      Corresponds to the main colours of the interface, cyan blue being the highlight colour.
+    </p>
     <div class="flex flex-row">
       <div class="flex-none mr-2.5 self-center">
         <div class="w-16 aspect-square inline-block rounded bg-main"></div>
@@ -96,6 +102,9 @@
     <h3 class="title">
       Other colors
     </h3>
+    <p class="subtitle">
+      These are the secondary colours, used partially on borders, texts of inactive elements, etc.
+    </p>
     <div class="flex flex-row">
       <div class="flex-none mr-2.5 self-center">
         <div class="w-16 aspect-square inline-block rounded bg-pink"></div>
@@ -190,6 +199,9 @@
   <div class="bg-default container mx-auto p-5">
     <h1 class="title">Global settings</h1>
     <h2 class="title">Columns</h2>
+    <p class="subtitle">
+      Grids, columns must have a seperation between elements of 10px (at least). Globally, elements are separate with 10px except with really small elements (such as tiny icons, extra small buttons, etc.)
+    </p>
     <div class="flex flex-row">
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
@@ -230,6 +242,9 @@
       </div>
     </div>
     <h2 class="title">Border radius</h2>
+    <p class="subtitle">
+      The common border radius is .rounded (10px). For small elements you have to use .rounded-xs (5px) and really large .rounded-md (15px).
+    </p>
     <div class="flex flex-row">
       <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-xs">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
@@ -258,20 +273,23 @@
       </div>
     </div>
     <h2 class="title">Box shadow</h2>
+    <p class="subtitle">
+      Box shadows are rarely used but can be used in some cases, particularly to make an element stand out more prominently.
+    </p>
     <div class="flex flex-row">
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadow">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
-          0 10px 20px 5px rgba(0,0,0,0.35)
+          default: 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadowHover">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
-          0 10px 20px 5px rgba(0,0,0,0.35)
+          hover : 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
       <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 relative shadow-bxShadowSmall">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
-          0 10px 20px 5px rgba(0,0,0,0.35)
+          hover: 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
     </div>
@@ -281,6 +299,9 @@
     <h3 class="title">
       Buttons regular size
     </h3>
+    <p class="subtitle">
+      The regular buttons are the main ones used within the platform.
+    </p>
     <div class="flex flex-row">
         <div class="flex-none mr-2.5 self-center">
           <a class="btn btn-primary" href="#">Primary</a>
@@ -1205,7 +1226,7 @@
             <li class="nav-elt"><a href="#">Tab #3</a></li>
             <li class="nav-elt">
               <a href="#">Tab #4</a>
-              <div class="notif notif-md notif-square absolute right-[-5px] top-[-5px]">2</div>
+              <div class="notif notif-md notif-square">2</div>
             </li>
             <li class="nav-elt disabled"><a href="#">Tab #5</a></li>
           </ul>
@@ -1221,7 +1242,7 @@
             <li class="nav-elt"><a href="#">Tab #3</a></li>
             <li class="nav-elt">
               <a href="#">Tab #4</a>
-              <div class="notif notif-md notif-square absolute right-[-5px] top-[-5px]">2</div>
+              <div class="notif notif-md notif-square">2</div>
             </li>
             <li class="nav-elt disabled"><a href="#">Tab #5</a></li>
           </ul>
@@ -1237,7 +1258,7 @@
             <li class="nav-elt"><a href="#">Tab #3</a></li>
             <li class="nav-elt">
               <a href="#">Tab #4</a>
-              <div class="notif notif-md notif-square absolute right-[-5px] top-[-5px]">2</div>
+              <div class="notif notif-md notif-square">2</div>
             </li>
             <li class="nav-elt disabled"><a href="#">Tab #5</a></li>
           </ul>

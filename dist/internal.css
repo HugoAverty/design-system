@@ -10,11 +10,15 @@
     background: #272736;
 }
 .title {
-    opacity: .5;
     color: #928EBB;
     margin-bottom: 0;
     margin-top: 0;
 }
+
+.title + p {
+
+}
+
 h1.title {
     font-size: 38px;
     letter-spacing: 5px;
@@ -41,10 +45,6 @@ h2.title {
     letter-spacing: 0;
     font-size: 24px;
     margin-top: 20px;
-}
-
-h3.title {
-    margin: 10px 0;
 }
 
 .legend {
