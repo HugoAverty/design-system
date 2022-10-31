@@ -683,9 +683,9 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
-      buttonRegular: '125px',
-      buttonSmall: '100px',
-      buttonExtraSmall: '75px',
+      buttonRegular: '110px',
+      buttonSmall: '85px',
+      buttonExtraSmall: '65px',
     },
     objectPosition: {
       bottom: 'bottom',

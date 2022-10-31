@@ -1332,7 +1332,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 
 .btn {
   display: inline-block;
-  min-width: 125px;
+  min-width: 110px;
   border-radius: 5px;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1531,13 +1531,13 @@ p a:not(.btn):hover::after, p .link:hover::after {
 }
 
 .btn.btn-small {
-  min-width: 100px;
+  min-width: 85px;
   font-size: 13px;
   line-height: 1.25rem;
 }
 
 .btn.btn-extrasmall {
-  min-width: 75px;
+  min-width: 65px;
   border-radius: 3px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1929,6 +1929,7 @@ label.disabled, .label.disabled {
   margin-top: 5px;
   font-size: 12px;
   line-height: 1rem;
+  font-style: italic;
 }
 
 .input-message.input-error {
@@ -2033,7 +2034,7 @@ input[type=text].input-search.input-success, input[type=text] [type=search].inpu
   background-image: url("img/search-green.svg");
 }
 
-select {
+select, .select {
   position: relative;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2043,7 +2044,7 @@ select {
   background-repeat: no-repeat;
 }
 
-select::before {
+select::before, .select::before {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2056,23 +2057,23 @@ select::before {
   content: var(--tw-content);
 }
 
-select:focus {
+select:focus, .select:focus {
   background-image: url("img/dropdown-active.svg");
 }
 
-select.input-error {
+select.input-error, .select.input-error {
   background-image: url("img/dropdown-red.svg");
 }
 
-select.input-error:focus {
+select.input-error:focus, .select.input-error:focus {
   background-image: url("img/dropdown-active-red.svg");
 }
 
-select.input-success {
+select.input-success, .select.input-success {
   background-image: url("img/dropdown-green.svg");
 }
 
-select.input-success:focus {
+select.input-success:focus, .select.input-success:focus {
   background-image: url("img/dropdown-active-green.svg");
 }
 
@@ -2339,7 +2340,6 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
 .progress {
   height: 1.25rem;
   width: 100%;
-  cursor: col-resize;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2350,19 +2350,6 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
   --tw-bg-opacity: 1;
   background-color: rgb(15 31 45 / var(--tw-bg-opacity));
   padding: 2px;
-}
-
-.progress.progress-pink .progress-bar {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #F56772;
-  --tw-gradient-to: rgb(245 103 114 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #BA6BFF;
-}
-
-.progress.progress-pink .progress-bar .progress-purcentage {
-  --tw-text-opacity: 1;
-  color: rgb(225 66 162 / var(--tw-text-opacity));
 }
 
 .progress .progress-bar {
@@ -2380,6 +2367,9 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
   --tw-gradient-to: rgb(133 242 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
   --tw-gradient-to: #CDFBFF;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .progress .progress-bar::after {
@@ -2402,6 +2392,19 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
   line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(86 234 255 / var(--tw-text-opacity));
+}
+
+.progress.progress-pink .progress-bar {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #F56772;
+  --tw-gradient-to: rgb(245 103 114 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #BA6BFF;
+}
+
+.progress.progress-pink .progress-bar .progress-purcentage {
+  --tw-text-opacity: 1;
+  color: rgb(225 66 162 / var(--tw-text-opacity));
 }
 
 textarea {
@@ -2489,7 +2492,7 @@ textarea {
   position: relative;
   z-index: 10;
   aspect-ratio: 1 / 1;
-  width: 1rem;
+  width: 0.75rem;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(86 234 255 / var(--tw-bg-opacity));
@@ -2548,7 +2551,7 @@ textarea {
 }
 
 .notif.notif-xs {
-  width: 1rem;
+  width: 0.75rem;
   font-size: 12px;
   line-height: 1rem;
 }

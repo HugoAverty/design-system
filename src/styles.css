@@ -263,7 +263,7 @@ label.disabled, .label.disabled {
 }
 
 .input-message {
-  @apply text-xs mt-[5px];
+  @apply text-xs mt-[5px] italic;
 }
 .input-message.input-error {
   @apply text-red;
@@ -291,13 +291,13 @@ input[type=text].input-search.input-success, input[type=text] [type=search].inpu
   @apply bg-[url("img/search-green.svg")];
 }
 
-select {
+select, .select {
   @apply relative before:content-[""] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url("img/dropdown.svg")] appearance-none focus:bg-[url("img/dropdown-active.svg")];
 }
-select.input-error {
+select.input-error, .select.input-error {
   @apply bg-[url("img/dropdown-red.svg")] focus:bg-[url("img/dropdown-active-red.svg")];
 }
-select.input-success {
+select.input-success, .select.input-success {
   @apply bg-[url("img/dropdown-green.svg")] focus:bg-[url("img/dropdown-active-green.svg")];
 }
 
@@ -357,19 +357,19 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
 }
 
 .progress {
-  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-5 cursor-col-resize p-[2px];
+  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-5 p-[2px];
+}
+.progress .progress-bar {
+  @apply bg-main transition-all rounded-full h-full bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] relative after:content-[""] after:absolute after:w-full after:h-full after:opacity-20 after:rounded-full after:bg-[url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0tyRWkyNCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGxpbmUgeDE9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAuNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjciLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fS3JFaTI0KSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==")];
+}
+.progress .progress-bar .progress-purcentage {
+  @apply absolute right-0 bottom-[-25px] text-main font-secondary text-base;
 }
 .progress.progress-pink .progress-bar {
   @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF];
 }
 .progress.progress-pink .progress-bar .progress-purcentage {
   @apply text-pink;
-}
-.progress .progress-bar {
-  @apply bg-main rounded-full h-full bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] relative after:content-[""] after:absolute after:w-full after:h-full after:opacity-20 after:rounded-full after:bg-[url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0tyRWkyNCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGxpbmUgeDE9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAuNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjciLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fS3JFaTI0KSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==")];
-}
-.progress .progress-bar .progress-purcentage {
-  @apply absolute right-0 bottom-[-25px] text-main font-secondary text-base;
 }
 
 textarea {
@@ -402,13 +402,13 @@ textarea {
 }
 
 .notif {
-  @apply z-10 w-4 aspect-square bg-main text-black rounded-full text-center font-bold text-xs relative before:content-[""] before:absolute before:w-full before:h-full before:bg-main before:opacity-30 before:top-0 before:left-0 before:animate-ping before:rounded-full before:z-0;
+  @apply z-10 w-3 aspect-square bg-main text-black rounded-full text-center font-bold text-xs relative before:content-[""] before:absolute before:w-full before:h-full before:bg-main before:opacity-30 before:top-0 before:left-0 before:animate-ping before:rounded-full before:z-0;
 }
 .notif .no-anim {
   @apply before:content-none static;
 }
 .notif.notif-xs {
-  @apply w-4 text-xs;
+  @apply w-3 text-xs;
 }
 .notif.notif-md {
   @apply w-6 text-base;
