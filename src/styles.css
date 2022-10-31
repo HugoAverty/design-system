@@ -37,7 +37,7 @@
 }
 
 .bg-default {
-  @apply bg-darkblueTransparent backdrop-blur-sm;
+  @apply bg-darkblueTransparent backdrop-blur-sm border border-deepBlue;
 }
 
 .bg-gr-primary {
@@ -81,7 +81,7 @@ h5, .h5 {
 }
 
 p {
-  @apply text-sm text-white leading-5;
+  @apply text-sm text-white leading-5 mb-2.5;
 }
 
 p a:not(.btn), p .link {
@@ -115,6 +115,9 @@ p a:not(.btn), p .link {
 .btn.btn-white {
   @apply bg-white text-darkblue hover:bg-white hover:shadow-white;
 }
+.btn:not(.btn-icon) svg {
+  @apply inline-block;
+}
 .btn.btn-gr-primary {
   @apply rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
 }
@@ -131,7 +134,7 @@ p a:not(.btn), p .link {
   @apply text-sm min-w-buttonSmall;
 }
 .btn.btn-extrasmall {
-  @apply text-xs min-w-buttonExtraSmall p-[5px] font-secondary font-normal;
+  @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal;
 }
 .btn.btn-ghost {
   @apply bg-transparent hover:shadow-none;
@@ -336,7 +339,7 @@ textarea {
 }
 
 .notif {
-  @apply w-4 aspect-square bg-main text-black rounded-full text-center font-bold text-xs;
+  @apply z-10 w-4 aspect-square bg-main text-black rounded-full text-center font-bold text-xs relative before:content-[""] before:absolute before:w-full before:h-full before:bg-main before:opacity-30 before:top-0 before:left-0 before:animate-ping before:rounded-full before:z-0;
 }
 .notif.notif-xs {
   @apply w-4 text-xs;
@@ -348,19 +351,19 @@ textarea {
   @apply w-7 text-xl;
 }
 .notif.notif-square {
-  @apply rounded-xs;
+  @apply rounded-xs before:rounded-xs;
 }
 .notif.notif-dark {
-  @apply bg-black text-white;
+  @apply bg-black text-white before:bg-black;
 }
 .notif.notif-pink {
-  @apply bg-pink text-white;
+  @apply bg-pink text-white before:bg-pink;
 }
 .notif.notif-success {
-  @apply bg-green;
+  @apply bg-green before:bg-green;
 }
 .notif.notif-danger {
-  @apply bg-red text-white;
+  @apply bg-red text-white before:bg-red;
 }
 
 .tag {

@@ -9,7 +9,10 @@
 .sys-block {
     background: #272736;
 }
-
+.title {
+    opacity: .5;
+    color: #928EBB;
+}
 h1.title {
     font-size: 38px;
     letter-spacing: 5px;
@@ -34,6 +37,13 @@ h2.title {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0;
-    color: white;
     font-size: 24px;
+}
+
+.legend {
+    font-family: 'Roboto Condensed';
+    color: white;
+    opacity: .5;
+    font-size: 12px;
+    text-align: center;
 }

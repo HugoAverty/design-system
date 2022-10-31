@@ -71,51 +71,211 @@
     </h3>
   </div>
   <div class="container mx-auto p-5">
-    <div class="w-full h-32 rounded bg-default"></div>
+    <div class="w-full h-32 rounded bg-default relative">
+      <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+        .bg-default
+      </div>
+    </div>
   </div>
   <div class="bg-default container mx-auto p-5">
     <h3 class="title">
       Main colors
     </h3>
-    <div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-main"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-darkblue"></div>
+    <div class="flex flex-row">
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-main"></div>
+        <div class="legend">
+          #56EAFF
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-darkblue"></div>
+        <div class="legend">
+          #272736
+        </div>
+      </div>
     </div>
     <h3 class="title">
       Other colors
     </h3>
-    <div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-pink"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-deepBlue"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-lightBlue"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-greyBlue"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-darkSea"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-greyDarkBlue"></div>
+    <div class="flex flex-row">
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-pink"></div>
+        <div class="legend">
+          #E142A2
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-deepBlue"></div>
+        <div class="legend">
+          #4D4B67
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-lightBlue"></div>
+        <div class="legend">
+          #928EBB
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-greyBlue"></div>
+        <div class="legend">
+          #272736
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-darkSea"></div>
+        <div class="legend">
+          #15172F
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-greyDarkBlue"></div>
+        <div class="legend">
+          #0F1F2D
+        </div>
+      </div>
     </div>
     <h3 class="title">
       Status colors
     </h3>
-    <div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-red"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-green"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-orange"></div>
-      <div class="w-16 aspect-square inline-block mr-2.5 rounded bg-blue"></div>
+    <div class="flex flex-row">
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-red"></div>
+        <div class="legend">
+          #FF6565
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-green"></div>
+        <div class="legend">
+          #93D57C
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-orange"></div>
+        <div class="legend">
+          #EC943F
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-16 aspect-square inline-block rounded bg-blue"></div>
+        <div class="legend">
+          #00ABFF
+        </div>
+      </div>
     </div>
     <h3 class="title">
       Gradient colors
     </h3>
-    <div>
-      <div class="w-32 h-16 inline-block mr-2.5 rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF]"></div>
-      <div class="w-32 h-16 inline-block mr-2.5 rounded bg-gradient-to-r from-[#F56772] to-[#BA6BFF]"></div>
+    <div class="flex flex-row">
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-32 h-16 inline-block rounded bg-gradient-to-r from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF]"></div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="legend">
+          linear-gradient(243deg, #CDFBFF 0%, #85F2FF 30%, #6AEDFF 62%, #1ABAD0 100%)
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-32 h-16 inline-block rounded bg-gradient-to-r from-[#F56772] to-[#BA6BFF]"></div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="legend">
+          linear-gradient(252deg, #F56772 0%, #BA6BFF 100%)
+        </div>
+      </div>
     </div>
   </div>
   <div class="bg-default container mx-auto p-5">
-    <h1 class="title">Columns</h1>
+    <h1 class="title">Global settings</h1>
+    <h2 class="title">Columns</h2>
     <div class="flex flex-row">
-      <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"></div>
-      <div class="basis-2/5 bg-deepBlue h-20 mr-2.5"></div>
-      <div class="basis-1/5 bg-deepBlue h-20 mr-2.5"></div>
-      <div class="basis-1/5 bg-deepBlue h-20"></div>
+      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-1/5 mr-2.5
+        </div>
+      </div>
+      <div class="basis-2/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-2/5 mr-2.5
+        </div>
+      </div>
+      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-1/5 mr-2.5
+        </div>
+      </div>
+      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 relative">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-1/5
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div class="basis-2/6 bg-bgButton border border-deepBlue h-20 mr-2.5 relative mt-2.5">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-2/6 mr-2.5 mt-2.5
+        </div>
+      </div>
+      <div class="basis-2/6 bg-bgButton border border-deepBlue h-20 mr-2.5 relative mt-2.5">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-2/6 mr-2.5 mt-2.5
+        </div>
+      </div>
+      <div class="basis-2/6 bg-bgButton border border-deepBlue h-20 relative mt-2.5">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          basis-2/6 mt-2.5
+        </div>
+      </div>
+    </div>
+    <h2 class="title">Border radius</h2>
+    <div class="flex flex-row">
+      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-xs">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          rounded-xs
+        </div>
+      </div>
+      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          rounded
+        </div>
+      </div>
+      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-md">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          rounded-md
+        </div>
+      </div>
+      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-lg">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          rounded-lg
+        </div>
+      </div>
+      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-full">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          rounded-full
+        </div>
+      </div>
+    </div>
+    <h2 class="title">Box shadow</h2>
+    <div class="flex flex-row">
+      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadow">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          0 10px 20px 5px rgba(0,0,0,0.35)
+        </div>
+      </div>
+      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadowHover">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          0 10px 20px 5px rgba(0,0,0,0.35)
+        </div>
+      </div>
+      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 relative shadow-bxShadowSmall">
+        <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-5 m-auto">
+          0 10px 20px 5px rgba(0,0,0,0.35)
+        </div>
+      </div>
     </div>
     <h1 class="title">
       Buttons
@@ -148,6 +308,15 @@
         <div class="flex-none mr-2.5 self-center">
           <a class="btn btn-white" href="#">White</a>
         </div>
+        <div class="flex-none mr-2.5 self-center">
+          <a class="btn btn-danger" href="#">
+            <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Loading
+          </a>
+        </div>
     </div>
 
     <h3 class="title">
@@ -179,6 +348,15 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-white btn-small" href="#">White</a>
       </div>
+      <div class="flex-none mr-2.5 self-center">
+        <a class="btn btn-danger btn-small" href="#">
+          <svg class="animate-spin -ml-1 mr-1 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Loading
+        </a>
+      </div>
     </div>
 
     <h3 class="title">
@@ -208,6 +386,15 @@
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-white btn-extrasmall" href="#">White</a>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <a class="btn btn-danger btn-extrasmall" href="#">
+          <svg class="animate-spin -ml-1 mr-1 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Loading
+        </a>
       </div>
     </div>
 
@@ -244,6 +431,15 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-white btn-ghost" href="#">White</a>
       </div>
+      <div class="flex-none mr-2.5 self-center">
+        <a class="btn btn-danger btn-bordered" href="#">
+          <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="red" stroke-width="4"></circle>
+            <path class="opacity-75" fill="red" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Loading
+        </a>
+      </div>
     </div>
 
     <h3 class="title">
@@ -274,6 +470,15 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-white btn-light" href="#">White</a>
       </div>
+      <div class="flex-none mr-2.5 self-center">
+        <a class="btn btn-danger btn-light" href="#">
+          <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="red" stroke-width="4"></circle>
+            <path class="opacity-75" fill="red" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Loading
+        </a>
+      </div>
     </div>
 
     <h3 class="title">
@@ -303,6 +508,15 @@
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-white btn-bordered" href="#">White</a>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <a class="btn btn-danger btn-bordered" href="#">
+          <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="red" stroke-width="4"></circle>
+            <path class="opacity-75" fill="red" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          Loading
+        </a>
       </div>
     </div>
     <h2 class="title">
@@ -537,6 +751,13 @@
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <input type="text" class="input-search input-success" value="Invalid value" />
+      </div>
+      <div class="basis-1/5 pr-[10px] pb-[10px]">
+        <input type="text" class="input-search input-success" value="Invalid value" />
+        <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
       </div>
     </div>
     <h3 class="title">
