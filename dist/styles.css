@@ -907,6 +907,11 @@ video {
   border-color: rgb(146 142 187 / var(--tw-border-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
+}
+
 .bg-darkblueTransparent {
   background-color: rgba(39,39,54,0.85);
 }
@@ -976,9 +981,20 @@ video {
   background-color: rgb(56 56 74 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
+.bg-white\/20 {
+  background-color: rgb(242 253 255 / 0.2);
+}
+
+.bg-white\/40 {
+  background-color: rgb(242 253 255 / 0.4);
+}
+
+.bg-white\/70 {
+  background-color: rgb(242 253 255 / 0.7);
+}
+
+.bg-white\/80 {
+  background-color: rgb(242 253 255 / 0.8);
 }
 
 .bg-gradient-to-r {
@@ -1046,6 +1062,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pr-\[10px\] {
   padding-right: 10px;
 }
@@ -1072,6 +1093,10 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
 }
 
 .text-left {
@@ -1179,6 +1204,12 @@ video {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1245,6 +1276,10 @@ video {
   --tw-gradient-to: rgb(255 255 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: rgba(255,255,255,1);
+}
+
+.logo {
+  padding: 0.625rem;
 }
 
 h1, .h1 {

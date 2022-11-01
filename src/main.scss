@@ -57,6 +57,10 @@
   @apply bg-gradient-to-tr from-[rgba(255,255,255,0)] to-[rgba(255,255,255,1)];
 }
 
+.logo {
+  @apply p-2.5;
+}
+
 h1, .h1 {
   @apply text-white font-light text-5xl tracking-[-1px] mb-2 mt-12;
   & + h2, & + .h2, & + h3, & + .h3, & + h4, & + .h4, & + h5, & + .h5 {
