@@ -662,6 +662,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mb-2\.5 {
   margin-bottom: 0.625rem;
 }
@@ -694,10 +698,6 @@ video {
   margin-top: 0.25rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -718,20 +718,20 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
 .h-20 {
   height: 5rem;
 }
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .h-6 {
@@ -750,8 +750,8 @@ video {
   height: 100%;
 }
 
-.w-2\/12 {
-  width: 16.666667%;
+.w-3\/12 {
+  width: 25%;
 }
 
 .w-full {
@@ -794,8 +794,8 @@ video {
   width: 16rem;
 }
 
-.w-3\/12 {
-  width: 25%;
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .flex-none {
@@ -907,6 +907,10 @@ video {
   border-color: rgb(146 142 187 / var(--tw-border-opacity));
 }
 
+.bg-darkblueTransparent {
+  background-color: rgba(39,39,54,0.85);
+}
+
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(86 234 255 / var(--tw-bg-opacity));
@@ -975,10 +979,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(242 253 255 / var(--tw-bg-opacity));
-}
-
-.bg-darkblueTransparent {
-  background-color: rgba(39,39,54,0.85);
 }
 
 .bg-gradient-to-r {
@@ -2373,6 +2373,7 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
 }
 
 .progress {
+  margin-bottom: 1.25rem;
   height: 1.25rem;
   width: 100%;
   -webkit-appearance: none;
@@ -2441,6 +2442,11 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
 .progress.progress-pink .progress-bar .progress-purcentage {
   --tw-text-opacity: 1;
   color: rgb(225 66 162 / var(--tw-text-opacity));
+}
+
+.progress.progress-xs {
+  height: 0.625rem;
+  padding: 1px;
 }
 
 textarea {
