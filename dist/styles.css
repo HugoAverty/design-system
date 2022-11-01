@@ -790,12 +790,12 @@ video {
   width: 50%;
 }
 
-.w-64 {
-  width: 16rem;
-}
-
 .w-\[75\%\] {
   width: 75%;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .flex-none {
@@ -1923,6 +1923,7 @@ p a:not(.btn):hover::after, p .link:hover::after {
 
 .btn.btn-disabled {
   pointer-events: none;
+  cursor: not-allowed;
   opacity: 0.4;
 }
 
@@ -1962,7 +1963,8 @@ label.input-success, .label.input-success {
   color: rgb(147 213 124 / var(--tw-text-opacity));
 }
 
-label.disabled, .label.disabled {
+label.label-disabled, label .disabled, .label.label-disabled, .label .disabled {
+  cursor: not-allowed;
   opacity: 0.4;
 }
 
@@ -2023,6 +2025,7 @@ input[type=text]:focus, input[type=search]:focus, input[type=number]:focus, text
 }
 
 input[type=text]:disabled, input[type=search]:disabled, input[type=number]:disabled, textarea:disabled, select:disabled {
+  cursor: not-allowed;
   opacity: 0.4;
 }
 
@@ -2199,6 +2202,7 @@ select.input-success:focus, .select.input-success:focus {
 }
 
 .input-checkbox:disabled, .input-radio:disabled {
+  cursor: not-allowed;
   opacity: 0.4;
 }
 
@@ -2230,10 +2234,6 @@ select.input-success:focus, .select.input-success:focus {
   --tw-shadow: 0 0 7px 0 #FF6565;
   --tw-shadow-colored: 0 0 7px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.input-checkbox:disabled + label, .input-radio:disabled + label {
-  opacity: 0.4;
 }
 
 .input-radio {
@@ -2302,6 +2302,7 @@ select.input-success:focus, .select.input-success:focus {
 }
 
 .input-switch:disabled {
+  cursor: not-allowed;
   opacity: 0.4;
 }
 
@@ -2339,10 +2340,6 @@ select.input-success:focus, .select.input-success:focus {
   --tw-shadow: 0 0 7px 0 #FF6565;
   --tw-shadow-colored: 0 0 7px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.input-switch:disabled + label {
-  opacity: 0.4;
 }
 
 input[type=range], .input-range {
@@ -2862,6 +2859,7 @@ textarea {
 
 .nav .nav-elt.disabled {
   pointer-events: none;
+  cursor: not-allowed;
   opacity: 0.3;
 }
 
@@ -3003,6 +3001,7 @@ textarea {
 
 .menu.menu-tools ul li.disabled a {
   pointer-events: none;
+  cursor: not-allowed;
   opacity: 0.4;
 }
 

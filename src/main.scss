@@ -255,7 +255,7 @@ p a:not(.btn), p .link {
   }
   // Button disabled
   &.btn-disabled {
-    @apply opacity-40 pointer-events-none;
+    @apply opacity-40 pointer-events-none cursor-not-allowed;
   }
 }
 
@@ -273,8 +273,8 @@ label, .label {
   &.input-success {
     @apply text-green;
   }
-  &.disabled {
-    @apply opacity-40;
+  &.label-disabled, .disabled {
+    @apply opacity-40 cursor-not-allowed;
   }
 }
 
@@ -289,7 +289,7 @@ label, .label {
 }
 
 input[type="text"], input[type="search"], input[type="number"], textarea, select {
-  @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40;
+  @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
     @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
   }
@@ -332,12 +332,9 @@ select, .select {
 }
 
 .input-checkbox, .input-radio {
-  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-black border border-solid border-deepBlue p-0 text-white inline-block outline-none rounded checked:before:rounded-xs  checked:before:top-[3px] checked:before:left-[3px] checked:border-lightBlue checked:before:bg-main checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute disabled:opacity-40;
+  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-black border border-solid border-deepBlue p-0 text-white inline-block outline-none rounded checked:before:rounded-xs  checked:before:top-[3px] checked:before:left-[3px] checked:border-lightBlue checked:before:bg-main checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
     @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between checked:before:shadow-inputRadioDanger checked:before:bg-red;
-  }
-  &:disabled + label {
-    @apply opacity-40;
   }
 }
 .input-radio {
@@ -352,12 +349,9 @@ select, .select {
   border border-solid border-deepBlue
   p-0 text-white inline-block outline-none rounded-full
   before:bg-lightBlue before:rounded-full before:w-5 before:left-[-3px] before:top-[-3px] before:h-5 before:content-[''] before:absolute
-  checked:before:right-[-3px] checked:before:top-[-3px] checked:before:left-auto checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio disabled:opacity-40;
+  checked:before:right-[-3px] checked:before:top-[-3px] checked:before:left-auto checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
     @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between before:bg-red-between checked:before:bg-red checked:before:shadow-inputRadioDanger;
-  }
-  &:disabled + label {
-    @apply opacity-40;
   }
 }
 
@@ -515,7 +509,7 @@ textarea {
       }
     }
     &.disabled {
-      @apply opacity-30 pointer-events-none;
+      @apply opacity-30 pointer-events-none cursor-not-allowed;
     }
     a {
       @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white-10 rounded transition-all;
@@ -561,7 +555,7 @@ textarea {
           @apply relative after:absolute after:content-[''] after:w-[5px] after:h-full after:bg-main after:right-[-3px] after:top-0 after:rounded;
         }
         &.disabled a {
-          @apply opacity-40 pointer-events-none;
+          @apply opacity-40 pointer-events-none cursor-not-allowed;
         }
         &.separator {
           @apply bg-deepBlue my-2.5 h-[1px] w-full;
