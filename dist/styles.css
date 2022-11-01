@@ -698,6 +698,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1065,6 +1069,11 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pb-5 {
@@ -1575,11 +1584,11 @@ p a:not(.btn):hover::after, p .link:hover::after {
 }
 
 .btn.btn-gr-pink {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #F56772;
-  --tw-gradient-to: rgb(245 103 114 / 0);
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: #BA6BFF;
+  --tw-gradient-to: rgb(186 107 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #BA6BFF;
+  --tw-gradient-to: #F56772;
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
@@ -2178,11 +2187,11 @@ select.input-success:focus, .select.input-success:focus {
 }
 
 .input-number .plus {
-  right: 0.625rem;
+  right: 0px;
 }
 
 .input-number .minus {
-  left: 0.625rem;
+  left: 0px;
 }
 
 .input-number input {
@@ -2190,6 +2199,8 @@ select.input-success:focus, .select.input-success:focus {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  padding-left: 0px;
+  padding-right: 0px;
   text-align: center;
 }
 
@@ -2319,6 +2330,9 @@ select.input-success:focus, .select.input-success:focus {
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(146 142 187 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
   --tw-content: "";
   content: var(--tw-content);
 }
@@ -2468,11 +2482,11 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
 }
 
 .progress.progress-pink .progress-bar {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #F56772;
-  --tw-gradient-to: rgb(245 103 114 / 0);
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: #BA6BFF;
+  --tw-gradient-to: rgb(186 107 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #BA6BFF;
+  --tw-gradient-to: #F56772;
 }
 
 .progress.progress-pink .progress-bar .progress-purcentage {
@@ -2901,17 +2915,20 @@ textarea {
 
 .nav {
   border-radius: 5px;
-  border-width: 1px;
   border-style: solid;
-  --tw-border-opacity: 1;
   border-color: rgb(39 39 54 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 54 / var(--tw-bg-opacity));
   padding: 0.625rem;
   font-size: 15px;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(77 75 103 / var(--tw-border-opacity));
+  background-color: rgba(39,39,54,0.85);
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .nav .nav-elt {
@@ -2974,6 +2991,9 @@ textarea {
   --tw-border-opacity: 1;
   border-color: rgb(77 75 103 / var(--tw-border-opacity));
   background-color: rgba(0,0,0,0);
+  --tw-backdrop-blur: blur(0);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .nav.nav-light .nav-elt, .nav.nav-light-pink .nav-elt {
