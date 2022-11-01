@@ -1,3 +1,6 @@
+body {
+    position: relative;
+}
 .sys-bg {
     position: fixed;
     z-index: -2;
@@ -10,14 +13,14 @@
     background: #272736;
 }
 .title {
-    color: #928EBB;
+    color: #FFFFFF;
     margin-bottom: 0;
     margin-top: 0;
+
 }
 
 .title + .subtitle {
     font-family: 'Roboto Condensed';
-    opacity: .75;
     transform: translateY(-8px);
 }
 
@@ -28,17 +31,18 @@ h1.title {
     padding-top: 20px;
     padding-bottom: 20px;
     font-weight: 200;
-    margin-top: 75px;
+    margin-top: 5px;
 }
 
 h1.title:before {
     content: "";
     position: absolute;
-    width: 100px;
-    height: 1px;
+    width: 7px;
+    height: 100%;
     background: #82F0FF;
     top: 0;
-    left: 0;
+    left: -24px;
+    border-radius: 99px;
 }
 
 h2.title {
@@ -46,12 +50,40 @@ h2.title {
     text-transform: uppercase;
     letter-spacing: 0;
     font-size: 24px;
-    margin-top: 20px;
+    margin-top: 40px;
+    position: relative;
 }
-
+h2.title:before {
+    content: "//";
+    color: #56EAFF;
+    font-size: 28px;
+    margin-right: 10px;
+    font-weight: 300;
+}
+h3.title {
+    padding-top: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+h3.title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -21px;
+    width: calc(100% + 43px);
+    border-top: 1px solid;
+    opacity: .15;
+}
+.legend.text-left {
+    text-align: left;
+}
 .legend {
     font-family: 'Roboto Condensed';
     font-size: 12px;
     text-align: center;
     color: #928EBB;
+}
+
+.bg-demo-white {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0FEWnVONCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjExLjUiIGhlaWdodD0iMTEuNSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGxpbmUgeDE9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTEuNSIgc3Ryb2tlPSIjRUZFRkVGIiBzdHJva2Utd2lkdGg9IjUiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fQURadU40KSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==')
 }

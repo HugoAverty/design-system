@@ -136,7 +136,7 @@ p a:not(.btn), p .link {
   }
 
   &.btn-skew {
-    @apply skew-x-[-20deg] rounded-xs font-secondary font-normal;
+    @apply skew-x-[-20deg] rounded-xs font-secondary font-normal hover:shadow-none;
     & > span {
       @apply skew-x-[20deg] block;
     }
@@ -236,7 +236,7 @@ p a:not(.btn), p .link {
     }
   }
   &.btn-icon {
-    @apply min-w-min px-2 aspect-square h-[40px] w-[40px] relative;
+    @apply min-w-min px-2 aspect-square h-[40px] w-[40px] relative block;
     svg, img {
       @apply h-[24px] w-[24px] absolute top-0 right-0 bottom-0 left-0 m-auto;
     }
@@ -318,7 +318,7 @@ select, .select {
 .input-number {
   @apply relative mb-2.5;
   .plus, .minus {
-    @apply absolute top-0 bottom-0 z-10 mt-auto mb-auto w-6 h-6 pt-0  hover:text-darkblue hover:bg-main-hover hover:shadow-main;
+    @apply absolute top-0 bottom-0 z-10 mt-auto mb-auto w-6 h-6 pt-0;
   }
   .plus {
     @apply right-2.5;
@@ -327,7 +327,7 @@ select, .select {
     @apply left-2.5;
   }
   input {
-    @apply text-center m-0;
+    @apply appearance-none text-center m-0;
   }
 }
 
@@ -373,7 +373,7 @@ input[type="range"], .input-range {
   .progress-bar {
     @apply bg-main transition-all rounded-full h-full bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] relative after:content-[''] after:absolute after:w-full after:h-full after:opacity-20 after:rounded-full after:bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0tyRWkyNCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGxpbmUgeDE9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAuNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjciLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fS3JFaTI0KSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==')];
     .progress-purcentage {
-      @apply absolute right-0 bottom-[-25px] text-main font-secondary text-base;
+      @apply absolute right-0 bottom-[-25px] text-main font-secondary text-base font-bold;
     }
   }
   &.progress-pink {
@@ -515,7 +515,7 @@ textarea {
       @apply opacity-30 pointer-events-none;
     }
     a {
-      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white-10 rounded;
+      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white-10 rounded transition-all;
     }
     .notif {
       @apply absolute right-[-5px] top-[-5px];
@@ -571,7 +571,7 @@ textarea {
 .modal {
   @apply text-center bg-default rounded-md border border-deepBlue shadow-modal overflow-hidden;
   .modal-title {
-    @apply text-main pb-2.5 pt-5 font-secondary font-bold text-2xl tracking-[-0.7px] border-b border-deepBlue;
+    @apply text-main p-5 font-secondary font-bold text-2xl tracking-[-0.7px] border-b border-deepBlue leading-5;
   }
   .modal-content {
     @apply p-5 text-center;
