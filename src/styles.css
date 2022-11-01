@@ -373,6 +373,10 @@ input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
   @apply h-2.5 p-[1px];
 }
 
+.file-upload:hover svg {
+  @apply animate-bounce;
+}
+
 textarea {
   @apply min-h-[100px];
 }

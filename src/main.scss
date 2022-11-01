@@ -387,6 +387,14 @@ input[type="range"], .input-range {
   }
 }
 
+.file-upload {
+  &:hover {
+    svg {
+      @apply animate-bounce;
+    }
+  }
+}
+
 textarea {
   @apply min-h-[100px];
 }
