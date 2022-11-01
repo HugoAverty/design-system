@@ -50,7 +50,7 @@
 }
 
 .bg-gr-pink {
-
+  @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF];
 }
 
 .bg-gr-overlay-white {
@@ -481,7 +481,7 @@ textarea {
 }
 
 .tooltip {
-  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm py-2.5 px-5 text-base font-secondary;
+  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm text-base font-secondary;
   p {
     @apply mb-0;
   }
@@ -508,6 +508,12 @@ textarea {
   }
   &.tooltip-arrow-br {
     @apply after:left-auto after:right-[15px];
+  }
+  .tooltip-content {
+    @apply py-2.5 px-5;
+  }
+  .tooltip-buttons {
+    @apply p-2.5;
   }
 }
 

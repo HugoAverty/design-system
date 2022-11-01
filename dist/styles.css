@@ -654,24 +654,8 @@ video {
   margin-right: auto;
 }
 
-.mr-2\.5 {
-  margin-right: 0.625rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
-}
-
-.mb-2\.5 {
-  margin-bottom: 0.625rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .mt-2\.5 {
@@ -680,6 +664,22 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mr-2\.5 {
+  margin-right: 0.625rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mb-2\.5 {
+  margin-bottom: 0.625rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mr-10 {
@@ -897,8 +897,17 @@ video {
   border-width: 2px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-dashed {
   border-style: dashed;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(242 253 255 / var(--tw-border-opacity));
 }
 
 .border-deepBlue {
@@ -911,9 +920,8 @@ video {
   border-color: rgb(146 142 187 / var(--tw-border-opacity));
 }
 
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(242 253 255 / var(--tw-border-opacity));
+.border-white\/20 {
+  border-color: rgb(242 253 255 / 0.2);
 }
 
 .bg-white\/80 {
@@ -1049,11 +1057,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 .px-2\.5 {
   padding-left: 0.625rem;
   padding-right: 0.625rem;
@@ -1076,16 +1079,12 @@ video {
   padding-bottom: 10px;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
-}
-
 .pl-1 {
   padding-left: 0.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .pb-2\.5 {
@@ -1265,6 +1264,14 @@ video {
   --tw-gradient-to: rgb(133 242 255 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
   --tw-gradient-to: #CDFBFF;
+}
+
+.bg-gr-pink {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #F56772;
+  --tw-gradient-to: rgb(245 103 114 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #BA6BFF;
 }
 
 .bg-gr-overlay-white {
@@ -2795,10 +2802,6 @@ textarea {
   border-radius: 3px;
   --tw-bg-opacity: 1;
   background-color: rgb(77 75 103 / var(--tw-bg-opacity));
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
   font-family: Roboto Condensed, Arial;
   font-size: 14px;
   line-height: 1.5rem;
@@ -2883,6 +2886,17 @@ textarea {
   left: auto;
   content: var(--tw-content);
   right: 15px;
+}
+
+.tooltip .tooltip-content {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.tooltip .tooltip-buttons {
+  padding: 0.625rem;
 }
 
 .nav {

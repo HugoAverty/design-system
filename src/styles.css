@@ -44,6 +44,10 @@
   @apply bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
 }
 
+.bg-gr-pink {
+  @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF];
+}
+
 .bg-gr-overlay-white {
   @apply bg-gradient-to-tr from-[rgba(255,255,255,0)] to-[rgba(255,255,255,1)];
 }
@@ -463,7 +467,7 @@ textarea {
 }
 
 .tooltip {
-  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm py-2.5 px-5 text-base font-secondary;
+  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm text-base font-secondary;
 }
 .tooltip p {
   @apply mb-0;
@@ -491,6 +495,12 @@ textarea {
 }
 .tooltip.tooltip-arrow-br {
   @apply after:left-auto after:right-[15px];
+}
+.tooltip .tooltip-content {
+  @apply py-2.5 px-5;
+}
+.tooltip .tooltip-buttons {
+  @apply p-2.5;
 }
 
 .nav {

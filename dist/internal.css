@@ -22,7 +22,6 @@ body {
 
 .title + .subtitle {
     font-family: 'Roboto Condensed';
-    transform: translateY(-8px);
 }
 
 h1.title {
@@ -66,7 +65,7 @@ h3.title {
     margin-top: 15px;
     position: relative;
 }
-h3.title:before {
+h3.title:after {
     content: "";
     position: absolute;
     top: 0;
@@ -74,6 +73,18 @@ h3.title:before {
     width: calc(100% + 43px);
     border-top: 1px solid;
     opacity: .15;
+}
+h3.title:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    border-radius: 50%;
+    background: #56EAFF;
+    left: -21px;
+    top: 15px;
+    bottom: 0;
+    margin: auto;
 }
 .legend.text-left {
     text-align: left;

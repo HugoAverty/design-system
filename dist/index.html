@@ -11,6 +11,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
   <title>Design System - Metadventure</title>
 </head>
 <body>
@@ -986,13 +990,6 @@
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <input type="text" class="input-search input-success" value="Invalid value" />
       </div>
-      <div class="basis-1/5 pr-[10px] pb-[10px]">
-        <input type="text" class="input-search input-success" value="Invalid value" />
-        <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg>
-      </div>
     </div>
     <h3 class="title">
       Input number
@@ -1514,39 +1511,85 @@
     <div class="flex flex-row mt-2.5">
       <div class="flex-none mr-2.5">
         <div class="tooltip">
-          Lorem ipsum dolor sit amet
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet
+          </div>
         </div>
       </div>
       <div class="flex-none mr-2.5">
         <div class="tooltip tooltip-primary">
-          Lorem ipsum dolor sit amet
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet
+          </div>
         </div>
       </div>
       <div class="flex-none mr-2.5">
         <div class="tooltip tooltip-danger">
-          Lorem ipsum dolor sit amet
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet
+          </div>
         </div>
       </div>
     </div>
     <div class="flex flex-row mt-2.5">
       <div class="flex-none mr-2.5">
         <div class="tooltip tooltip-arrow-bl w-64">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          </div>
         </div>
       </div>
       <div class="flex-none mr-2.5">
         <div class="tooltip tooltip-arrow-br w-64">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          </div>
         </div>
       </div>
       <div class="flex-none mr-2.5">
         <div class="tooltip tooltip-arrow-bl tooltip-primary w-64">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          </div>
         </div>
       </div>
       <div class="flex-none mr-2.5">
         <div class="tooltip tooltip-arrow-br tooltip-danger w-64">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row mt-2.5">
+      <div class="flex-none mr-2.5">
+        <div class="tooltip tooltip-arrow-bl w-64">
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          </div>
+          <div class="flex flex-row tooltip-buttons border-t border-white/20">
+            <div class="basis-1/2 mr-2.5">
+              <a class="btn btn-primary btn-ghost btn-extrasmall w-full" href="#">Cancel</a>
+            </div>
+            <div class="basis-1/2">
+              <a class="btn btn-primary btn-extrasmall w-full" href="#">Confirm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-none mr-2.5">
+        <div class="tooltip tooltip-arrow-br tooltip-danger w-64">
+          <div class="tooltip-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.
+          </div>
+          <div class="flex flex-row tooltip-buttons border-t border-white/20">
+            <div class="basis-1/2 mr-2.5">
+              <a class="btn btn-white btn-ghost btn-extrasmall w-full" href="#">Cancel</a>
+            </div>
+            <div class="basis-1/2">
+              <a class="btn btn-white btn-extrasmall w-full" href="#">Delete</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
