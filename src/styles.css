@@ -148,6 +148,30 @@ p a:not(.btn), p .link {
 .btn.btn-extrasmall {
   @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal rounded-xs;
 }
+.btn.btn-extrasmall.btn-primary {
+  @apply hover:shadow-main/40;
+}
+.btn.btn-extrasmall.btn-pink {
+  @apply hover:shadow-pink/80;
+}
+.btn.btn-extrasmall.btn-danger {
+  @apply hover:shadow-red/80;
+}
+.btn.btn-extrasmall.btn-success {
+  @apply hover:shadow-green/80;
+}
+.btn.btn-extrasmall.btn-warning {
+  @apply hover:shadow-orange/80;
+}
+.btn.btn-extrasmall.btn-info {
+  @apply hover:shadow-blue/80;
+}
+.btn.btn-extrasmall.btn-white {
+  @apply hover:shadow-white/30;
+}
+.btn.btn-extrasmall svg, .btn.btn-extrasmall img {
+  @apply h-[16px] w-[16px];
+}
 .btn.btn-ghost {
   @apply bg-none bg-transparent hover:shadow-none;
 }
