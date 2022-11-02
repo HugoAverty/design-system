@@ -386,7 +386,7 @@ input[type="range"], .input-range {
     }
   }
   &.progress-xs {
-    @apply h-2.5 p-[1px];
+    @apply h-2.5 p-[1px] mb-0;
   }
 }
 

@@ -377,7 +377,7 @@ input[type=range].input-range-vertical, .input-range.input-range-vertical {
   @apply text-pink;
 }
 .progress.progress-xs {
-  @apply h-2.5 p-[1px];
+  @apply h-2.5 p-[1px] mb-0;
 }
 
 .file-upload:hover svg {

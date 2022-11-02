@@ -698,6 +698,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -720,6 +724,10 @@ video {
 
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .h-20 {
@@ -790,12 +798,12 @@ video {
   width: 3rem;
 }
 
-.w-\[35\%\] {
-  width: 35%;
-}
-
 .w-\[50\%\] {
   width: 50%;
+}
+
+.w-\[35\%\] {
+  width: 35%;
 }
 
 .w-\[75\%\] {
@@ -808,6 +816,10 @@ video {
 
 .flex-none {
   flex: none;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .basis-1\/4 {
@@ -875,6 +887,10 @@ video {
 
 .self-center {
   align-self: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
@@ -1137,6 +1153,11 @@ video {
 .text-xs {
   font-size: 12px;
   line-height: 1rem;
+}
+
+.text-base {
+  font-size: 14px;
+  line-height: 1.5rem;
 }
 
 .font-light {
@@ -2507,6 +2528,7 @@ input[type=range].input-range-vertical, .input-range.input-range-vertical {
 }
 
 .progress.progress-xs {
+  margin-bottom: 0px;
   height: 0.625rem;
   padding: 1px;
 }
