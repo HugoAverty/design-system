@@ -1089,7 +1089,7 @@
       Switch
     </h3>
     <p class="subtitle">
-
+      Switch with two label must follow strictly the DOM structure (using ~ selector in CSS). You also need to add a class to label elements .two-label and they must also need an .order-first or .order-last class.
     </p>
     <div class="flex flex-row">
       <div class="flex-none self-center">
@@ -1129,22 +1129,15 @@
         <label class=" input-error">Error checked</label>
       </div>
       <div class="flex-none self-center">
-        <label class="">Yes</label>
-      </div>
-      <div class="flex-none self-center">
-        <input type="checkbox" class="input-switch " checked />
-      </div>
-      <div class="flex-none mr-2.5 self-center">
-        <label class="">No</label>
-      </div>
-      <div class="flex-none self-center">
-        <label class="">Yes</label>
-      </div>
-      <div class="flex-none self-center">
-        <input type="checkbox" class="input-switch " />
-      </div>
-      <div class="flex-none mr-2.5 self-center">
-        <label class="">No</label>
+        <div class="flex flex-row">
+          <input id="yesnoswitch" type="checkbox" class="input-switch flex-none self-center" checked />
+          <label for="yesnoswitch" class="flex-none self-center order-first two-label">
+            No
+          </label>
+          <label for="yesnoswitch" class="flex-none mr-2.5 self-center order-last two-label">
+            Yes
+          </label>
+        </div>
       </div>
     </div>
     <h3 class="title">
@@ -1671,6 +1664,7 @@
   </div>
   <div class="bg-default container mx-auto p-5 mt-10 rounded">
     <h1 class="title">Tabs bar</h1>
+    <h3 class="title">Default tab bar</h3>
     <div class="flex flex-row mt-2.5">
       <div class="flex-none mr-2.5">
         <nav class="nav nav-light">
@@ -1703,6 +1697,7 @@
         </nav>
       </div>
     </div>
+    <h3 class="title">No dark background tab bar</h3>
   </div>
   <div class="container mx-auto px-5 mt-5 rounded">
     <div class="flex flex-row">
