@@ -95,8 +95,11 @@ p {
   @apply text-sm text-white leading-5 mb-2.5;
 }
 
-p a:not(.btn), p .link {
+p a:not(.btn), .link {
   @apply overflow-hidden font-bold text-main relative after:content-[''] after:absolute after:bottom-[-3px] after:left-0 after:w-0 after:h-['1px'] after:border-t after:border-dashed hover:after:w-full after:transition-all;
+  &.link-dark {
+    @apply text-black;
+  }
 }
 
 .btn {

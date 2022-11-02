@@ -952,6 +952,11 @@ video {
   background-color: rgb(242 253 255 / 0.8);
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
+}
+
 .bg-darkblueTransparent {
   background-color: rgba(39,39,54,0.85);
 }
@@ -1019,11 +1024,6 @@ video {
 .bg-bgButton {
   --tw-bg-opacity: 1;
   background-color: rgb(56 56 74 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -1409,7 +1409,7 @@ p {
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-p a:not(.btn), p .link {
+p a:not(.btn), .link {
   position: relative;
   overflow: hidden;
   font-weight: 700;
@@ -1417,7 +1417,7 @@ p a:not(.btn), p .link {
   color: rgb(86 234 255 / var(--tw-text-opacity));
 }
 
-p a:not(.btn)::after, p .link::after {
+p a:not(.btn)::after, .link::after {
   position: absolute;
   bottom: -3px;
   left: 0px;
@@ -1432,9 +1432,14 @@ p a:not(.btn)::after, p .link::after {
   content: var(--tw-content);
 }
 
-p a:not(.btn):hover::after, p .link:hover::after {
+p a:not(.btn):hover::after, .link:hover::after {
   content: var(--tw-content);
   width: 100%;
+}
+
+p a.link-dark:not(.btn), .link.link-dark {
+  --tw-text-opacity: 1;
+  color: rgb(15 31 45 / var(--tw-text-opacity));
 }
 
 .btn {
