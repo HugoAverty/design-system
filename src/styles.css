@@ -357,6 +357,9 @@ input[type=range], .input-range {
 input[type=range]::-webkit-slider-thumb, .input-range::-webkit-slider-thumb {
   @apply bg-main shadow-main rounded-full appearance-none h-5 w-5;
 }
+input[type=range].input-range-vertical, .input-range.input-range-vertical {
+  @apply cursor-col-resize rotate-[270deg] translate-y-[45px] translate-x-[-50px];
+}
 
 .progress {
   @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-5 p-[2px] mb-5;

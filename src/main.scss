@@ -364,6 +364,9 @@ input[type="range"], .input-range {
   &::-webkit-slider-thumb {
     @apply bg-main shadow-main rounded-full appearance-none h-5 w-5;
   }
+  &.input-range-vertical {
+    @apply cursor-col-resize rotate-[270deg] translate-y-[45px] translate-x-[-50px];
+  }
 }
 
 .progress {
