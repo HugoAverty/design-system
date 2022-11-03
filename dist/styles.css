@@ -1500,8 +1500,8 @@ p a.link-dark:not(.btn), .link.link-dark {
 
 .btn.btn-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(192 247 255 / var(--tw-bg-opacity));
-  --tw-gradient-to: rgba(255,255,255,.2);
+  background-color: rgb(130 240 255 / var(--tw-bg-opacity));
+  --tw-gradient-to: rgba(255,255,255,.4);
   --tw-shadow-color: rgb(86 234 255 / 0.6);
   --tw-shadow: var(--tw-shadow-colored);
 }

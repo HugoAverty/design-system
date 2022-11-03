@@ -107,7 +107,7 @@ p a:not(.btn).link-dark, .link.link-dark {
   @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
 }
 .btn.btn-primary {
-  @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main/60 hover:to-[rgba(255,255,255,.2)];
+  @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main/60 hover:to-[rgba(255,255,255,.4)];
 }
 .btn.btn-dark {
   @apply bg-darkblue text-white hover:bg-darkSea hover:to-[rgba(255,255,255,.1)];

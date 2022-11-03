@@ -15,7 +15,7 @@ module.exports = {
 
       main: {
         DEFAULT: '#56EAFF',
-        hover: '#C0F7FF'
+        hover: '#82F0FF'
       },
 
       pink: {
