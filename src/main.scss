@@ -27,17 +27,17 @@
 
 /* width */
 ::-webkit-scrollbar {
-  @apply w-2;
+  @apply w-1;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-greyBlue;
+  @apply bg-transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-lightBlue;
+  @apply bg-lightBlue rounded;
 }
 
 
@@ -106,7 +106,7 @@ p a:not(.btn), .link {
   @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
   // Button color
   &.btn-primary {
-    @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
+    @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main/60 hover:to-[rgba(255,255,255,.2)];
   }
   &.btn-dark {
     @apply bg-darkblue text-white hover:bg-darkSea hover:to-[rgba(255,255,255,.1)];
@@ -319,7 +319,7 @@ label, .label {
   }
 }
 
-input[type="text"], input[type="search"], input[type="number"], textarea, select {
+input[type="text"], input[type="search"], input[type="number"], textarea, select, .input-select {
   @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
     @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
@@ -337,8 +337,8 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
     }
   }
 }
-select, .select {
-  @apply relative before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
+select, .input-select {
+  @apply relative before:content-[''] bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
   &.input-error {
     @apply bg-[url('img/dropdown-red.svg')] focus:bg-[url('img/dropdown-active-red.svg')];
   }
@@ -346,6 +346,27 @@ select, .select {
     @apply bg-[url('img/dropdown-green.svg')] focus:bg-[url('img/dropdown-active-green.svg')];
   }
 }
+
+.input-select-wrapper {
+  .input-select {
+    @apply relative cursor-pointer hover:border-blue hover:bg-[url('img/dropdown-active.svg')];
+    .placeholder {
+      @apply italic text-lightBlue;
+    }
+    .input-select-values {
+      @apply z-10 opacity-0 absolute top-[20px] left-0 w-full h-64 bg-greyDarkBlue border border-solid border-deepBlue transition-all rounded overflow-x-auto;
+      li {
+        @apply p-2.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-deepBlue hover:bg-deepBlue cursor-pointer;
+      }
+    }
+  }
+  &:hover {
+    .input-select-values {
+      @apply opacity-100 top-[45px];
+    }
+  }
+}
+
 .input-number {
   @apply relative mb-2.5;
   .plus, .minus {

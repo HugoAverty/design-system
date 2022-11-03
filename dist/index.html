@@ -1066,6 +1066,28 @@
       </div>
     </div>
     <h3 class="title">
+      Custom select
+    </h3>
+    <div class="flex flex-row">
+      <div class="basis-1/5 pr-[10px] pb-[10px]">
+        <div class="input-select-wrapper">
+          <div class="input-select">
+            <div class="placeholder">Please select something...</div>
+            <ul class="input-select-values">
+              <li>Item #1</li>
+              <li>Item #2</li>
+              <li>Item #3</li>
+              <li>Item #4</li>
+              <li>Item #5</li>
+              <li>Item #6</li>
+              <li>Item #7</li>
+              <li>Item #8</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="title">
       Textarea
     </h3>
     <p class="subtitle">
@@ -1348,7 +1370,7 @@
     <div class="flex flex-row">
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <div class="progress">
-          <div class="progress-bar w-[35%]">
+          <div class="progress-bar w-[35%]" id="progress-1">
             <div class="progress-purcentage">
               35%
             </div>
@@ -1357,7 +1379,7 @@
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <div class="progress progress-pink">
-          <div class="progress-bar w-[50%]">
+          <div class="progress-bar w-[50%]" id="progress-2">
             <div class="progress-purcentage">
               50%
             </div>
@@ -1368,16 +1390,35 @@
     <div class="flex flex-row">
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <div class="progress progress-xs">
-          <div class="progress-bar w-[50%]">
+          <div class="progress-bar w-[50%]" id="progress-3">
           </div>
         </div>
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
         <div class="progress progress-pink progress-xs">
-          <div class="progress-bar w-[75%]">
+          <div class="progress-bar w-[75%]" id="progress-4">
           </div>
         </div>
       </div>
+      <script>
+        const progress1 = document.getElementById('progress-1');
+        const progress2 = document.getElementById('progress-2');
+        const progress3 = document.getElementById('progress-3');
+        const progress4 = document.getElementById('progress-4');
+        function animateProgress() {
+          setTimeout(() => {
+            var value = Math.floor(Math.random() * (100 + 1)) + "%";
+            progress1.style.width = value;
+            progress1.children[0].innerText = value;
+            progress2.style.width = value;
+            progress2.children[0].innerText = value;
+            progress3.style.width = value;
+            progress4.style.width = value;
+            animateProgress();
+          }, 1000);
+        }
+        animateProgress();
+      </script>
     </div>
   </div>
   <div class="bg-default container mx-auto p-5 mt-10 rounded">
@@ -1717,14 +1758,14 @@
       </div>
     </div>
   </div>
-  <div class="bg-default container mx-auto p-5 mt-10 rounded">
+  <div class="bg-default container mx-auto p-5 mt-5 rounded">
     <h1 class="title">Tools menu</h1>
     <p class="subtitle">
 
     </p>
   </div>
-  <div class="container mx-auto p-5 mt-10 rounded">
-    <div class="flex flex-row mt-2.5">
+  <div class="container mx-auto p-5 mt-5 rounded">
+    <div class="flex flex-row">
       <nav class="menu menu-tools">
         <ul>
           <li class="active">

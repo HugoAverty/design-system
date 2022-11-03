@@ -1279,19 +1279,19 @@ video {
 /* width */
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.25rem;
 }
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 54 / var(--tw-bg-opacity));
+  background-color: rgba(0,0,0,0);
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
   --tw-bg-opacity: 1;
   background-color: rgb(146 142 187 / var(--tw-bg-opacity));
 }
@@ -1501,7 +1501,8 @@ p a.link-dark:not(.btn), .link.link-dark {
 .btn.btn-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(192 247 255 / var(--tw-bg-opacity));
-  --tw-shadow-color: #56EAFF;
+  --tw-gradient-to: rgba(255,255,255,.2);
+  --tw-shadow-color: rgb(86 234 255 / 0.6);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2121,7 +2122,7 @@ label.label-disabled, label .disabled, .label.label-disabled, .label .disabled {
   color: rgb(147 213 124 / var(--tw-text-opacity));
 }
 
-input[type=text], input[type=search], input[type=number], textarea, select {
+input[type=text], input[type=search], input[type=number], textarea, select, .input-select {
   width: 100%;
   border-radius: 5px;
   border-width: 1px;
@@ -2143,29 +2144,29 @@ input[type=text], input[type=search], input[type=number], textarea, select {
   outline-offset: 2px;
 }
 
-input[type=text]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+input[type=text]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, .input-select::-moz-placeholder {
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(146 142 187 / var(--tw-text-opacity));
 }
 
-input[type=text]::placeholder, input[type=search]::placeholder, input[type=number]::placeholder, textarea::placeholder, select::placeholder {
+input[type=text]::placeholder, input[type=search]::placeholder, input[type=number]::placeholder, textarea::placeholder, select::placeholder, .input-select::placeholder {
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(146 142 187 / var(--tw-text-opacity));
 }
 
-input[type=text]:focus, input[type=search]:focus, input[type=number]:focus, textarea:focus, select:focus {
+input[type=text]:focus, input[type=search]:focus, input[type=number]:focus, textarea:focus, select:focus, .input-select:focus {
   --tw-border-opacity: 1;
   border-color: rgb(0 171 255 / var(--tw-border-opacity));
 }
 
-input[type=text]:disabled, input[type=search]:disabled, input[type=number]:disabled, textarea:disabled, select:disabled {
+input[type=text]:disabled, input[type=search]:disabled, input[type=number]:disabled, textarea:disabled, select:disabled, .input-select:disabled {
   cursor: not-allowed;
   opacity: 0.4;
 }
 
-input[type=text].input-error, input[type=search].input-error, input[type=number].input-error, textarea.input-error, select.input-error {
+input[type=text].input-error, input[type=search].input-error, input[type=number].input-error, textarea.input-error, select.input-error, .input-select.input-error {
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -2176,17 +2177,17 @@ input[type=text].input-error, input[type=search].input-error, input[type=number]
   color: rgb(255 101 101 / var(--tw-text-opacity));
 }
 
-input[type=text].input-error::-moz-placeholder, input[type=search].input-error::-moz-placeholder, input[type=number].input-error::-moz-placeholder, textarea.input-error::-moz-placeholder, select.input-error::-moz-placeholder {
+input[type=text].input-error::-moz-placeholder, input[type=search].input-error::-moz-placeholder, input[type=number].input-error::-moz-placeholder, textarea.input-error::-moz-placeholder, select.input-error::-moz-placeholder, .input-select.input-error::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(160 84 84 / var(--tw-text-opacity));
 }
 
-input[type=text].input-error::placeholder, input[type=search].input-error::placeholder, input[type=number].input-error::placeholder, textarea.input-error::placeholder, select.input-error::placeholder {
+input[type=text].input-error::placeholder, input[type=search].input-error::placeholder, input[type=number].input-error::placeholder, textarea.input-error::placeholder, select.input-error::placeholder, .input-select.input-error::placeholder {
   --tw-text-opacity: 1;
   color: rgb(160 84 84 / var(--tw-text-opacity));
 }
 
-input[type=text].input-success, input[type=search].input-success, input[type=number].input-success, textarea.input-success, select.input-success {
+input[type=text].input-success, input[type=search].input-success, input[type=number].input-success, textarea.input-success, select.input-success, .input-select.input-success {
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -2197,7 +2198,7 @@ input[type=text].input-success, input[type=search].input-success, input[type=num
   color: rgb(147 213 124 / var(--tw-text-opacity));
 }
 
-input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search] {
+input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search], .input-select.input-search, .input-select [type=search] {
   border-radius: 9999px;
   background-image: url("img/search.svg");
   background-size: 16px 16px;
@@ -2206,15 +2207,15 @@ input[type=text].input-search, input[type=text] [type=search], input[type=search
   padding-left: 40px;
 }
 
-input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error {
+input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error, .input-select.input-search.input-error, .input-select [type=search].input-error {
   background-image: url("img/search-red.svg");
 }
 
-input[type=text].input-search.input-success, input[type=text] [type=search].input-success, input[type=search].input-search.input-success, input[type=search] [type=search].input-success, input[type=number].input-search.input-success, input[type=number] [type=search].input-success, textarea.input-search.input-success, textarea [type=search].input-success, select.input-search.input-success, select [type=search].input-success {
+input[type=text].input-search.input-success, input[type=text] [type=search].input-success, input[type=search].input-search.input-success, input[type=search] [type=search].input-success, input[type=number].input-search.input-success, input[type=number] [type=search].input-success, textarea.input-search.input-success, textarea [type=search].input-success, select.input-search.input-success, select [type=search].input-success, .input-select.input-search.input-success, .input-select [type=search].input-success {
   background-image: url("img/search-green.svg");
 }
 
-select, .select {
+select, .input-select {
   position: relative;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2224,37 +2225,95 @@ select, .select {
   background-repeat: no-repeat;
 }
 
-select::before, .select::before {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 0.75rem;
-  width: 0.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 253 255 / var(--tw-bg-opacity));
-  opacity: 0.3;
+select::before, .input-select::before {
   --tw-content: "";
   content: var(--tw-content);
 }
 
-select:focus, .select:focus {
+select:focus, .input-select:focus {
   background-image: url("img/dropdown-active.svg");
 }
 
-select.input-error, .select.input-error {
+select.input-error, .input-select.input-error {
   background-image: url("img/dropdown-red.svg");
 }
 
-select.input-error:focus, .select.input-error:focus {
+select.input-error:focus, .input-select.input-error:focus {
   background-image: url("img/dropdown-active-red.svg");
 }
 
-select.input-success, .select.input-success {
+select.input-success, .input-select.input-success {
   background-image: url("img/dropdown-green.svg");
 }
 
-select.input-success:focus, .select.input-success:focus {
+select.input-success:focus, .input-select.input-success:focus {
   background-image: url("img/dropdown-active-green.svg");
+}
+
+.input-select-wrapper .input-select {
+  position: relative;
+  cursor: pointer;
+}
+
+.input-select-wrapper .input-select:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 171 255 / var(--tw-border-opacity));
+  background-image: url("img/dropdown-active.svg");
+}
+
+.input-select-wrapper .input-select .placeholder {
+  font-style: italic;
+  --tw-text-opacity: 1;
+  color: rgb(146 142 187 / var(--tw-text-opacity));
+}
+
+.input-select-wrapper .input-select .input-select-values {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 10;
+  height: 16rem;
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(77 75 103 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 31 45 / var(--tw-bg-opacity));
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.input-select-wrapper .input-select .input-select-values li {
+  position: relative;
+  cursor: pointer;
+  padding: 0.625rem;
+}
+
+.input-select-wrapper .input-select .input-select-values li::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(77 75 103 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.input-select-wrapper .input-select .input-select-values li:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(77 75 103 / var(--tw-bg-opacity));
+}
+
+.input-select-wrapper:hover .input-select-values {
+  top: 45px;
+  opacity: 1;
 }
 
 .input-number {

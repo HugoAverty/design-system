@@ -23,17 +23,17 @@
 @tailwind variants;
 /* width */
 ::-webkit-scrollbar {
-  @apply w-2;
+  @apply w-1;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-greyBlue;
+  @apply bg-transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-lightBlue;
+  @apply bg-lightBlue rounded;
 }
 
 .bg-default {
@@ -107,7 +107,7 @@ p a:not(.btn).link-dark, .link.link-dark {
   @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
 }
 .btn.btn-primary {
-  @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main;
+  @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main/60 hover:to-[rgba(255,255,255,.2)];
 }
 .btn.btn-dark {
   @apply bg-darkblue text-white hover:bg-darkSea hover:to-[rgba(255,255,255,.1)];
@@ -307,33 +307,49 @@ label.label-disabled, label .disabled, .label.label-disabled, .label .disabled {
   @apply text-green;
 }
 
-input[type=text], input[type=search], input[type=number], textarea, select {
+input[type=text], input[type=search], input[type=number], textarea, select, .input-select {
   @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40 disabled:cursor-not-allowed;
 }
-input[type=text].input-error, input[type=search].input-error, input[type=number].input-error, textarea.input-error, select.input-error {
+input[type=text].input-error, input[type=search].input-error, input[type=number].input-error, textarea.input-error, select.input-error, .input-select.input-error {
   @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
 }
-input[type=text].input-success, input[type=search].input-success, input[type=number].input-success, textarea.input-success, select.input-success {
+input[type=text].input-success, input[type=search].input-success, input[type=number].input-success, textarea.input-success, select.input-success, .input-select.input-success {
   @apply bg-green-dark border border-solid border-green text-green;
 }
-input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search] {
+input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search], .input-select.input-search, .input-select [type=search] {
   @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url("img/search.svg")] bg-[length:16px_16px];
 }
-input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error {
+input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error, .input-select.input-search.input-error, .input-select [type=search].input-error {
   @apply bg-[url("img/search-red.svg")];
 }
-input[type=text].input-search.input-success, input[type=text] [type=search].input-success, input[type=search].input-search.input-success, input[type=search] [type=search].input-success, input[type=number].input-search.input-success, input[type=number] [type=search].input-success, textarea.input-search.input-success, textarea [type=search].input-success, select.input-search.input-success, select [type=search].input-success {
+input[type=text].input-search.input-success, input[type=text] [type=search].input-success, input[type=search].input-search.input-success, input[type=search] [type=search].input-success, input[type=number].input-search.input-success, input[type=number] [type=search].input-success, textarea.input-search.input-success, textarea [type=search].input-success, select.input-search.input-success, select [type=search].input-success, .input-select.input-search.input-success, .input-select [type=search].input-success {
   @apply bg-[url("img/search-green.svg")];
 }
 
-select, .select {
-  @apply relative before:content-[""] before:absolute before:w-3 before:h-3 before:bg-white before:opacity-30 before:top-0 before:right-0 bg-no-repeat bg-select bg-[url("img/dropdown.svg")] appearance-none focus:bg-[url("img/dropdown-active.svg")];
+select, .input-select {
+  @apply relative before:content-[""] bg-no-repeat bg-select bg-[url("img/dropdown.svg")] appearance-none focus:bg-[url("img/dropdown-active.svg")];
 }
-select.input-error, .select.input-error {
+select.input-error, .input-select.input-error {
   @apply bg-[url("img/dropdown-red.svg")] focus:bg-[url("img/dropdown-active-red.svg")];
 }
-select.input-success, .select.input-success {
+select.input-success, .input-select.input-success {
   @apply bg-[url("img/dropdown-green.svg")] focus:bg-[url("img/dropdown-active-green.svg")];
+}
+
+.input-select-wrapper .input-select {
+  @apply relative cursor-pointer hover:border-blue hover:bg-[url("img/dropdown-active.svg")];
+}
+.input-select-wrapper .input-select .placeholder {
+  @apply italic text-lightBlue;
+}
+.input-select-wrapper .input-select .input-select-values {
+  @apply z-10 opacity-0 absolute top-[20px] left-0 w-full h-64 bg-greyDarkBlue border border-solid border-deepBlue transition-all rounded overflow-x-auto;
+}
+.input-select-wrapper .input-select .input-select-values li {
+  @apply p-2.5 relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-deepBlue hover:bg-deepBlue cursor-pointer;
+}
+.input-select-wrapper:hover .input-select-values {
+  @apply opacity-100 top-[45px];
 }
 
 .input-number {
