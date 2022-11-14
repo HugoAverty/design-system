@@ -22,7 +22,7 @@ module.exports = {
         hover: '#D28FEF'
       },
       neutral: '#272736',
-      white: {
+      opposite: {
         DEFAULT: '#F2FDFF'
       },
       contrast: {

@@ -48,7 +48,7 @@
   @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF];
 }
 
-.bg-gr-overlay-white {
+.bg-gr-overlay-opposite {
   @apply bg-gradient-to-tr from-[rgba(255,255,255,0)] to-[rgba(255,255,255,1)];
 }
 
@@ -57,35 +57,35 @@
 }
 
 h1, .h1 {
-  @apply text-white font-light text-5xl tracking-[-1px] mb-2 mt-12;
+  @apply text-opposite font-light text-5xl tracking-[-1px] mb-2 mt-12;
 }
 h1 + h2, h1 + .h2, h1 + h3, h1 + .h3, h1 + h4, h1 + .h4, h1 + h5, h1 + .h5, .h1 + h2, .h1 + .h2, .h1 + h3, .h1 + .h3, .h1 + h4, .h1 + .h4, .h1 + h5, .h1 + .h5 {
   @apply mt-2;
 }
 
 h2, .h2 {
-  @apply text-white font-light text-4xl tracking-[-0.85px] mb-2 mt-10;
+  @apply text-opposite font-light text-4xl tracking-[-0.85px] mb-2 mt-10;
 }
 h2 + h3, h2 + .h3, h2 + h4, h2 + .h4, h2 + h5, h2 + .h5, .h2 + h3, .h2 + .h3, .h2 + h4, .h2 + .h4, .h2 + h5, .h2 + .h5 {
   @apply mt-2;
 }
 
 h3, .h3 {
-  @apply text-white font-secondary text-3xl tracking-[-0.8px] mb-2 mt-7;
+  @apply text-opposite font-secondary text-3xl tracking-[-0.8px] mb-2 mt-7;
 }
 h3 + h4, h3 + .h4, h3 + h5, h3 + .h5, .h3 + h4, .h3 + .h4, .h3 + h5, .h3 + .h5 {
   @apply mt-2;
 }
 
 h4, .h4 {
-  @apply text-white font-secondary font-bold text-2xl tracking-[-0.7px] mb-2 mt-5;
+  @apply text-opposite font-secondary font-bold text-2xl tracking-[-0.7px] mb-2 mt-5;
 }
 h4 + h5, h4 + .h5, .h4 + h5, .h4 + .h5 {
   @apply mt-2;
 }
 
 h5, .h5 {
-  @apply text-white font-secondary font-bold text-xl tracking-[-0.7px] mb-2 mt-2;
+  @apply text-opposite font-secondary font-bold text-xl tracking-[-0.7px] mb-2 mt-2;
 }
 
 .subtitle {
@@ -93,7 +93,7 @@ h5, .h5 {
 }
 
 p {
-  @apply text-sm text-white leading-5 mb-2.5;
+  @apply text-sm text-opposite leading-5 mb-2.5;
 }
 
 p a:not(.btn), .link {
@@ -110,25 +110,25 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   @apply bg-primary text-neutral hover:bg-primary-hover hover:shadow-primary/60 hover:to-[rgba(255,255,255,.4)];
 }
 .btn.btn-contrast {
-  @apply bg-neutral text-white hover:bg-contrast hover:to-[rgba(255,255,255,.1)];
+  @apply bg-neutral text-opposite hover:bg-contrast hover:to-[rgba(255,255,255,.1)];
 }
 .btn.btn-secondary {
-  @apply bg-secondary text-neutral text-white hover:bg-secondary-hover hover:shadow-secondary;
+  @apply bg-secondary text-neutral text-opposite hover:bg-secondary-hover hover:shadow-secondary;
 }
 .btn.btn-danger {
-  @apply bg-danger text-neutral text-white hover:bg-danger-hover hover:shadow-danger;
+  @apply bg-danger text-neutral text-opposite hover:bg-danger-hover hover:shadow-danger;
 }
 .btn.btn-success {
-  @apply bg-success text-neutral text-white hover:bg-success-hover hover:shadow-success;
+  @apply bg-success text-neutral text-opposite hover:bg-success-hover hover:shadow-success;
 }
 .btn.btn-warning {
-  @apply bg-warning text-neutral text-white hover:bg-warning-hover hover:shadow-warning;
+  @apply bg-warning text-neutral text-opposite hover:bg-warning-hover hover:shadow-warning;
 }
 .btn.btn-info {
-  @apply bg-info text-neutral text-white hover:bg-info-hover hover:shadow-info;
+  @apply bg-info text-neutral text-opposite hover:bg-info-hover hover:shadow-info;
 }
-.btn.btn-white {
-  @apply bg-white text-neutral hover:bg-white hover:shadow-white;
+.btn.btn-opposite {
+  @apply bg-opposite text-neutral hover:bg-opposite hover:shadow-opposite;
 }
 .btn:not(.btn-icon) svg {
   @apply inline-block;
@@ -137,7 +137,7 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   @apply rounded bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-contrast hover:shadow-primary;
 }
 .btn.btn-gr-secondary {
-  @apply bg-gradient-to-tr from-[#BA6BFF] to-[#F56772] text-white hover:shadow-secondary;
+  @apply bg-gradient-to-tr from-[#BA6BFF] to-[#F56772] text-opposite hover:shadow-secondary;
 }
 .btn.btn-skew {
   @apply skew-x-[-20deg] rounded-xs font-secondary font-normal hover:shadow-none;
@@ -169,8 +169,8 @@ p a:not(.btn).link-contrast, .link.link-contrast {
 .btn.btn-extrasmall.btn-info {
   @apply hover:shadow-info/80;
 }
-.btn.btn-extrasmall.btn-white {
-  @apply hover:shadow-white/30;
+.btn.btn-extrasmall.btn-opposite {
+  @apply hover:shadow-opposite/30;
 }
 .btn.btn-extrasmall svg, .btn.btn-extrasmall img {
   @apply h-[16px] w-[16px];
@@ -199,8 +199,8 @@ p a:not(.btn).link-contrast, .link.link-contrast {
 .btn.btn-ghost.btn-info {
   @apply text-info hover:bg-info/10;
 }
-.btn.btn-ghost.btn-white {
-  @apply text-white hover:bg-white/10;
+.btn.btn-ghost.btn-opposite {
+  @apply text-opposite hover:bg-opposite/10;
 }
 .btn.btn-light {
   @apply bg-none hover:shadow-none;
@@ -226,8 +226,8 @@ p a:not(.btn).link-contrast, .link.link-contrast {
 .btn.btn-light.btn-info {
   @apply bg-info/10 text-info hover:bg-info/20;
 }
-.btn.btn-light.btn-white {
-  @apply bg-white/10 text-white hover:bg-white/20;
+.btn.btn-light.btn-opposite {
+  @apply bg-opposite/10 text-opposite hover:bg-opposite/20;
 }
 .btn.btn-bordered {
   @apply bg-none bg-transparent hover:shadow-none;
@@ -253,8 +253,8 @@ p a:not(.btn).link-contrast, .link.link-contrast {
 .btn.btn-bordered.btn-info {
   @apply border border-solid border-info text-info hover:bg-info/10;
 }
-.btn.btn-bordered.btn-white {
-  @apply border border-solid border-white text-white hover:bg-white/10;
+.btn.btn-bordered.btn-opposite {
+  @apply border border-solid border-opposite text-opposite hover:bg-opposite/10;
 }
 .btn.btn-icon {
   @apply min-w-min px-2 aspect-square h-[40px] w-[40px] relative block;
@@ -279,7 +279,7 @@ p a:not(.btn).link-contrast, .link.link-contrast {
 }
 
 label, .label {
-  @apply font-bold text-white px-[10px] pb-[5px] block text-lg cursor-pointer relative;
+  @apply font-bold text-opposite px-[10px] pb-[5px] block text-lg cursor-pointer relative;
 }
 label.label-checkbox, .label.label-checkbox {
   @apply inline-block;
@@ -308,7 +308,7 @@ label.label-disabled, label .disabled, .label.label-disabled, .label .disabled {
 }
 
 input[type=text], input[type=search], input[type=number], textarea, select, .input-select {
-  @apply bg-input px-[10px] py-[7px] border border-solid border-highlight text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-active focus:border-info disabled:opacity-40 disabled:cursor-not-allowed;
+  @apply bg-input px-[10px] py-[7px] border border-solid border-highlight text-base not-italic text-opposite outline-none rounded w-full placeholder:italic placeholder:text-active focus:border-info disabled:opacity-40 disabled:cursor-not-allowed;
 }
 input[type=text].input-error, input[type=search].input-error, input[type=number].input-error, textarea.input-error, select.input-error, .input-select.input-error {
   @apply bg-danger-dark border border-solid border-danger text-danger placeholder:text-danger-between;
@@ -369,7 +369,7 @@ select.input-success, .input-select.input-success {
 }
 
 .input-checkbox, .input-radio {
-  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-contrast border border-solid border-highlight p-0 text-white inline-block outline-none rounded
+  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-contrast border border-solid border-highlight p-0 text-opposite inline-block outline-none rounded
   before:transition-all before:absolute  before:content-[""] before:bg-transparent before:h-0 before:w-0 before:top-[10px] before:left-[10px]
 
   checked:before:rounded-xs checked:before:top-[3px] checked:before:left-[3px] checked:border-active checked:before:bg-primary checked:before:h-3 checked:before:w-3 checked:before:content-[""] checked:before:shadow-inputRadio checked:before:absolute
@@ -391,7 +391,7 @@ select.input-success, .input-select.input-success {
   h-4 w-8
   bg-contrast
   border border-solid border-highlight
-  p-0 text-white inline-block outline-none rounded-full
+  p-0 text-opposite inline-block outline-none rounded-full
   before:bg-active before:rounded-full before:w-5 before:left-[-3px] before:top-[-3px] before:h-5 before:content-[""] before:transition-all   before:absolute
   checked:before:left-[13px] checked:before:top-[-3px] checked:border-active checked:before:bg-primary checked:before:shadow-inputRadio disabled:opacity-40 disabled:cursor-not-allowed;
 }
@@ -449,7 +449,7 @@ textarea {
 }
 
 .alert {
-  @apply text-center text-white rounded-md bg-highlight shadow-alert backdrop-blur-sm relative;
+  @apply text-center text-opposite rounded-md bg-highlight shadow-alert backdrop-blur-sm relative;
 }
 .alert.alert-danger {
   @apply bg-danger-alert shadow-alertDanger;
@@ -470,7 +470,7 @@ textarea {
   @apply absolute top-0 right-0 p-2.5 cursor-pointer hover:bg-neutral/80 rounded-bl transition-all;
 }
 .alert .alert-buttons {
-  @apply p-2.5 relative before:content-[""] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;
+  @apply p-2.5 relative before:content-[""] before:absolute before:w-full before:h-px before:bg-opposite before:opacity-30 before:top-0 before:left-0;
 }
 
 .notif {
@@ -492,32 +492,32 @@ textarea {
   @apply rounded-xs before:rounded-xs;
 }
 .notif.notif-dark {
-  @apply bg-contrast text-white before:bg-contrast;
+  @apply bg-contrast text-opposite before:bg-contrast;
 }
 .notif.notif-secondary {
-  @apply bg-secondary text-white before:bg-secondary;
+  @apply bg-secondary text-opposite before:bg-secondary;
 }
 .notif.notif-success {
   @apply bg-success before:bg-success;
 }
 .notif.notif-danger {
-  @apply bg-danger text-white before:bg-danger;
+  @apply bg-danger text-opposite before:bg-danger;
 }
 
 .tag {
   @apply bg-primary text-contrast rounded-full px-2.5 text-base font-bold;
 }
 .tag.tag-dark {
-  @apply bg-contrast text-white;
+  @apply bg-contrast text-opposite;
 }
 .tag.tag-secondary {
-  @apply bg-secondary text-white;
+  @apply bg-secondary text-opposite;
 }
 .tag.tag-success {
   @apply bg-success;
 }
 .tag.tag-danger {
-  @apply bg-danger text-white;
+  @apply bg-danger text-opposite;
 }
 .tag.tag-removable {
   @apply relative pr-7;
@@ -530,7 +530,7 @@ textarea {
 }
 
 .tooltip {
-  @apply text-white rounded-xs bg-highlight shadow-alert backdrop-blur-sm text-base font-secondary;
+  @apply text-opposite rounded-xs bg-highlight shadow-alert backdrop-blur-sm text-base font-secondary;
 }
 .tooltip p {
   @apply mb-0;
@@ -567,7 +567,7 @@ textarea {
 }
 
 .nav {
-  @apply p-2.5 bg-default border border-solid border-highlight text-white text-lg rounded border-highlight;
+  @apply p-2.5 bg-default border border-solid border-highlight text-opposite text-lg rounded border-highlight;
 }
 .nav .nav-elt {
   @apply inline-block rounded font-bold relative;
@@ -579,7 +579,7 @@ textarea {
   @apply opacity-30 pointer-events-none cursor-not-allowed;
 }
 .nav .nav-elt a {
-  @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white/10 rounded transition-all;
+  @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-opposite/10 rounded transition-all;
 }
 .nav .nav-elt .notif {
   @apply absolute right-[-5px] top-[-5px];
@@ -591,7 +591,7 @@ textarea {
   @apply inline-block;
 }
 .nav.nav-light .nav-elt.active a, .nav.nav-light-secondary .nav-elt.active a {
-  @apply text-white bg-none after:content-[""] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-primary after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
+  @apply text-opposite bg-none after:content-[""] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-primary after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
 }
 .nav.nav-light-secondary .nav-elt.active a {
   @apply after:from-[#F56772] after:to-[#BA6BFF];

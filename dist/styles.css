@@ -886,7 +886,7 @@ video {
   border-style: dashed;
 }
 
-.border-white {
+.border-opposite {
   --tw-border-opacity: 1;
   border-color: rgb(242 253 255 / var(--tw-border-opacity));
 }
@@ -901,15 +901,15 @@ video {
   border-color: rgb(146 142 187 / var(--tw-border-opacity));
 }
 
-.border-white\/20 {
+.border-opposite\/20 {
   border-color: rgb(242 253 255 / 0.2);
 }
 
-.bg-white\/80 {
+.bg-opposite\/80 {
   background-color: rgb(242 253 255 / 0.8);
 }
 
-.bg-white {
+.bg-opposite {
   --tw-bg-opacity: 1;
   background-color: rgb(242 253 255 / var(--tw-bg-opacity));
 }
@@ -1007,7 +1007,7 @@ video {
   --tw-gradient-to: #F56772;
 }
 
-.fill-white {
+.fill-opposite {
   fill: #F2FDFF;
 }
 
@@ -1125,11 +1125,6 @@ video {
   font-style: italic;
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(242 253 255 / var(--tw-text-opacity));
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(86 234 255 / var(--tw-text-opacity));
@@ -1138,6 +1133,11 @@ video {
 .text-active {
   --tw-text-opacity: 1;
   color: rgb(146 142 187 / var(--tw-text-opacity));
+}
+
+.text-opposite {
+  --tw-text-opacity: 1;
+  color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
 .opacity-25 {
@@ -1261,7 +1261,7 @@ video {
   --tw-gradient-to: #BA6BFF;
 }
 
-.bg-gr-overlay-white {
+.bg-gr-overlay-opposite {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: rgba(255,255,255,0);
   --tw-gradient-to: rgb(255 255 255 / 0);
@@ -1529,14 +1529,14 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.btn.btn-white {
+.btn.btn-opposite {
   --tw-bg-opacity: 1;
   background-color: rgb(242 253 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(39 39 54 / var(--tw-text-opacity));
 }
 
-.btn.btn-white:hover {
+.btn.btn-opposite:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(242 253 255 / var(--tw-bg-opacity));
   --tw-shadow-color: #F2FDFF;
@@ -1651,7 +1651,7 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.btn.btn-extrasmall.btn-white:hover {
+.btn.btn-extrasmall.btn-opposite:hover {
   --tw-shadow-color: rgb(242 253 255 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
 }
@@ -1735,12 +1735,12 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   background-color: rgb(0 171 255 / 0.1);
 }
 
-.btn.btn-ghost.btn-white {
+.btn.btn-ghost.btn-opposite {
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-.btn.btn-ghost.btn-white:hover {
+.btn.btn-ghost.btn-opposite:hover {
   background-color: rgb(242 253 255 / 0.1);
 }
 
@@ -1824,13 +1824,13 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   background-color: rgb(0 171 255 / 0.2);
 }
 
-.btn.btn-light.btn-white {
+.btn.btn-light.btn-opposite {
   background-color: rgb(242 253 255 / 0.1);
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-.btn.btn-light.btn-white:hover {
+.btn.btn-light.btn-opposite:hover {
   background-color: rgb(242 253 255 / 0.2);
 }
 
@@ -1936,7 +1936,7 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   background-color: rgb(0 171 255 / 0.1);
 }
 
-.btn.btn-bordered.btn-white {
+.btn.btn-bordered.btn-opposite {
   border-width: 1px;
   border-style: solid;
   --tw-border-opacity: 1;
@@ -1945,7 +1945,7 @@ p a:not(.btn).link-contrast, .link.link-contrast {
   color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
-.btn.btn-bordered.btn-white:hover {
+.btn.btn-bordered.btn-opposite:hover {
   background-color: rgb(242 253 255 / 0.1);
 }
 
