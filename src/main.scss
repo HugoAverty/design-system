@@ -37,19 +37,19 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-lightBlue rounded;
+  @apply bg-active rounded;
 }
 
 
 .bg-default {
-  @apply bg-darkblueTransparent backdrop-blur-sm border border-deepBlue;
+  @apply bg-neutral/80 backdrop-blur-sm border border-highlight ;
 }
 
 .bg-gr-primary {
   @apply bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF];
 }
 
-.bg-gr-pink {
+.bg-gr-secondary {
   @apply bg-gradient-to-r from-[#F56772] to-[#BA6BFF];
 }
 
@@ -89,45 +89,45 @@ h5, .h5 {
   @apply text-white font-secondary font-bold text-xl tracking-[-0.7px] mb-2 mt-2;
 }
 .subtitle {
-  @apply italic text-lightBlue text-base;
+  @apply italic text-active text-base;
 }
 p {
   @apply text-sm text-white leading-5 mb-2.5;
 }
 
 p a:not(.btn), .link {
-  @apply overflow-hidden font-bold text-main relative after:content-[''] after:absolute after:bottom-[-3px] after:left-0 after:w-0 after:h-['1px'] after:border-t after:border-dashed hover:after:w-full after:transition-all;
-  &.link-dark {
-    @apply text-black;
+  @apply overflow-hidden font-bold text-primary relative after:content-[''] after:absolute after:bottom-[-3px] after:left-0 after:w-0 after:h-['1px'] after:border-t after:border-dashed hover:after:w-full after:transition-all;
+  &.link-contrast {
+    @apply text-contrast;
   }
 }
 
 .btn {
-  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-main transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
+  @apply px-5 py-2 rounded min-w-buttonRegular inline-block text-center text-base font-bold text-primary transition-all hover:shadow-lg hover:bg-gradient-to-tr hover:from-[rgba(255,255,255,0)] hover:via-[rgba(255,255,255,0)] hover:to-[rgba(255,255,255,.5)];
   // Button color
   &.btn-primary {
-    @apply bg-main text-darkblue hover:bg-main-hover hover:shadow-main/60 hover:to-[rgba(255,255,255,.4)];
+    @apply bg-primary text-neutral hover:bg-primary-hover hover:shadow-primary/60 hover:to-[rgba(255,255,255,.4)];
   }
-  &.btn-dark {
-    @apply bg-darkblue text-white hover:bg-darkSea hover:to-[rgba(255,255,255,.1)];
+  &.btn-contrast {
+    @apply bg-neutral text-white hover:bg-contrast hover:to-[rgba(255,255,255,.1)];
   }
-  &.btn-pink {
-    @apply bg-pink text-darkblue text-white hover:bg-pink-hover hover:shadow-pink;
+  &.btn-secondary {
+    @apply bg-secondary text-neutral text-white hover:bg-secondary-hover hover:shadow-secondary;
   }
   &.btn-danger {
-    @apply bg-red text-darkblue text-white hover:bg-red-hover hover:shadow-red;
+    @apply bg-danger text-neutral text-white hover:bg-danger-hover hover:shadow-danger;
   }
   &.btn-success {
-    @apply bg-green text-darkblue text-white hover:bg-green-hover hover:shadow-green;
+    @apply bg-success text-neutral text-white hover:bg-success-hover hover:shadow-success;
   }
   &.btn-warning {
-    @apply bg-orange text-darkblue text-white hover:bg-orange-hover hover:shadow-orange;
+    @apply bg-warning text-neutral text-white hover:bg-warning-hover hover:shadow-warning;
   }
   &.btn-info {
-    @apply bg-blue text-darkblue text-white hover:bg-blue-hover hover:shadow-blue;
+    @apply bg-info text-neutral text-white hover:bg-info-hover hover:shadow-info;
   }
   &.btn-white {
-    @apply bg-white text-darkblue hover:bg-white hover:shadow-white;
+    @apply bg-white text-neutral hover:bg-white hover:shadow-white;
   }
   &:not(.btn-icon) {
     svg {
@@ -136,10 +136,10 @@ p a:not(.btn), .link {
   }
 
   &.btn-gr-primary {
-    @apply rounded bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-black hover:shadow-main;
+    @apply rounded bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] text-contrast hover:shadow-primary;
   }
-  &.btn-gr-pink {
-    @apply bg-gradient-to-tr from-[#BA6BFF] to-[#F56772] text-white hover:shadow-pink;
+  &.btn-gr-secondary {
+    @apply bg-gradient-to-tr from-[#BA6BFF] to-[#F56772] text-white hover:shadow-secondary;
   }
 
   &.btn-skew {
@@ -156,22 +156,22 @@ p a:not(.btn), .link {
   &.btn-extrasmall {
     @apply text-xs min-w-buttonExtraSmall py-[5px] px-2.5 font-secondary font-normal rounded-xs;
     &.btn-primary {
-      @apply hover:shadow-main/40;
+      @apply hover:shadow-primary/40;
     }
-    &.btn-pink {
-      @apply hover:shadow-pink/80;
+    &.btn-secondary {
+      @apply hover:shadow-secondary/80;
     }
     &.btn-danger {
-      @apply hover:shadow-red/80;
+      @apply hover:shadow-danger/80;
     }
     &.btn-success {
-      @apply hover:shadow-green/80;
+      @apply hover:shadow-success/80;
     }
     &.btn-warning {
-      @apply hover:shadow-orange/80;
+      @apply hover:shadow-warning/80;
     }
     &.btn-info {
-      @apply hover:shadow-blue/80;
+      @apply hover:shadow-info/80;
     }
     &.btn-white {
       @apply hover:shadow-white/30;
@@ -184,25 +184,25 @@ p a:not(.btn), .link {
   &.btn-ghost {
     @apply bg-none bg-transparent hover:shadow-none;
     &.btn-primary {
-      @apply text-main hover:bg-main/10;
+      @apply text-primary hover:bg-primary/10;
     }
-    &.btn-dark {
-      @apply text-darkblue hover:bg-darkblue/10;
+    &.btn-contrast {
+      @apply text-neutral hover:bg-neutral/10;
     }
-    &.btn-pink {
-      @apply text-pink hover:bg-pink/10;
+    &.btn-secondary {
+      @apply text-secondary hover:bg-secondary/10;
     }
     &.btn-danger {
-      @apply text-red hover:bg-red/10;
+      @apply text-danger hover:bg-danger/10;
     }
     &.btn-success {
-      @apply text-green hover:bg-green/10;
+      @apply text-success hover:bg-success/10;
     }
     &.btn-warning {
-      @apply text-orange hover:bg-orange/10;
+      @apply text-warning hover:bg-warning/10;
     }
     &.btn-info {
-      @apply text-blue hover:bg-blue/10;
+      @apply text-info hover:bg-info/10;
     }
     &.btn-white {
       @apply text-white hover:bg-white/10;
@@ -213,25 +213,25 @@ p a:not(.btn), .link {
   &.btn-light {
     @apply bg-none hover:shadow-none;
     &.btn-primary {
-      @apply bg-main/10 text-main hover:bg-main/20;
+      @apply bg-primary/10 text-primary hover:bg-primary/20;
     }
-    &.btn-dark {
-      @apply bg-darkblue/10 text-darkblue hover:bg-darkblue/20;
+    &.btn-contrast {
+      @apply bg-neutral/10 text-neutral hover:bg-neutral/20;
     }
-    &.btn-pink {
-      @apply bg-pink/10 text-pink hover:bg-pink/20;
+    &.btn-secondary {
+      @apply bg-secondary/10 text-secondary hover:bg-secondary/20;
     }
     &.btn-danger {
-      @apply bg-red/10 text-red hover:bg-red/20;
+      @apply bg-danger/10 text-danger hover:bg-danger/20;
     }
     &.btn-success {
-      @apply bg-green/10 text-green hover:bg-green/20;
+      @apply bg-success/10 text-success hover:bg-success/20;
     }
     &.btn-warning {
-      @apply bg-orange/10 text-orange hover:bg-orange/20;
+      @apply bg-warning/10 text-warning hover:bg-warning/20;
     }
     &.btn-info {
-      @apply bg-blue/10 text-blue hover:bg-blue/20;
+      @apply bg-info/10 text-info hover:bg-info/20;
     }
     &.btn-white {
       @apply bg-white/10 text-white hover:bg-white/20;
@@ -242,25 +242,25 @@ p a:not(.btn), .link {
   &.btn-bordered {
     @apply bg-none bg-transparent hover:shadow-none;
     &.btn-primary {
-      @apply border border-solid border-main text-main hover:bg-main/10;
+      @apply border border-solid border-primary text-primary hover:bg-primary/10;
     }
-    &.btn-dark {
-      @apply border border-solid border-darkblue text-darkblue hover:bg-darkblue/10;
+    &.btn-contrast {
+      @apply border border-solid border-neutral text-neutral hover:bg-neutral/10;
     }
-    &.btn-pink {
-      @apply border border-solid border-pink text-pink hover:bg-pink/10;
+    &.btn-secondary {
+      @apply border border-solid border-secondary text-secondary hover:bg-secondary/10;
     }
     &.btn-danger {
-      @apply border border-solid border-red text-red hover:bg-red/10;
+      @apply border border-solid border-danger text-danger hover:bg-danger/10;
     }
     &.btn-success {
-      @apply border border-solid border-green text-green hover:bg-green/10;
+      @apply border border-solid border-success text-success hover:bg-success/10;
     }
     &.btn-warning {
-      @apply border border-solid border-orange text-orange hover:bg-orange/10;
+      @apply border border-solid border-warning text-warning hover:bg-warning/10;
     }
     &.btn-info {
-      @apply border border-solid border-blue text-blue hover:bg-blue/10;
+      @apply border border-solid border-info text-info hover:bg-info/10;
     }
     &.btn-white {
       @apply border border-solid border-white text-white hover:bg-white/10;
@@ -296,13 +296,13 @@ label, .label {
     @apply inline-block;
   }
   .is-optional {
-    @apply font-normal text-lightBlue text-sm;
+    @apply font-normal text-active text-sm;
   }
   &.input-error {
-    @apply text-red;
+    @apply text-danger;
   }
   &.input-success {
-    @apply text-green;
+    @apply text-success;
   }
   &.label-disabled, .disabled {
     @apply opacity-40 cursor-not-allowed;
@@ -312,20 +312,20 @@ label, .label {
 .input-message {
   @apply text-xs mt-[5px] italic;
   &.input-error {
-    @apply text-red;
+    @apply text-danger;
   }
   &.input-success {
-    @apply text-green;
+    @apply text-success;
   }
 }
 
 input[type="text"], input[type="search"], input[type="number"], textarea, select, .input-select {
-  @apply bg-greyDarkBlue px-[10px] py-[7px] border border-solid border-deepBlue text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-lightBlue focus:border-blue disabled:opacity-40 disabled:cursor-not-allowed;
+  @apply bg-input px-[10px] py-[7px] border border-solid border-highlight text-base not-italic text-white outline-none rounded w-full placeholder:italic placeholder:text-active focus:border-info disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
-    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between;
+    @apply bg-danger-dark border border-solid border-danger text-danger placeholder:text-danger-between;
   }
   &.input-success {
-    @apply bg-green-dark border border-solid border-green text-green;
+    @apply bg-success-dark border border-solid border-success text-success;
   }
   &.input-search, [type='search'] {
     @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url('img/search.svg')] bg-[length:16px_16px];
@@ -333,7 +333,7 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
       @apply bg-[url('img/search-red.svg')];
     }
     &.input-success {
-      @apply bg-[url('img/search-green.svg')];
+      @apply bg-[url('img/search-success.svg')];
     }
   }
 }
@@ -349,14 +349,14 @@ select, .input-select {
 
 .input-select-wrapper {
   .input-select {
-    @apply relative cursor-pointer hover:border-blue hover:bg-[url('img/dropdown-active.svg')];
+    @apply relative cursor-pointer hover:border-info hover:bg-[url('img/dropdown-active.svg')];
     .placeholder {
-      @apply italic text-lightBlue;
+      @apply italic text-active;
     }
     .input-select-values {
-      @apply z-10 opacity-0 absolute top-[20px] left-0 w-full h-64 bg-greyDarkBlue border border-solid border-deepBlue transition-all rounded overflow-x-auto;
+      @apply z-10 opacity-0 absolute top-[20px] left-0 w-full h-64 bg-input border border-solid border-highlight transition-all rounded overflow-x-auto;
       li {
-        @apply p-2.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-deepBlue hover:bg-deepBlue cursor-pointer;
+        @apply p-2.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-highlight hover:bg-highlight cursor-pointer;
       }
     }
   }
@@ -384,14 +384,14 @@ select, .input-select {
 }
 
 .input-checkbox, .input-radio {
-  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-black border border-solid border-deepBlue p-0 text-white inline-block outline-none rounded
+  @apply appearance-none relative top-0 right-0 bottom-0 left-0 h-5 w-5 bg-contrast border border-solid border-highlight p-0 text-white inline-block outline-none rounded
   before:transition-all before:absolute  before:content-[''] before:bg-transparent before:h-0 before:w-0 before:top-[10px] before:left-[10px]
 
-  checked:before:rounded-xs checked:before:top-[3px] checked:before:left-[3px] checked:border-lightBlue checked:before:bg-main checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute
+  checked:before:rounded-xs checked:before:top-[3px] checked:before:left-[3px] checked:border-active checked:before:bg-primary checked:before:h-3 checked:before:w-3 checked:before:content-[''] checked:before:shadow-inputRadio checked:before:absolute
 
   disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
-    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between checked:before:shadow-inputRadioDanger checked:before:bg-red;
+    @apply bg-danger-dark border border-solid border-danger text-danger placeholder:text-danger-between checked:before:shadow-inputRadioDanger checked:before:bg-danger;
   }
 }
 .input-radio {
@@ -402,13 +402,13 @@ select, .input-select {
   relative
   top-0 right-0 bottom-0 left-0
   h-4 w-8
-  bg-black
-  border border-solid border-deepBlue
+  bg-contrast
+  border border-solid border-highlight
   p-0 text-white inline-block outline-none rounded-full
-  before:bg-lightBlue before:rounded-full before:w-5 before:left-[-3px] before:top-[-3px] before:h-5 before:content-[''] before:transition-all   before:absolute
-  checked:before:left-[13px] checked:before:top-[-3px] checked:border-lightBlue checked:before:bg-main checked:before:shadow-inputRadio disabled:opacity-40 disabled:cursor-not-allowed;
+  before:bg-active before:rounded-full before:w-5 before:left-[-3px] before:top-[-3px] before:h-5 before:content-[''] before:transition-all   before:absolute
+  checked:before:left-[13px] checked:before:top-[-3px] checked:border-active checked:before:bg-primary checked:before:shadow-inputRadio disabled:opacity-40 disabled:cursor-not-allowed;
   &.input-error {
-    @apply bg-red-dark border border-solid border-red text-red placeholder:text-red-between before:bg-red-between checked:before:bg-red checked:before:shadow-inputRadioDanger;
+    @apply bg-danger-dark border border-solid border-danger text-danger placeholder:text-danger-between before:bg-danger-between checked:before:bg-danger checked:before:shadow-inputRadioDanger;
   }
   & ~ .two-label {
     @apply opacity-40 pointer-events-auto;
@@ -425,9 +425,9 @@ select, .input-select {
 }
 
 input[type="range"], .input-range {
-  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-2.5 cursor-col-resize;
+  @apply bg-input border border-highlight rounded-full appearance-none w-full h-2.5 cursor-col-resize;
   &::-webkit-slider-thumb {
-    @apply bg-main shadow-main rounded-full appearance-none h-5 w-5;
+    @apply bg-primary shadow-primary rounded-full appearance-none h-5 w-5;
   }
   &.input-range-vertical {
     @apply cursor-col-resize rotate-[270deg] translate-y-[45px] translate-x-[-50px];
@@ -435,18 +435,18 @@ input[type="range"], .input-range {
 }
 
 .progress {
-  @apply bg-greyDarkBlue border border-deepBlue rounded-full appearance-none w-full h-5 p-[2px] mb-5;
+  @apply bg-input border border-highlight rounded-full appearance-none w-full h-5 p-[2px] mb-5;
   .progress-bar {
-    @apply bg-main duration-700 transition-all rounded-full h-full bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] relative after:content-[''] after:absolute after:w-full after:h-full after:opacity-20 after:rounded-full after:bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0tyRWkyNCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGxpbmUgeDE9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAuNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjciLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fS3JFaTI0KSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==')];
+    @apply bg-primary duration-700 transition-all rounded-full h-full bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] relative after:content-[''] after:absolute after:w-full after:h-full after:opacity-20 after:rounded-full after:bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0tyRWkyNCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwLjUiIGhlaWdodD0iMTAuNSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PGxpbmUgeDE9IjAiIHk9IjAiIHgyPSIwIiB5Mj0iMTAuNSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjciLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5fS3JFaTI0KSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==')];
     .progress-purcentage {
-      @apply absolute right-0 bottom-[-25px] text-main font-secondary text-base font-bold;
+      @apply absolute right-0 bottom-[-25px] text-primary font-secondary text-base font-bold;
     }
   }
-  &.progress-pink {
+  &.progress-secondary {
     .progress-bar {
       @apply  bg-gradient-to-tr from-[#BA6BFF] to-[#F56772];
       .progress-purcentage {
-        @apply text-pink;
+        @apply text-secondary;
       }
     }
   }
@@ -468,12 +468,12 @@ textarea {
 }
 
 .alert {
-  @apply text-center text-white rounded-md bg-deepBlue shadow-alert backdrop-blur-sm relative;
+  @apply text-center text-white rounded-md bg-highlight shadow-alert backdrop-blur-sm relative;
   &.alert-danger {
-    @apply bg-red-alert shadow-alertDanger;
+    @apply bg-danger-alert shadow-alertDanger;
   }
   &.alert-success {
-    @apply bg-green-alert shadow-alertSuccess;
+    @apply bg-success-alert shadow-alertSuccess;
   }
   .alert-content {
     @apply p-5 pb-7;
@@ -485,7 +485,7 @@ textarea {
     }
   }
   .alert-close {
-    @apply absolute top-0 right-0 p-2.5 cursor-pointer hover:bg-darkblueTransparent rounded-bl transition-all;
+    @apply absolute top-0 right-0 p-2.5 cursor-pointer hover:bg-neutral/80 rounded-bl transition-all;
   }
   .alert-buttons {
     @apply p-2.5 relative before:content-[''] before:absolute before:w-full before:h-px before:bg-white before:opacity-30 before:top-0 before:left-0;
@@ -493,7 +493,7 @@ textarea {
 }
 
 .notif {
-  @apply z-10 w-3 aspect-square bg-main text-black rounded-full text-center font-bold text-xs relative before:content-[''] before:absolute before:w-full before:h-full before:bg-main before:opacity-30 before:top-0 before:left-0 before:animate-ping before:rounded-full before:z-0;
+  @apply z-10 w-3 aspect-square bg-primary text-contrast rounded-full text-center font-bold text-xs relative before:content-[''] before:absolute before:w-full before:h-full before:bg-primary before:opacity-30 before:top-0 before:left-0 before:animate-ping before:rounded-full before:z-0;
   .no-anim {
     @apply before:content-none static;
   }
@@ -510,37 +510,37 @@ textarea {
     @apply rounded-xs before:rounded-xs;
   }
   &.notif-dark {
-    @apply bg-black text-white before:bg-black;
+    @apply bg-contrast text-white before:bg-contrast;
   }
-  &.notif-pink {
-    @apply bg-pink text-white before:bg-pink;
+  &.notif-secondary {
+    @apply bg-secondary text-white before:bg-secondary;
   }
   &.notif-success {
-    @apply bg-green before:bg-green;
+    @apply bg-success before:bg-success;
   }
   &.notif-danger {
-    @apply bg-red text-white before:bg-red;
+    @apply bg-danger text-white before:bg-danger;
   }
 }
 
 .tag {
-  @apply bg-main text-black rounded-full px-2.5 text-base font-bold;
+  @apply bg-primary text-contrast rounded-full px-2.5 text-base font-bold;
   &.tag-dark {
-    @apply bg-black text-white;
+    @apply bg-contrast text-white;
   }
-  &.tag-pink {
-    @apply bg-pink text-white;
+  &.tag-secondary {
+    @apply bg-secondary text-white;
   }
   &.tag-success {
-    @apply bg-green;
+    @apply bg-success;
   }
   &.tag-danger {
-    @apply bg-red text-white;
+    @apply bg-danger text-white;
   }
   &.tag-removable {
     @apply relative pr-7;
     .icon {
-      @apply bg-black-30 rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
+      @apply bg-contrast/30 rounded-full aspect-square absolute right-[2px] top-[2px] p-1 cursor-pointer;
       img, svg {
         @apply h-3 w-3;
       }
@@ -549,29 +549,29 @@ textarea {
 }
 
 .tooltip {
-  @apply text-white rounded-xs bg-deepBlue shadow-alert backdrop-blur-sm text-base font-secondary;
+  @apply text-white rounded-xs bg-highlight shadow-alert backdrop-blur-sm text-base font-secondary;
   p {
     @apply mb-0;
   }
   &.tooltip-danger {
-    @apply bg-red shadow-alertDanger;
+    @apply bg-danger shadow-alertDanger;
   }
   &.tooltip-success {
-    @apply bg-green shadow-alertSuccess;
+    @apply bg-success shadow-alertSuccess;
   }
   &.tooltip-primary {
-    @apply bg-main shadow-alertPrimary text-black;
+    @apply bg-primary shadow-alertPrimary text-contrast;
   }
   &.tooltip-arrow-bl, &.tooltip-arrow-br  {
-    @apply after:content-[''] after:absolute after:w-0 after:h-0 after:inline-block after:bottom-[-8px] after:left-[15px] after:border-r-8 after:border-l-8 after:border-t-8 after:border-l-transparent after:border-r-transparent after:border-t-deepBlue after:border-solid;
+    @apply after:content-[''] after:absolute after:w-0 after:h-0 after:inline-block after:bottom-[-8px] after:left-[15px] after:border-r-8 after:border-l-8 after:border-t-8 after:border-l-transparent after:border-r-transparent after:border-t-highlight after:border-solid;
     &.tooltip-danger {
-      @apply after:border-t-red;
+      @apply after:border-t-danger;
     }
     &.tooltip-primary {
-      @apply after:border-t-main;
+      @apply after:border-t-primary;
     }
     &.tooltip-success {
-      @apply after:border-t-green;
+      @apply after:border-t-success;
     }
   }
   &.tooltip-arrow-br {
@@ -586,36 +586,36 @@ textarea {
 }
 
 .nav {
-  @apply p-2.5 bg-default border border-solid border-greyBlue text-white text-lg rounded border-greyBlue;
+  @apply p-2.5 bg-default border border-solid border-highlight text-white text-lg rounded border-highlight;
   .nav-elt {
     @apply inline-block rounded font-bold relative;
     &.active {
       a {
-        @apply text-black bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
+        @apply text-contrast bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
       }
     }
     &.disabled {
       @apply opacity-30 pointer-events-none cursor-not-allowed;
     }
     a {
-      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white-10 rounded transition-all;
+      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-white/10 rounded transition-all;
     }
     .notif {
       @apply absolute right-[-5px] top-[-5px];
     }
   }
-  &.nav-light, &.nav-light-pink {
-    @apply bg-transparent backdrop-blur-0 border-x-0 border-t-0 rounded-none border-b border-deepBlue;
+  &.nav-light, &.nav-light-secondary {
+    @apply bg-transparent backdrop-blur-0 border-x-0 border-t-0 rounded-none border-b border-highlight;
     .nav-elt {
       @apply inline-block;
       &.active {
         a {
-          @apply text-white bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-main after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
+          @apply text-white bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-primary after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
         }
       }
     }
   }
-  &.nav-light-pink {
+  &.nav-light-secondary {
     .nav-elt {
       &.active {
         a {
@@ -628,23 +628,23 @@ textarea {
 
 .menu {
   &.menu-tools {
-    @apply bg-default border border-deepBlue block py-2.5 rounded;
+    @apply bg-default border border-highlight block py-2.5 rounded;
     ul {
       li {
         a {
-          @apply border-deepBlue px-5 py-2.5 block hover:bg-gradient-to-tr hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
+          @apply border-highlight px-5 py-2.5 block hover:bg-gradient-to-tr hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] transition-all relative;
           &:hover:not(.active) img {
             @apply invert;
           }
         }
         &.active {
-          @apply relative after:absolute after:content-[''] after:w-[5px] after:h-full after:bg-main after:right-[-3px] after:top-0 after:rounded;
+          @apply relative after:absolute after:content-[''] after:w-[5px] after:h-full after:bg-primary after:right-[-3px] after:top-0 after:rounded;
         }
         &.disabled a {
           @apply opacity-40 pointer-events-none cursor-not-allowed;
         }
         &.separator {
-          @apply bg-deepBlue my-2.5 h-[1px] w-full;
+          @apply bg-highlight my-2.5 h-[1px] w-full;
         }
       }
     }
@@ -652,9 +652,9 @@ textarea {
 }
 
 .modal {
-  @apply text-center bg-default rounded-md border border-deepBlue shadow-modal overflow-hidden;
+  @apply text-center bg-default rounded-md border border-highlight shadow-modal overflow-hidden;
   .modal-title {
-    @apply text-main p-5 font-secondary font-bold text-2xl tracking-[-0.7px] border-b border-deepBlue leading-5;
+    @apply text-primary p-5 font-secondary font-bold text-2xl tracking-[-0.7px] border-b border-highlight leading-5;
   }
   .modal-content {
     @apply p-5 text-center;
@@ -666,6 +666,6 @@ textarea {
     }
   }
   .modal-buttons {
-    @apply bg-bgButton p-2.5 border-t border-deepBlue;
+    @apply bg-highlight-low p-2.5 border-t border-highlight;
   }
 }

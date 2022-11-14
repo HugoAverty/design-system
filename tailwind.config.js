@@ -13,65 +13,47 @@ module.exports = {
     },
     colors: ({ colors }) => ({
 
-      main: {
+      primary: {
         DEFAULT: '#56EAFF',
         hover: '#82F0FF'
       },
-
-      pink: {
+      secondary: {
         DEFAULT: '#E142A2',
         hover: '#D28FEF'
       },
+      neutral: '#272736',
       white: {
-        DEFAULT: '#F2FDFF',
-        10:'rgba(242,253,255,.1)',
-        20:'rgba(242,253,255,.2)',
-        30:'rgba(242,253,255,.3)',
-        40:'rgba(242,253,255,.4)',
-        50:'rgba(242,253,255,.5)',
-        60:'rgba(242,253,255,.6)',
-        70:'rgba(242,253,255,.7)',
-        80:'rgba(242,253,255,.8)',
-        90:'rgba(242,253,255,.9)',
+        DEFAULT: '#F2FDFF'
       },
-      black: {
-        DEFAULT: '#0F1F2D',
-        20:'rgba(15,31,45,.2)',
-        30:'rgba(15,31,45,.3)',
-        40:'rgba(15,31,45,.4)',
-        50:'rgba(15,31,45,.5)',
-        60:'rgba(15,31,45,.6)',
-        70:'rgba(15,31,45,.7)',
-        80:'rgba(15,31,45,.8)',
+      contrast: {
+        DEFAULT: '#0F1F2D'
       },
-      deepBlue: '#4D4B67',
-      lightBlue: '#928EBB',
-      greyBlue: '#272736',
-      darkSea: '#15172F',
-      greyDarkBlue: '#0F1F2D',
-      bgButton: '#38384A',
 
-      darkblueTransparent: 'rgba(39,39,54,0.85)',
-      darkblue: 'rgba(39,39,54)',
+      input: '#0F1F2D',
+      highlight: {
+        DEFAULT: '#4D4B67',
+        low: '#38384A'
+      },
+      active: '#928EBB',
 
-      red: {
+      danger: {
         DEFAULT: '#FF6565',
         between: '#A05454',
         dark: '#392525',
         hover: '#FF8B8B',
         alert: 'rgba(255,101,101,.75)'
       },
-      green: {
+      success: {
         DEFAULT: '#93D57C',
         dark: '#1A2B14',
         hover: '#AEDF9C',
         alert: 'rgba(147,213,124,.75)'
       },
-      orange: {
+      warning: {
         DEFAULT:'#EC943F',
         hover: '#F0AE6F'
       },
-      blue: {
+      info: {
         DEFAULT:'#00ABFF',
         hover: '#40C0FF'
       },
@@ -254,10 +236,10 @@ module.exports = {
       xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
-      alertDanger: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #FF9C71',
-      alertSuccess: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #8EFF8F',
-      alertPrimary: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 #FFFFFF',
-      alert: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(146,142,187,0.50)',
+      alertDanger: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(255,156,113,0.5)',
+      alertSuccess: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(142,255,143,0.25)',
+      alertPrimary: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(255,255,255,0.25)',
+      alert: '0 10px 20px 5px rgba(0,0,0,0.35), inset 0 10px 20px 0 rgba(146,142,187,0.25)',
       modal: '0 10px 20px 5px rgba(0,0,0,0.35)',
       inputRadio: '0 0 7px 0 rgba(4,255,210,1)',
       inputRadioDanger: '0 0 7px 0 #FF6565',

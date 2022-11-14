@@ -101,10 +101,10 @@
       Font Family
     </h3>
     <div class="flex flex-row">
-      <div class="basis-1/4 font-main font-light text-white text-4xl">Main font light</div>
-      <div class="basis-1/4 font-main text-white text-4xl">Main font regular</div>
-      <div class="basis-1/4 font-main text-white text-4xl italic">Main font italic</div>
-      <div class="basis-1/4 font-main font-bold text-white text-4xl">Main font bold</div>
+      <div class="basis-1/4 font-primary font-light text-white text-4xl">Main font light</div>
+      <div class="basis-1/4 font-primary text-white text-4xl">Main font regular</div>
+      <div class="basis-1/4 font-primary text-white text-4xl italic">Main font italic</div>
+      <div class="basis-1/4 font-primary font-bold text-white text-4xl">Main font bold</div>
     </div>
     <div class="flex flex-row">
       <div class="basis-1/4"></div>
@@ -125,12 +125,12 @@
         <div class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
       </div>
       <div class="basis-1/2 mr-2.5">
-        <h1 class="text-main">Let's create your own Metaverse!</h1>
-        <h2 class="text-main">Let's create your own Metaverse!</h2>
-        <h3 class="text-main">Let's create your own Metaverse!</h3>
-        <h4 class="text-main">Let's create your own Metaverse!</h4>
-        <h5 class="text-main">Let's create your own Metaverse!</h5>
-        <div class="subtitle text-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
+        <h1 class="text-primary">Let's create your own Metaverse!</h1>
+        <h2 class="text-primary">Let's create your own Metaverse!</h2>
+        <h3 class="text-primary">Let's create your own Metaverse!</h3>
+        <h4 class="text-primary">Let's create your own Metaverse!</h4>
+        <h5 class="text-primary">Let's create your own Metaverse!</h5>
+        <div class="subtitle text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec nulla nulla.</div>
       </div>
     </div>
     <h3 class="title">
@@ -156,7 +156,7 @@
         </a>
       </div>
       <div class="flex-none bg-white px-5 py-2.5 self-center rounded bg-demo-white">
-        <a href="#" class="link link-dark">
+        <a href="#" class="link link-contrast">
           I'm dark link style
         </a>
       </div>
@@ -177,7 +177,7 @@
     <div class="w-3/12 h-20 rounded bg-default relative">
       <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
         .bg-default<br />
-        bg-darkblueTransparent backdrop-blur-sm border-deepBlue
+        bg-neutral/80 backdrop-blur-sm border-highlight
       </div>
     </div>
   </div>
@@ -190,16 +190,23 @@
     </p>
     <div class="flex flex-row">
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-main"></div>
+        <div class="w-20 aspect-square inline-block rounded bg-primary"></div>
         <div class="legend">
-          .bg-main <br/>
+          .bg-primary <br/>
           #56EAFF
         </div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-darkblue"></div>
+        <div class="w-20 aspect-square inline-block rounded bg-secondary"></div>
         <div class="legend">
-          .bg-greyBlue <br/>
+          .bg-secondary <br/>
+          #E142A2
+        </div>
+      </div>
+      <div class="flex-none mr-2.5 self-center">
+        <div class="w-20 aspect-square inline-block rounded bg-neutral"></div>
+        <div class="legend">
+          .bg-neutral <br/>
           #272736
         </div>
       </div>
@@ -212,44 +219,23 @@
     </p>
     <div class="flex flex-row">
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-pink"></div>
+        <div class="w-20 aspect-square inline-block rounded bg-highlight"></div>
         <div class="legend">
-          .bg-pink <br/>
-          #E142A2
-        </div>
-      </div>
-      <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-deepBlue"></div>
-        <div class="legend">
-          .bg-deepBlue <br/>
+          .bg-highlight <br/>
           #4D4B67
         </div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-lightBlue"></div>
+        <div class="w-20 aspect-square inline-block rounded bg-active"></div>
         <div class="legend">
-          .bg-lightBlue <br/>
+          .bg-active <br/>
           #928EBB
         </div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-greyBlue"></div>
+        <div class="w-20 aspect-square inline-block rounded bg-input"></div>
         <div class="legend">
-          .bg-bg-greyBlue <br/>
-          #272736
-        </div>
-      </div>
-      <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-darkSea"></div>
-        <div class="legend">
-          .bg-darkSea <br/>
-          #15172F
-        </div>
-      </div>
-      <div class="flex-none mr-2.5 self-center">
-        <div class="w-20 aspect-square inline-block rounded bg-greyDarkBlue"></div>
-        <div class="legend">
-          .bg-greyDarkBlue <br/>
+          .bg-input <br/>
           #0F1F2D
         </div>
       </div>
@@ -259,30 +245,30 @@
     </h3>
     <div class="flex flex-row">
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-16 aspect-square inline-block rounded bg-red"></div>
+        <div class="w-16 aspect-square inline-block rounded bg-danger"></div>
         <div class="legend">
-          .bg-red <br/>
+          .bg-danger <br/>
           #FF6565
         </div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-16 aspect-square inline-block rounded bg-green"></div>
+        <div class="w-16 aspect-square inline-block rounded bg-success"></div>
         <div class="legend">
-          .bg-green<br/>
+          .bg-success<br/>
           #93D57C
         </div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-16 aspect-square inline-block rounded bg-orange"></div>
+        <div class="w-16 aspect-square inline-block rounded bg-warning"></div>
         <div class="legend">
-          .bg-orange<br/>
+          .bg-warning<br/>
           #EC943F
         </div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="w-16 aspect-square inline-block rounded bg-blue"></div>
+        <div class="w-16 aspect-square inline-block rounded bg-info"></div>
         <div class="legend">
-          .bg-blue<br/>
+          .bg-info<br/>
           #00ABFF
         </div>
       </div>
@@ -307,7 +293,7 @@
       </div>
       <div class="flex-none mr-2.5 self-center">
         <div class="legend text-left">
-          .bg-gr-pink <br/>
+          .bg-gr-secondary <br/>
           linear-gradient(270deg, #F56772 0%, #BA6BFF 100%)
         </div>
       </div>
@@ -320,25 +306,25 @@
       Grids, columns must have a seperation between elements of 10px (at least). Globally, elements are separate with 10px except with really small elements (such as tiny icons, extra small buttons, etc.)
     </p>
     <div class="flex flex-row">
-      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
+      <div class="basis-1/5 bg-highlight-low border border-highlight h-20 mr-2.5 relative">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-1/5 .mr-2.5<br/>
           column
         </div>
       </div>
-      <div class="basis-2/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
+      <div class="basis-2/5 bg-highlight-low border border-highlight h-20 mr-2.5 relative">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-2/5 .mr-2.5<br/>
           column
         </div>
       </div>
-      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-2.5 relative">
+      <div class="basis-1/5 bg-highlight-low border border-highlight h-20 mr-2.5 relative">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-1/5 .mr-2.5<br/>
           column
         </div>
       </div>
-      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 relative">
+      <div class="basis-1/5 bg-highlight-low border border-highlight h-20 relative">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-1/5<br/>
           column
@@ -346,19 +332,19 @@
       </div>
     </div>
     <div class="flex flex-row">
-      <div class="basis-2/6 bg-bgButton border border-deepBlue h-20 mr-2.5 relative mt-2.5">
+      <div class="basis-2/6 bg-highlight-low border border-highlight h-20 mr-2.5 relative mt-2.5">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-2/6 .mr-2.5 .mt-2.5<br/>
           column
         </div>
       </div>
-      <div class="basis-2/6 bg-bgButton border border-deepBlue h-20 mr-2.5 relative mt-2.5">
+      <div class="basis-2/6 bg-highlight-low border border-highlight h-20 mr-2.5 relative mt-2.5">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-2/6 .mr-2.5 .mt-2.5<br/>
           column
         </div>
       </div>
-      <div class="basis-2/6 bg-bgButton border border-deepBlue h-20 relative mt-2.5">
+      <div class="basis-2/6 bg-highlight-low border border-highlight h-20 relative mt-2.5">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .basis-2/6 .mt-2.5<br/>
           column
@@ -370,31 +356,31 @@
       The common border radius is .rounded (10px). For small elements you have to use .rounded-xs (5px) and really large .rounded-md (15px).
     </p>
     <div class="flex flex-row">
-      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-xs">
+      <div class="aspect-square basis-1/12 bg-highlight-low border border-highlight mr-2.5 relative rounded-xs">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .rounded-xs<br/>
           border-radius (3px)
         </div>
       </div>
-      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded">
+      <div class="aspect-square basis-1/12 bg-highlight-low border border-highlight mr-2.5 relative rounded">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .rounded<br/>
           border-radius (5px)
         </div>
       </div>
-      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-md">
+      <div class="aspect-square basis-1/12 bg-highlight-low border border-highlight mr-2.5 relative rounded-md">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .rounded-md<br/>
           border-radius (10px)
         </div>
       </div>
-      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-lg">
+      <div class="aspect-square basis-1/12 bg-highlight-low border border-highlight mr-2.5 relative rounded-lg">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .rounded-lg <br/>
           border-radius (15px)
         </div>
       </div>
-      <div class="aspect-square basis-1/12 bg-bgButton border border-deepBlue mr-2.5 relative rounded-full">
+      <div class="aspect-square basis-1/12 bg-highlight-low border border-highlight mr-2.5 relative rounded-full">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           .rounded-full<br/>
           border-radius (50%)
@@ -406,17 +392,17 @@
       Box shadows are rarely used but can be used in some cases, particularly to make an element stand out more prominently.
     </p>
     <div class="flex flex-row">
-      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadow">
+      <div class="basis-1/5 bg-highlight-low border border-highlight h-20 mr-10 relative shadow-bxShadow">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           <strong>.shadow-bxShadow</strong><br /> 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
-      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 mr-10 relative shadow-bxShadowHover">
+      <div class="basis-1/5 bg-highlight-low border border-highlight h-20 mr-10 relative shadow-bxShadowHover">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           <strong>.shadow-bxShadowHover</strong><br /> 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
       </div>
-      <div class="basis-1/5 bg-bgButton border border-deepBlue h-20 relative shadow-bxShadowSmall">
+      <div class="basis-1/5 bg-highlight-low border border-highlight h-20 relative shadow-bxShadowSmall">
         <div class="legend absolute top-0 bottom-[0px] left-0 right-0 w-full h-10 m-auto">
           <strong>.shadow-bxShadowSmall</strong><br /> 0 10px 20px 5px rgba(0,0,0,0.35)
         </div>
@@ -460,11 +446,11 @@
         <div class="flex-none mr-2.5 self-center">
           <a class="btn btn-primary" href="#">Primary</a>
         </div>
-        <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-          <a class="btn btn-dark" href="#">Dark</a>
-        </div>
         <div class="flex-none mr-2.5 self-center">
-          <a class="btn btn-pink" href="#">Pink</a>
+          <a class="btn btn-secondary" href="#">secondary</a>
+        </div>
+        <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+          <a class="btn btn-contrast" href="#">Negative</a>
         </div>
         <div class="flex-none mr-2.5 self-center">
           <a class="btn btn-danger" href="#">Danger</a>
@@ -502,11 +488,11 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-small" href="#">Primary</a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-small" href="#">Dark</a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-small" href="#">Pink</a>
+        <a class="btn btn-secondary btn-small" href="#">secondary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-small" href="#">Negative</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-danger btn-small" href="#">Danger</a>
@@ -544,11 +530,11 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-extrasmall" href="#">Primary</a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-extrasmall" href="#">Dark</a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-extrasmall" href="#">Pink</a>
+        <a class="btn btn-secondary btn-extrasmall" href="#">secondary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-extrasmall" href="#">Dark</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-danger btn-extrasmall" href="#">Danger</a>
@@ -590,11 +576,11 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-ghost" href="#">Primary</a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-ghost" href="#">Dark</a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-ghost" href="#">Pink</a>
+        <a class="btn btn-secondary btn-ghost" href="#">secondary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-ghost" href="#">Dark</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-danger btn-ghost" href="#">Danger</a>
@@ -632,11 +618,11 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-bordered" href="#">Primary</a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-bordered" href="#">Dark</a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-bordered" href="#">Pink</a>
+        <a class="btn btn-secondary btn-bordered" href="#">secondary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-bordered" href="#">Dark</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-danger btn-bordered" href="#">Danger</a>
@@ -674,11 +660,11 @@
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-light" href="#">Primary</a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-light" href="#">Dark</a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-light" href="#">Pink</a>
+        <a class="btn btn-secondary btn-light" href="#">secondary</a>
+      </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-light" href="#">Dark</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-danger btn-light" href="#">Danger</a>
@@ -719,18 +705,18 @@
           </svg>
         </a>
       </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
         </svg></a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-        </svg></a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <a class="btn btn-secondary btn-icon" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
         </svg></a>
       </div>
@@ -763,18 +749,18 @@
           </svg>
         </a>
       </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-icon btn-small" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-icon btn-small" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
         </svg></a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-icon btn-small" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-        </svg></a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-icon btn-small" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
+        <a class="btn btn-secondary btn-icon btn-small" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
         </svg></a>
       </div>
@@ -807,18 +793,18 @@
           </svg>
         </a>
       </div>
+      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
+        <a class="btn btn-contrast btn-icon btn-extrasmall" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+        </svg></a>
+      </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-primary btn-icon btn-extrasmall" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
         </svg></a>
       </div>
-      <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-icon btn-extrasmall" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-        </svg></a>
-      </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-icon btn-extrasmall" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
+        <a class="btn btn-secondary btn-icon btn-extrasmall" href="#"><svg class="h-6 w-6" x-description="Heroicon name: outline/chat-bubble-bottom-center-text" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
         </svg></a>
       </div>
@@ -855,10 +841,10 @@
         <a class="btn btn-primary btn-disabled" href="#">Primary</a>
       </div>
       <div class="flex-none mr-2.5 bg-white p-2.5 self-center rounded bg-demo-white">
-        <a class="btn btn-dark btn-disabled" href="#">Dark</a>
+        <a class="btn btn-contrast btn-disabled" href="#">Dark</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-disabled" href="#">Pink</a>
+        <a class="btn btn-secondary btn-disabled" href="#">secondary</a>
       </div>
       <div class="flex-none mr-2.5 self-center">
         <a class="btn btn-danger btn-disabled" href="#">Danger</a>
@@ -892,9 +878,9 @@
         </a>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-gr-pink btn-skew" href="#">
+        <a class="btn btn-gr-secondary btn-skew" href="#">
           <span>
-            Gradient pink
+            Gradient secondary
           </span>
         </a>
       </div>
@@ -906,9 +892,9 @@
         </a>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-skew" href="#">
+        <a class="btn btn-secondary btn-skew" href="#">
           <span>
-            Flat pink
+            Flat secondary
           </span>
         </a>
       </div>
@@ -920,9 +906,9 @@
         </a>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <a class="btn btn-pink btn-bordered btn-skew" href="#">
+        <a class="btn btn-secondary btn-bordered btn-skew" href="#">
           <span>
-            Bordered pink
+            Bordered secondary
           </span>
         </a>
       </div>
@@ -1142,10 +1128,10 @@
         <input type="checkbox" class="input-switch  input-error" />
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <label class=" input-error">Error unchecked</label>
+        <label class=" input-error" id="switch-error-1">Error unchecked</label>
       </div>
       <div class="flex-none self-center">
-        <input type="checkbox" class="input-switch  input-error" checked />
+        <input type="checkbox" class="input-switch input-error" for="switch-error-1" checked />
       </div>
       <div class="flex-none mr-2.5 self-center">
         <label class=" input-error">Error checked</label>
@@ -1261,17 +1247,17 @@
     </p>
     <div class="flex flex-row">
       <div class="basis-1/3 pr-[10px] pb-[10px]">
-        <div class="mt-1 justify-center rounded-md border-2 border-dashed border-lightBlue text-white p-5 relative hover:bg-black-40 transition-all file-upload">
+        <div class="mt-1 justify-center rounded-md border-2 border-dashed border-active text-white p-5 relative hover:bg-contrast/40 transition-all file-upload">
           <div class="space-y-1 text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto h-12 w-12 text-main">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto h-12 w-12 text-primary">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
             </svg>
 
             <div class="text-sm text-white">
-              <span class="text-main">Upload a file</span>
+              <span class="text-primary">Upload a file</span>
               <p class="pl-1">or drag and drop</p>
             </div>
-            <p class="text-xs text-lightBlue italic">PNG, JPG, GIF up to 10MB</p>
+            <p class="text-xs text-active italic">PNG, JPG, GIF up to 10MB</p>
           </div>
           <label for="file-upload" class="absolute w-full h-full top-0 left-0">
             <input id="file-upload" name="file-upload" type="file" class="sr-only">
@@ -1279,13 +1265,13 @@
         </div>
       </div>
       <div class="basis-1/6 pr-[10px] pb-[10px]">
-        <div class="mt-1 justify-center rounded-md border-2 border-dashed border-lightBlue text-white p-2.5 relative hover:bg-black-40 transition-all file-upload">
+        <div class="mt-1 justify-center rounded-md border-2 border-dashed border-active text-white p-2.5 relative hover:bg-contrast/40 transition-all file-upload">
           <div class="space-y-1 text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto h-6 w-6 text-main">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto h-6 w-6 text-primary">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
             </svg>
             <div class="text-sm text-white">
-              <span class="text-main">Upload a file</span>
+              <span class="text-primary">Upload a file</span>
             </div>
             <label for="file-upload" class="absolute w-full h-full top-0 left-0">
               <input id="file-upload" name="file-upload" type="file" class="sr-only">
@@ -1296,9 +1282,9 @@
     </div>
     <div class="flex flex-row">
       <div class="basis-1/3 pr-[10px] pb-[10px]">
-        <div class="flex flex-row p-2.5 hover:bg-black-40 transition-all rounded">
+        <div class="flex flex-row p-2.5 hover:bg-contrast/40 transition-all rounded">
           <div class="flex-none self-center mr-5 ">
-            <div class="h-16 aspect-video overflow-hidden rounded bg-darkblue relative border border-deepBlue">
+            <div class="h-16 aspect-video overflow-hidden rounded bg-neutral relative border border-highlight">
               <div class="absolute left-0 right-0 top-0 bottom-[0px] m-auto h-5 w-5">
                 <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="#56EAFF" stroke-width="4"></circle>
@@ -1325,14 +1311,14 @@
     </div>
     <div class="flex flex-row">
       <div class="basis-1/3 pr-[10px] pb-[10px]">
-        <div class="flex flex-row p-2.5 hover:bg-black-40 transition-all rounded">
+        <div class="flex flex-row p-2.5 hover:bg-contrast/40 transition-all rounded">
           <div class="flex-none self-center mr-5 ">
-            <div class="h-16 aspect-video overflow-hidden rounded  border border-deepBlue">
+            <div class="h-16 aspect-video overflow-hidden rounded  border border-highlight">
               <img src="http://placekitten.com/160/90" class="" />
             </div>
           </div>
           <div class="flex-none grow self-center mr-2.5 ">
-              <div class="text-sm font-secondary text-main">Capture d’écran 2022-10-20 à 08.10.56.png</div>
+              <div class="text-sm font-secondary text-primary">Capture d’écran 2022-10-20 à 08.10.56.png</div>
               <div class="font-bold text-white text-base">2.8 Mo</div>
           </div>
           <div class="flex-none self-center ">
@@ -1378,7 +1364,7 @@
         </div>
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
-        <div class="progress progress-pink">
+        <div class="progress progress-secondary">
           <div class="progress-bar w-[50%]" id="progress-2">
             <div class="progress-purcentage">
               50%
@@ -1395,7 +1381,7 @@
         </div>
       </div>
       <div class="basis-1/5 pr-[10px] pb-[10px]">
-        <div class="progress progress-pink progress-xs">
+        <div class="progress progress-secondary progress-xs">
           <div class="progress-bar w-[75%]" id="progress-4">
           </div>
         </div>
@@ -1441,7 +1427,7 @@
                 <a class="btn btn-white btn-ghost w-full" href="#">Cancel</a>
               </div>
               <div class="basis-1/2">
-                <a class="btn btn-dark w-full" href="#">OK</a>
+                <a class="btn btn-contrast w-full" href="#">OK</a>
               </div>
             </div>
           </div>
@@ -1459,7 +1445,7 @@
                 <a class="btn btn-white btn-ghost w-full" href="#">Cancel</a>
               </div>
               <div class="basis-1/2">
-                <a class="btn btn-dark w-full" href="#">OK</a>
+                <a class="btn btn-contrast w-full" href="#">OK</a>
               </div>
             </div>
           </div>
@@ -1542,22 +1528,22 @@
       </div>
 
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-xs"></div>
+        <div class="notif notif-secondary notif-xs"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-md">2</div>
+        <div class="notif notif-secondary notif-md">2</div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-lg">2</div>
+        <div class="notif notif-secondary notif-lg">2</div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-xs notif-square"></div>
+        <div class="notif notif-secondary notif-xs notif-square"></div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-md notif-square">2</div>
+        <div class="notif notif-secondary notif-md notif-square">2</div>
       </div>
       <div class="flex-none mr-2.5 self-center">
-        <div class="notif notif-pink notif-lg notif-square">2</div>
+        <div class="notif notif-secondary notif-lg notif-square">2</div>
       </div>
 
       <div class="flex-none mr-2.5 self-center">
@@ -1727,7 +1713,7 @@
     </div>
     <div class="flex flex-row mt-2.5">
       <div class="flex-none mr-2.5">
-        <nav class="nav nav-light-pink">
+        <nav class="nav nav-light-secondary">
           <ul>
             <li class="nav-elt"><a href="#">Tab #1</a></li>
             <li class="nav-elt active"><a href="#">Tab #2</a></li>
