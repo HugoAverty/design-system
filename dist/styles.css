@@ -1125,6 +1125,11 @@ video {
   font-style: italic;
 }
 
+.text-opposite {
+  --tw-text-opacity: 1;
+  color: rgb(242 253 255 / var(--tw-text-opacity));
+}
+
 .text-primary {
   --tw-text-opacity: 1;
   color: rgb(86 234 255 / var(--tw-text-opacity));
@@ -1133,11 +1138,6 @@ video {
 .text-active {
   --tw-text-opacity: 1;
   color: rgb(146 142 187 / var(--tw-text-opacity));
-}
-
-.text-opposite {
-  --tw-text-opacity: 1;
-  color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
 .opacity-25 {
@@ -3036,17 +3036,9 @@ textarea {
 
 .nav .nav-elt.active a {
   border-radius: 5px;
-  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-  --tw-gradient-from: #1ABAD0;
-  --tw-gradient-to: rgb(26 186 208 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: rgb(106 237 255 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #6AEDFF, var(--tw-gradient-to);
-  --tw-gradient-to: rgb(133 242 255 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
-  --tw-gradient-to: #CDFBFF;
+  background-color: rgb(242 253 255 / 0.1);
   --tw-text-opacity: 1;
-  color: rgb(15 31 45 / var(--tw-text-opacity));
+  color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
 .nav .nav-elt.disabled {
@@ -3069,7 +3061,17 @@ textarea {
 }
 
 .nav .nav-elt a:hover {
-  background-color: rgb(242 253 255 / 0.1);
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+  --tw-gradient-from: #1ABAD0;
+  --tw-gradient-to: rgb(26 186 208 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(106 237 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #6AEDFF, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(133 242 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #85F2FF, var(--tw-gradient-to);
+  --tw-gradient-to: #CDFBFF;
+  --tw-text-opacity: 1;
+  color: rgb(15 31 45 / var(--tw-text-opacity));
 }
 
 .nav .nav-elt .notif {
@@ -3097,6 +3099,7 @@ textarea {
 }
 
 .nav.nav-light .nav-elt.active a, .nav.nav-light-secondary .nav-elt.active a {
+  background-color: rgba(0,0,0,0);
   background-image: none;
   --tw-text-opacity: 1;
   color: rgb(242 253 255 / var(--tw-text-opacity));
@@ -3122,6 +3125,13 @@ textarea {
   --tw-gradient-to: #CDFBFF;
   --tw-content: "";
   content: var(--tw-content);
+}
+
+.nav.nav-light .nav-elt a:hover, .nav.nav-light-secondary .nav-elt a:hover {
+  background-color: rgb(242 253 255 / 0.1);
+  background-image: none;
+  --tw-text-opacity: 1;
+  color: rgb(242 253 255 / var(--tw-text-opacity));
 }
 
 .nav.nav-light-secondary .nav-elt.active a::after {

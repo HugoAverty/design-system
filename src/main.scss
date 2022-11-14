@@ -591,14 +591,14 @@ textarea {
     @apply inline-block rounded font-bold relative;
     &.active {
       a {
-        @apply text-contrast bg-gradient-to-tr from-[#1ABAD0] via-[#6AEDFF] via-[#85F2FF] to-[#CDFBFF] rounded;
+        @apply bg-opposite/10 rounded text-opposite;
       }
     }
     &.disabled {
       @apply opacity-30 pointer-events-none cursor-not-allowed;
     }
     a {
-      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-opposite/10 rounded transition-all;
+      @apply py-2.5 px-5 inline-block cursor-pointer hover:bg-gradient-to-tr hover:from-[#1ABAD0] hover:via-[#6AEDFF] hover:via-[#85F2FF] hover:to-[#CDFBFF] rounded transition-all hover:text-contrast;
     }
     .notif {
       @apply absolute right-[-5px] top-[-5px];
@@ -610,8 +610,11 @@ textarea {
       @apply inline-block;
       &.active {
         a {
-          @apply text-opposite bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-primary after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
+          @apply bg-transparent text-opposite bg-none after:content-[''] after:absolute after:w-full after:h-[5px] after:rounded-full after:bottom-[-13px] after:left-0 after:bg-primary after:bg-gradient-to-tr after:from-[#1ABAD0] after:via-[#6AEDFF] after:via-[#85F2FF] after:to-[#CDFBFF];
         }
+      }
+      a {
+        @apply hover:bg-none hover:bg-opposite/10 hover:text-opposite;
       }
     }
   }
