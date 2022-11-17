@@ -317,7 +317,7 @@ input[type=text].input-success, input[type=search].input-success, input[type=num
   @apply bg-success-dark border border-solid border-success text-success;
 }
 input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search], .input-select.input-search, .input-select [type=search] {
-  @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url("img/search.svg")] bg-[length:16px_16px];
+  @apply rounded-full pl-[40px] bg-no-repeat bg-primary bg-[url("img/search.svg")] bg-[length:16px_16px];
 }
 input[type=text].input-search.input-error, input[type=text] [type=search].input-error, input[type=search].input-search.input-error, input[type=search] [type=search].input-error, input[type=number].input-search.input-error, input[type=number] [type=search].input-error, textarea.input-search.input-error, textarea [type=search].input-error, select.input-search.input-error, select [type=search].input-error, .input-select.input-search.input-error, .input-select [type=search].input-error {
   @apply bg-[url("img/search-red.svg")];
@@ -327,7 +327,7 @@ input[type=text].input-search.input-success, input[type=text] [type=search].inpu
 }
 
 select, .input-select {
-  @apply relative before:content-[""] bg-no-repeat bg-select bg-[url("img/dropdown.svg")] appearance-none focus:bg-[url("img/dropdown-active.svg")];
+  @apply relative before:content-[""] bg-no-repeat bg-input bg-[url("img/dropdown.svg")] appearance-none focus:bg-[url("img/dropdown-active.svg")];
 }
 select.input-error, .input-select.input-error {
   @apply bg-[url("img/dropdown-red.svg")] focus:bg-[url("img/dropdown-active-red.svg")];

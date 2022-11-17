@@ -328,7 +328,7 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
     @apply bg-success-dark border border-solid border-success text-success;
   }
   &.input-search, [type='search'] {
-    @apply rounded-full pl-[40px] bg-no-repeat bg-iconLeft bg-[url('img/search.svg')] bg-[length:16px_16px];
+    @apply rounded-full pl-[40px] bg-no-repeat bg-primary bg-[url('img/search.svg')] bg-[length:16px_16px];
     &.input-error {
       @apply bg-[url('img/search-red.svg')];
     }
@@ -338,7 +338,7 @@ input[type="text"], input[type="search"], input[type="number"], textarea, select
   }
 }
 select, .input-select {
-  @apply relative before:content-[''] bg-no-repeat bg-select bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
+  @apply relative before:content-[''] bg-no-repeat bg-input bg-[url('img/dropdown.svg')] appearance-none focus:bg-[url('img/dropdown-active.svg')];
   &.input-error {
     @apply bg-[url('img/dropdown-red.svg')] focus:bg-[url('img/dropdown-active-red.svg')];
   }

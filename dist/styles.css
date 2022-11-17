@@ -20,7 +20,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: #e5e7eb;
   /* 2 */
 }
 
@@ -2134,9 +2134,10 @@ input[type=text].input-success, input[type=search].input-success, input[type=num
 
 input[type=text].input-search, input[type=text] [type=search], input[type=search].input-search, input[type=search] [type=search], input[type=number].input-search, input[type=number] [type=search], textarea.input-search, textarea [type=search], select.input-search, select [type=search], .input-select.input-search, .input-select [type=search] {
   border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 234 255 / var(--tw-bg-opacity));
   background-image: url("img/search.svg");
   background-size: 16px 16px;
-  background-position: left 1rem center;
   background-repeat: no-repeat;
   padding-left: 40px;
 }
@@ -2154,8 +2155,9 @@ select, .input-select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 31 45 / var(--tw-bg-opacity));
   background-image: url("img/dropdown.svg");
-  background-position: right 1rem center;
   background-repeat: no-repeat;
 }
 
